@@ -1,0 +1,787 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nero(Yi) Chen - Career Direction Resume</title>
+  <style>
+    :root {
+      --brand: #1f4e5f;
+      --brand-2: #6f4e37;
+      --accent: #c6a15b;
+      --critical: #9b2c2c;
+      --canvas: #f5f7f8;
+      --paper: #ffffff;
+      --muted: #eef2f3;
+      --ink: #1d252c;
+      --text: #53616b;
+      --soft: #667680;
+      --line: #dce4e8;
+      --strong-line: #aebbc3;
+      --positive: #087f5b;
+      --warning: #b7791f;
+      --shadow: 0 10px 28px rgba(22, 33, 43, 0.08);
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      --font: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none;
+      overflow-wrap: anywhere;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 28px auto 40px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .top {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      padding: 34px 38px 28px;
+      border-bottom: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, rgba(31, 78, 95, 0.08), transparent 38%),
+        var(--paper);
+    }
+
+    .identity {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    .mark {
+      width: 54px;
+      height: 54px;
+      flex: 0 0 auto;
+      border: 2px solid var(--brand);
+      display: grid;
+      place-items: center;
+      color: var(--brand);
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .role {
+      margin-top: 10px;
+      color: var(--brand);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .motto {
+      margin-top: 8px;
+      color: var(--soft);
+      font-size: 13px;
+    }
+
+    .contact {
+      display: grid;
+      gap: 9px;
+      align-content: start;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .contact div {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 7px;
+    }
+
+    .contact b {
+      color: var(--ink);
+      min-width: 74px;
+      font-weight: 700;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      border: 1px solid var(--line);
+      background: var(--muted);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 12px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .chip.primary {
+      border-color: rgba(31, 78, 95, 0.32);
+      color: var(--brand);
+      background: #e8f1f3;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 0;
+    }
+
+    main {
+      padding: 30px 38px 34px;
+      border-right: 1px solid var(--line);
+    }
+
+    aside {
+      padding: 30px 28px 34px;
+      background: #fbfcfc;
+    }
+
+    section + section {
+      margin-top: 28px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
+      line-height: 1.25;
+      letter-spacing: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    h2::before {
+      content: "";
+      width: 24px;
+      height: 3px;
+      background: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    .summary {
+      font-size: 15px;
+      color: var(--ink);
+      max-width: 78ch;
+    }
+
+    .summary strong {
+      color: var(--brand);
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .value {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: var(--paper);
+    }
+
+    .value b {
+      display: block;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .value span {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .job {
+      display: grid;
+      grid-template-columns: 138px minmax(0, 1fr);
+      gap: 18px;
+      padding-top: 2px;
+    }
+
+    .period {
+      color: var(--soft);
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .meta {
+      margin-top: 3px;
+      color: var(--soft);
+      font-size: 12px;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--text);
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    li strong {
+      color: var(--ink);
+    }
+
+    .portfolio {
+      display: grid;
+      gap: 12px;
+    }
+
+    .project {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 15px 16px;
+      background: var(--paper);
+    }
+
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .project .tag {
+      color: var(--brand);
+      font-family: var(--mono);
+      font-size: 11px;
+      white-space: nowrap;
+      border: 1px solid rgba(31, 78, 95, 0.25);
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: #f1f7f8;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .metric {
+      background: var(--muted);
+      border: 1px solid var(--line);
+      padding: 9px;
+      border-radius: 6px;
+    }
+
+    .metric b {
+      display: block;
+      color: var(--brand);
+      font-size: 17px;
+      line-height: 1.1;
+    }
+
+    .metric span {
+      color: var(--soft);
+      font-size: 11px;
+    }
+
+    .direction {
+      display: grid;
+      gap: 12px;
+    }
+
+    .direction-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      padding: 13px;
+    }
+
+    .direction-title {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+      margin-bottom: 8px;
+    }
+
+    .score {
+      color: var(--positive);
+      font-weight: 800;
+      font-family: var(--mono);
+      white-space: nowrap;
+    }
+
+    .bar {
+      height: 7px;
+      background: var(--muted);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 9px;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand), var(--accent));
+      border-radius: inherit;
+    }
+
+    .side-block + .side-block {
+      margin-top: 24px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .skill {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 6px;
+      padding: 6px 8px;
+      color: var(--ink);
+      font-size: 12px;
+    }
+
+    .education {
+      border-left: 3px solid var(--brand);
+      padding-left: 12px;
+      color: var(--text);
+    }
+
+    .education b {
+      color: var(--ink);
+    }
+
+    .note {
+      border-top: 1px solid var(--line);
+      margin-top: 30px;
+      padding: 18px 38px 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      background: #fbfcfc;
+      color: var(--soft);
+      font-size: 12px;
+    }
+
+    .note b {
+      color: var(--ink);
+    }
+
+    .source-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 8px;
+    }
+
+    .source {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 999px;
+      padding: 4px 8px;
+      color: var(--soft);
+      font-size: 11px;
+    }
+
+    @media (max-width: 920px) {
+      .top,
+      .layout,
+      .note {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .value-grid,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: 100%;
+        margin: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .top,
+      main,
+      aside,
+      .note {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .identity {
+        display: block;
+      }
+
+      .mark {
+        margin-bottom: 14px;
+      }
+
+      .job {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .project-head,
+      .direction-title,
+      .contact div {
+        display: block;
+      }
+
+      .project .tag,
+      .score {
+        display: inline-block;
+        margin-top: 6px;
+      }
+
+    }
+
+    @media print {
+      html,
+      body {
+        background: white;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        box-shadow: none;
+      }
+
+      a {
+        color: var(--ink);
+      }
+
+      .top,
+      main,
+      aside,
+      .note {
+        break-inside: avoid;
+      }
+
+      .project,
+      .direction-item,
+      .job,
+      .value {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header class="top">
+      <div>
+        <div class="identity">
+          <div class="mark" aria-label="NERO mark">NC</div>
+          <div>
+            <h1>Nero(Yi) Chen</h1>
+            <div class="role">投资银行业务总监 | Capital Markets, Disclosure Systems, AI Industry Research</div>
+            <div class="motto">温而厉，威而不猛，恭而安。</div>
+          </div>
+        </div>
+        <div class="chips" aria-label="career positioning">
+          <span class="chip primary">IPO / NEEQ 披露与问询</span>
+          <span class="chip primary">业财数据与证据链产品</span>
+          <span class="chip">AI / 半导体产业研究</span>
+          <span class="chip">1-month CLI + Codex build sprint</span>
+          <span class="chip">Python / SQL / HTML-only 输出</span>
+        </div>
+      </div>
+      <div class="contact" aria-label="contact and profile facts">
+        <div><b>Current</b><span>国金证券 · 投资银行业务总监</span></div>
+        <div><b>Location</b><span>Shanghai, China · Hybrid open</span></div>
+        <div><b>LinkedIn</b><span><a href="https://www.linkedin.com/in/frech/">linkedin.com/in/frech</a></span></div>
+        <div><b>Languages</b><span>Chinese native · English full professional</span></div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <main>
+        <section>
+          <h2>Profile</h2>
+          <p class="summary">
+            国金证券投行条线 6 年 10 个月经历，覆盖香港主板、科创板、创业板 IPO 申报及核查、小公募承揽等资本市场场景。差异化优势不是单纯“会做项目”或“会写代码”，而是把 <strong>监管问题、财务口径、证据链、数据治理和 AI 研究资产</strong> 转成可复核、可交付、可持续维护的系统。近期用 1 个月借助 CLI 与 Codex 工具，以 vibe coding 方式完成 Hermes、Loki、NERO Design Team、AIpha 四套系统级原型/工具链，适合投向资本市场数字化、投行 AI 产品、披露/尽调数据治理、AI 与半导体产业研究产品等交叉岗位。
+          </p>
+        </section>
+
+        <section>
+          <h2>Value Proposition</h2>
+          <div class="value-grid">
+            <div class="value">
+              <b>从监管问题到证据闭环</b>
+              <span>能把问询、披露差异、底稿目录、证据来源和质量门拆成可检查 workflow，而不是停留在文案层。</span>
+            </div>
+            <div class="value">
+              <b>从业财数据到可审计产品</b>
+              <span>熟悉 Gold/M2、Shared Evidence、Fact / Feature / Evaluation Ledger 等分层，把事实源权威和输出边界做清楚。</span>
+            </div>
+            <div class="value">
+              <b>从产业研究到结构化资产</b>
+              <span>长期跟踪 AI 与半导体链，把海外事实、Serenity 线索、A 股映射、行情特征和后验评估沉淀为私有研究资产。</span>
+            </div>
+            <div class="value">
+              <b>从输出形态到品牌级交付</b>
+              <span>可独立设计 HTML-only 研究页、审阅报告、工作底稿和投研输出系统，重视排版、来源、口径和可追溯性。</span>
+            </div>
+            <div class="value">
+              <b>从 AI 工具到系统级交付</b>
+              <span>1 个月内借助 CLI、Codex 和本地工作流完成多套系统原型，体现 AI-native execution、快速架构判断和持续验证能力。</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Experience</h2>
+          <div class="timeline">
+            <div class="job">
+              <div class="period">Nov 2024 - Present<br>1 yr 8 mos</div>
+              <div>
+                <h3>Boutique Bank Director · 国金证券</h3>
+                <div class="meta">Shanghai, China · Investment Banking</div>
+                <ul>
+                  <li><strong>定位：</strong>从传统投行业务执行升级为资本市场问题总控，重点在项目申报、核查、披露质量、问询回复和跨材料口径一致性。</li>
+                  <li><strong>可迁移价值：</strong>适合承担“投行数字化产品负责人 / 资本市场 AI 解决方案专家 / 披露数据治理负责人”类岗位。</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="job">
+              <div class="period">Aug 2023 - Nov 2024<br>1 yr 4 mos</div>
+              <div>
+                <h3>Investment Banking Vice President · 国金证券</h3>
+                <div class="meta">Pudong, Shanghai · On-site</div>
+                <ul>
+                  <li>推进 A 股 IPO 和资本市场项目的申报、核查、材料组织与内部协调，积累监管问法、财务核验和项目推进经验。</li>
+                  <li>形成以证据、口径、工作底稿和流程门禁为核心的投行项目管理方法，可迁移到合规科技与尽调自动化场景。</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="job">
+              <div class="period">Apr 2021 - Aug 2023<br>2 yrs 5 mos</div>
+              <div>
+                <h3>Investment Banking Associate · 国金证券</h3>
+                <div class="meta">Pudong, Shanghai</div>
+                <ul>
+                  <li>参与某产业互联网企业创业板 IPO 申报及核查工作，覆盖业务、财务、法律和申报材料支持。</li>
+                  <li>参与某城投公司小公募联席承揽，理解企业融资、承揽和资本市场发行链路。</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="job">
+              <div class="period">Sep 2019 - Mar 2021<br>1 yr 7 mos</div>
+              <div>
+                <h3>Investment Banking Intern · 国金证券</h3>
+                <div class="meta">Shanghai, China</div>
+                <ul>
+                  <li>参与香港主板、科创板、创业板 IPO 申报及核查工作，建立多市场 IPO 文档、核查和材料协同经验。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Selected Build Portfolio</h2>
+          <div class="portfolio">
+            <div class="project">
+              <div class="project-head">
+                <h3>Hermes System - IPO/NEEQ 业财披露与证据工作台</h3>
+                <span class="tag">CLI + Codex sprint</span>
+              </div>
+              <p>面向 IPO/NEEQ 的垂直业务 harness，覆盖披露审阅、问询回复、尽调底稿、银行流水核查、Shared Evidence、质量门和 Codex 协作边界。核心价值是把“能读到的数据”变成“可作为正式事实源的数据”。</p>
+              <div class="metrics">
+                <div class="metric"><b>719</b><span>tracked Python files</span></div>
+                <div class="metric"><b>134,724</b><span>tracked Python LOC</span></div>
+                <div class="metric"><b>12</b><span>workflow nodes</span></div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-head">
+                <h3>AIpha - AI 与半导体产业链研究资产系统</h3>
+                <span class="tag">CLI + Codex sprint</span>
+              </div>
+              <p>把海外产业事实、Serenity 推文资产、A 股产业链映射、本地行情事实、特征计算和后验评估沉淀为可查询、可复算、可审计的私有研究资产。强调 leaf_segment、来源等级、验证点和失效条件。</p>
+              <div class="metrics">
+                <div class="metric"><b>202,466</b><span>A-share OHLCV rows</span></div>
+                <div class="metric"><b>5,857</b><span>Serenity tweets</span></div>
+                <div class="metric"><b>329</b><span>A-share mapping rows</span></div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-head">
+                <h3>Loki - A 股投研投委会与投资监控系统</h3>
+                <span class="tag">CLI + Codex sprint</span>
+              </div>
+              <p>个人增强型 A 股投研投委会系统，覆盖日度盘面沉淀、盘中风险提醒、周度投委会、月度战略审计、专家群分工和长期投研记忆。简历中只作为系统设计与工作流能力展示，不构成投资建议。</p>
+              <div class="metrics">
+                <div class="metric"><b>462</b><span>repo files snapshot</span></div>
+                <div class="metric"><b>62,914</b><span>approx. Python LOC</span></div>
+                <div class="metric"><b>12</b><span>menu workflows</span></div>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="project-head">
+                <h3>NERO Design Team - Research Output Design System</h3>
+                <span class="tag">CLI + Codex sprint</span>
+              </div>
+              <p>沉淀面向投行、AI 产业研究和内部分析工具的设计规则、token、可视化 QA 与 HTML/PPT 输出规范。输出强调信息密度、来源可追溯、中文排版和品牌边界。</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside>
+        <section class="side-block">
+          <h2>Best-Fit Moves</h2>
+          <div class="direction">
+            <div class="direction-item">
+              <div class="direction-title"><h3>投行 AI / 金融数据产品负责人</h3><span class="score">9.2</span></div>
+              <div class="bar"><span style="width:92%"></span></div>
+              <p>把投行业务理解、证据链、CLI/Codex 开发能力和数据产品能力叠加，进入券商/金融科技/咨询公司的 AI 生产力产品线。</p>
+            </div>
+            <div class="direction-item">
+              <div class="direction-title"><h3>资本市场披露与尽调数字化咨询</h3><span class="score">8.8</span></div>
+              <div class="bar"><span style="width:88%"></span></div>
+              <p>面向 IPO、NEEQ、债券和上市公司治理，做披露质量、问询回复、底稿和证据库解决方案。</p>
+            </div>
+            <div class="direction-item">
+              <div class="direction-title"><h3>AI / 半导体产业研究产品</h3><span class="score">8.3</span></div>
+              <div class="bar"><span style="width:83%"></span></div>
+              <p>以 AIpha 和 Serenity Lens 为样板，切入买方研究中台、产业研究平台或科技主题策略产品。</p>
+            </div>
+            <div class="direction-item">
+              <div class="direction-title"><h3>纯传统投行业务平移</h3><span class="score">7.0</span></div>
+              <div class="bar"><span style="width:70%"></span></div>
+              <p>可行但不应作为主线。它会低估你的系统化、AI 和数据产品杠杆，只适合作为更高平台或更好项目资源的备选。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="side-block">
+          <h2>Core Skills</h2>
+          <div class="skill-list">
+            <span class="skill">IPO verification</span>
+            <span class="skill">Disclosure review</span>
+            <span class="skill">Inquiry response workflow</span>
+            <span class="skill">Financial tie-out</span>
+            <span class="skill">Evidence traceability</span>
+            <span class="skill">Due diligence workpapers</span>
+            <span class="skill">Python</span>
+            <span class="skill">SQL / SQLite / DuckDB</span>
+            <span class="skill">Streamlit</span>
+            <span class="skill">HTML / CSS</span>
+            <span class="skill">Data pipeline QA</span>
+            <span class="skill">AI semiconductor research</span>
+            <span class="skill">Bilingual communication</span>
+          </div>
+        </section>
+
+        <section class="side-block">
+          <h2>Education</h2>
+          <div class="education">
+            <p><b>Shanghai University of International Business and Economics</b></p>
+            <p>Master of Finance, General · 2018 - 2021</p>
+            <p>GPA 3.82/4.00 · 专业第一</p>
+            <p>全国挑战杯学术竞赛三等奖；第三届研究生大会学生代表；优秀毕业论文</p>
+          </div>
+        </section>
+
+        <section class="side-block">
+          <h2>Positioning Note</h2>
+          <p>对外叙事建议：不要只写“投行项目经验 + Office”。核心卖点应改为“资本市场专家，能把披露、业财和证据问题产品化”。</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="note">
+      <div>
+        <b>Evidence boundary</b>
+        <p>LinkedIn 字段来自 2026-06-11 你提供的 Chrome 视图；未登录公开抓取返回 LinkedIn authwall，因此不把公开爬取结果当事实。Hermes、Loki、AIpha 和设计系统内容来自本机顶层文档、设计团队规则、会话记忆摘要和你的补充说明。客户名称、敏感项目细节已脱敏。</p>
+        <div class="source-list">
+          <span class="source">LinkedIn appshot</span>
+          <span class="source">Hermes local docs</span>
+          <span class="source">Loki local docs</span>
+          <span class="source">AIpha local docs</span>
+          <span class="source">NERO Design tokens</span>
+          <span class="source">Codex memory registry</span>
+          <span class="source">User-provided build timeline</span>
+        </div>
+      </div>
+      <div>
+        <b>Fields to confirm before external use</b>
+        <p>建议补充正式邮箱、手机号、是否公开“保荐代表人/资格”字样、是否可公开 Hermes / Loki / AIpha 项目名称、目标岗位英文 title，以及是否保留当前 LinkedIn 的“Open to work Shanghai Hybrid”。</p>
+      </div>
+    </footer>
+  </article>
+
+</body>
+</html>
