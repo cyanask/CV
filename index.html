@@ -327,6 +327,126 @@
       line-height: 1.35;
     }
 
+    .fit-navigator {
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(31, 78, 95, 0.07), rgba(184, 138, 61, 0.07)),
+        #fbfcfc;
+      padding: 14px;
+    }
+
+    .fit-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .fit-tab {
+      min-height: 34px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--text);
+      font: 800 12px/1.2 var(--font);
+      cursor: pointer;
+    }
+
+    .fit-tab:hover {
+      border-color: rgba(31, 78, 95, 0.38);
+      color: var(--brand);
+    }
+
+    .fit-tab:focus-visible {
+      outline: 3px solid rgba(184, 138, 61, 0.32);
+      outline-offset: 2px;
+    }
+
+    .fit-tab[aria-selected="true"] {
+      border-color: var(--brand);
+      background: var(--brand);
+      color: #fff;
+      box-shadow: inset 0 -3px 0 var(--accent);
+    }
+
+    .fit-panel {
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .fit-panel[hidden] {
+      display: none;
+    }
+
+    .fit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .fit-card {
+      min-height: 116px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 11px 12px;
+    }
+
+    .fit-card-label {
+      display: block;
+      color: var(--brand);
+      font: 800 10px/1.2 var(--mono);
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .fit-card p {
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.48;
+    }
+
+    .fit-bars {
+      display: grid;
+      gap: 7px;
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-left: 3px solid var(--accent);
+      background: rgba(255, 255, 255, 0.72);
+    }
+
+    .fit-bar {
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr) 34px;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .fit-bar span {
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .fit-bar-track {
+      height: 8px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+
+    .fit-bar-track i {
+      display: block;
+      width: var(--value);
+      height: 100%;
+      background: linear-gradient(90deg, var(--brand), var(--accent));
+    }
+
+    .fit-bar b {
+      color: var(--brand);
+      font: 800 12px/1.1 var(--mono);
+      text-align: right;
+    }
+
     .proof-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -805,6 +925,8 @@
       }
 
       .target-strip,
+      .fit-tabs,
+      .fit-grid,
       .proof-grid,
       .signal-grid,
       .project,
@@ -860,6 +982,10 @@
       .tenure {
         text-align: left;
         white-space: normal;
+      }
+
+      .fit-bar {
+        grid-template-columns: 82px minmax(0, 1fr) 32px;
       }
 
     }
@@ -926,12 +1052,51 @@
 
     <div class="body">
       <main>
-        <section>
-          <h2>目标方向</h2>
-          <div class="target-strip">
-            <div class="target"><b>人工智能战略 / 资本市场</b><span>公司战略、融资叙事、商业化和资本市场接口。</span></div>
-            <div class="target"><b>人工智能产业投研</b><span>产业链研究、资产映射和投研数据产品。</span></div>
-            <div class="target"><b>人工智能解决方案</b><span>金融、投研、合规等高证据密度流程落地。</span></div>
+        <section class="fit-navigator" data-fit-navigator>
+          <h2>方向匹配导航</h2>
+          <div class="fit-tabs" role="tablist" aria-label="方向匹配">
+            <button class="fit-tab" id="zh-fit-tab-strategy" type="button" role="tab" aria-selected="true" aria-controls="zh-fit-panel-strategy" data-fit-tab="strategy">战略</button>
+            <button class="fit-tab" id="zh-fit-tab-research" type="button" role="tab" aria-selected="false" aria-controls="zh-fit-panel-research" data-fit-tab="research">投研</button>
+            <button class="fit-tab" id="zh-fit-tab-solutions" type="button" role="tab" aria-selected="false" aria-controls="zh-fit-panel-solutions" data-fit-tab="solutions">解决方案</button>
+          </div>
+
+          <div class="fit-panel" id="zh-fit-panel-strategy" role="tabpanel" aria-labelledby="zh-fit-tab-strategy" data-fit-panel="strategy">
+            <div class="fit-grid">
+              <div class="fit-card"><span class="fit-card-label">适配问题</span><p>人工智能公司如何把产业逻辑、融资叙事和商业化路径压成可执行战略。</p></div>
+              <div class="fit-card"><span class="fit-card-label">证据基础</span><p>创业板上市核心执行、问询回复、交易所沟通文件、资本市场叙事。</p></div>
+              <div class="fit-card"><span class="fit-card-label">可交付物</span><p>战略备忘录、资本市场叙事框架、商业化优先级、董事会或融资材料。</p></div>
+            </div>
+            <div class="fit-bars" aria-label="战略方向能力权重">
+              <div class="fit-bar" style="--value: 92%;"><span>资本市场</span><div class="fit-bar-track"><i></i></div><b>92</b></div>
+              <div class="fit-bar" style="--value: 82%;"><span>产业研究</span><div class="fit-bar-track"><i></i></div><b>82</b></div>
+              <div class="fit-bar" style="--value: 76%;"><span>系统交付</span><div class="fit-bar-track"><i></i></div><b>76</b></div>
+            </div>
+          </div>
+
+          <div class="fit-panel" id="zh-fit-panel-research" role="tabpanel" aria-labelledby="zh-fit-tab-research" data-fit-panel="research" hidden>
+            <div class="fit-grid">
+              <div class="fit-card"><span class="fit-card-label">适配问题</span><p>如何把人工智能、半导体事实、标的映射和后验验证沉淀为投研资产。</p></div>
+              <div class="fit-card"><span class="fit-card-label">证据基础</span><p>AIpha、Loki、Serenity 资产、A 股映射、行情特征、研究输出。</p></div>
+              <div class="fit-card"><span class="fit-card-label">可交付物</span><p>产业链图谱、研究数据库、主题雷达、投资研究简报和复盘框架。</p></div>
+            </div>
+            <div class="fit-bars" aria-label="投研方向能力权重">
+              <div class="fit-bar" style="--value: 94%;"><span>产业研究</span><div class="fit-bar-track"><i></i></div><b>94</b></div>
+              <div class="fit-bar" style="--value: 88%;"><span>数据资产</span><div class="fit-bar-track"><i></i></div><b>88</b></div>
+              <div class="fit-bar" style="--value: 78%;"><span>资本市场</span><div class="fit-bar-track"><i></i></div><b>78</b></div>
+            </div>
+          </div>
+
+          <div class="fit-panel" id="zh-fit-panel-solutions" role="tabpanel" aria-labelledby="zh-fit-tab-solutions" data-fit-panel="solutions" hidden>
+            <div class="fit-grid">
+              <div class="fit-card"><span class="fit-card-label">适配问题</span><p>如何把高证据密度的金融、投研、合规工作流产品化并形成可复核交付。</p></div>
+              <div class="fit-card"><span class="fit-card-label">证据基础</span><p>Hermes、NERO 设计团队、证据结构、智能体闭环、浏览器质检。</p></div>
+              <div class="fit-card"><span class="fit-card-label">可交付物</span><p>客户问题拆解、方案原型、工作流交付、质量门和复核体系。</p></div>
+            </div>
+            <div class="fit-bars" aria-label="解决方案方向能力权重">
+              <div class="fit-bar" style="--value: 92%;"><span>系统交付</span><div class="fit-bar-track"><i></i></div><b>92</b></div>
+              <div class="fit-bar" style="--value: 90%;"><span>证据结构</span><div class="fit-bar-track"><i></i></div><b>90</b></div>
+              <div class="fit-bar" style="--value: 80%;"><span>客户沟通</span><div class="fit-bar-track"><i></i></div><b>80</b></div>
+            </div>
           </div>
         </section>
 
@@ -1192,11 +1357,14 @@
         </section>
 
         <section class="side-block">
-          <h2>匹配场景</h2>
-          <div class="fit-list">
-            <p><strong>人工智能战略</strong><br>把产业逻辑、资本市场叙事和商业化路径翻译成公司战略。</p>
-            <p><strong>产业投研</strong><br>人工智能 / 半导体产业链事实、映射、特征和后验验证。</p>
-            <p><strong>解决方案</strong><br>高证据密度流程的客户问题拆解、系统方案和交付闭环。</p>
+          <h2>求职偏好</h2>
+          <div class="skill-tags">
+            <span class="tag primary">人工智能公司优先</span>
+            <span class="tag primary">战略 / 投研优先</span>
+            <span class="tag">上海 base</span>
+            <span class="tag">远程开放</span>
+            <span class="tag">海外机会开放</span>
+            <span class="tag">解决方案可转</span>
           </div>
         </section>
       </aside>
@@ -1239,12 +1407,51 @@
 
     <div class="body">
       <main>
-        <section>
-          <h2>Target Roles</h2>
-          <div class="target-strip">
-            <div class="target"><b>AI Strategy / Capital Markets</b><span>Company strategy, financing narrative, commercialization and capital markets interface.</span></div>
-            <div class="target"><b>AI Investment Research</b><span>AI and semiconductor industry research, asset mapping and research data products.</span></div>
-            <div class="target"><b>AI Solutions</b><span>Evidence-heavy workflows for finance, research and compliance scenarios.</span></div>
+        <section class="fit-navigator" data-fit-navigator>
+          <h2>Role Fit Navigator</h2>
+          <div class="fit-tabs" role="tablist" aria-label="Role fit">
+            <button class="fit-tab" id="en-fit-tab-strategy" type="button" role="tab" aria-selected="true" aria-controls="en-fit-panel-strategy" data-fit-tab="strategy">Strategy</button>
+            <button class="fit-tab" id="en-fit-tab-research" type="button" role="tab" aria-selected="false" aria-controls="en-fit-panel-research" data-fit-tab="research">Research</button>
+            <button class="fit-tab" id="en-fit-tab-solutions" type="button" role="tab" aria-selected="false" aria-controls="en-fit-panel-solutions" data-fit-tab="solutions">Solutions</button>
+          </div>
+
+          <div class="fit-panel" id="en-fit-panel-strategy" role="tabpanel" aria-labelledby="en-fit-tab-strategy" data-fit-panel="strategy">
+            <div class="fit-grid">
+              <div class="fit-card"><span class="fit-card-label">Problem Fit</span><p>Help AI companies turn industry logic, financing narrative and commercialization paths into executable strategy.</p></div>
+              <div class="fit-card"><span class="fit-card-label">Evidence Base</span><p>Core GEM IPO execution, inquiry responses, exchange communication materials and capital markets narrative.</p></div>
+              <div class="fit-card"><span class="fit-card-label">Outputs</span><p>Strategy memos, capital markets narrative, commercialization priorities, board or financing materials.</p></div>
+            </div>
+            <div class="fit-bars" aria-label="Strategy fit weights">
+              <div class="fit-bar" style="--value: 92%;"><span>Markets</span><div class="fit-bar-track"><i></i></div><b>92</b></div>
+              <div class="fit-bar" style="--value: 82%;"><span>Industry</span><div class="fit-bar-track"><i></i></div><b>82</b></div>
+              <div class="fit-bar" style="--value: 76%;"><span>Systems</span><div class="fit-bar-track"><i></i></div><b>76</b></div>
+            </div>
+          </div>
+
+          <div class="fit-panel" id="en-fit-panel-research" role="tabpanel" aria-labelledby="en-fit-tab-research" data-fit-panel="research" hidden>
+            <div class="fit-grid">
+              <div class="fit-card"><span class="fit-card-label">Problem Fit</span><p>Convert AI and semiconductor facts, ticker mapping and ex-post validation into durable research assets.</p></div>
+              <div class="fit-card"><span class="fit-card-label">Evidence Base</span><p>AIpha, Loki, Serenity assets, A-share mapping, market features and research outputs.</p></div>
+              <div class="fit-card"><span class="fit-card-label">Outputs</span><p>Industry chain maps, research databases, theme radar, investment research briefs and review loops.</p></div>
+            </div>
+            <div class="fit-bars" aria-label="Research fit weights">
+              <div class="fit-bar" style="--value: 94%;"><span>Industry</span><div class="fit-bar-track"><i></i></div><b>94</b></div>
+              <div class="fit-bar" style="--value: 88%;"><span>Data</span><div class="fit-bar-track"><i></i></div><b>88</b></div>
+              <div class="fit-bar" style="--value: 78%;"><span>Markets</span><div class="fit-bar-track"><i></i></div><b>78</b></div>
+            </div>
+          </div>
+
+          <div class="fit-panel" id="en-fit-panel-solutions" role="tabpanel" aria-labelledby="en-fit-tab-solutions" data-fit-panel="solutions" hidden>
+            <div class="fit-grid">
+              <div class="fit-card"><span class="fit-card-label">Problem Fit</span><p>Productize evidence-heavy finance, research and compliance workflows into reviewable delivery systems.</p></div>
+              <div class="fit-card"><span class="fit-card-label">Evidence Base</span><p>Hermes, NERO Design Team, evidence schema, agent loop and browser-based quality checks.</p></div>
+              <div class="fit-card"><span class="fit-card-label">Outputs</span><p>Customer problem framing, solution prototype, workflow delivery, quality gates and review system.</p></div>
+            </div>
+            <div class="fit-bars" aria-label="Solutions fit weights">
+              <div class="fit-bar" style="--value: 92%;"><span>Systems</span><div class="fit-bar-track"><i></i></div><b>92</b></div>
+              <div class="fit-bar" style="--value: 90%;"><span>Evidence</span><div class="fit-bar-track"><i></i></div><b>90</b></div>
+              <div class="fit-bar" style="--value: 80%;"><span>Client</span><div class="fit-bar-track"><i></i></div><b>80</b></div>
+            </div>
           </div>
         </section>
 
@@ -1505,11 +1712,14 @@
         </section>
 
         <section class="side-block">
-          <h2>Best Fit</h2>
-          <div class="fit-list">
-            <p><strong>AI strategy</strong><br>Translate industry logic, capital markets narrative and commercialization path into company strategy.</p>
-            <p><strong>Industry research</strong><br>AI and semiconductor supply-chain facts, mapping, features and ex-post validation.</p>
-            <p><strong>Solutions</strong><br>Customer problem decomposition, system design and delivery loop for evidence-heavy workflows.</p>
+          <h2>Search Preferences</h2>
+          <div class="skill-tags">
+            <span class="tag primary">AI companies first</span>
+            <span class="tag primary">strategy / research first</span>
+            <span class="tag">Shanghai base</span>
+            <span class="tag">remote open</span>
+            <span class="tag">overseas open</span>
+            <span class="tag">solutions transferable</span>
           </div>
         </section>
       </aside>
@@ -1541,6 +1751,39 @@
 
       button.addEventListener("click", function () {
         setLanguage(body.dataset.lang === "zh" ? "en" : "zh");
+      });
+
+      document.querySelectorAll("[data-fit-navigator]").forEach(function (navigator) {
+        const tabs = Array.from(navigator.querySelectorAll("[data-fit-tab]"));
+        const panels = Array.from(navigator.querySelectorAll("[data-fit-panel]"));
+
+        function activate(tab) {
+          const target = tab.dataset.fitTab;
+          tabs.forEach(function (item) {
+            item.setAttribute("aria-selected", item === tab ? "true" : "false");
+          });
+          panels.forEach(function (panel) {
+            panel.hidden = panel.dataset.fitPanel !== target;
+          });
+        }
+
+        tabs.forEach(function (tab, index) {
+          tab.addEventListener("click", function () {
+            activate(tab);
+          });
+          tab.addEventListener("keydown", function (event) {
+            const key = event.key;
+            if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(key)) return;
+            event.preventDefault();
+            let nextIndex = index;
+            if (key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+            if (key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+            if (key === "Home") nextIndex = 0;
+            if (key === "End") nextIndex = tabs.length - 1;
+            tabs[nextIndex].focus();
+            activate(tabs[nextIndex]);
+          });
+        });
       });
     })();
   </script>
