@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nero(Yi) Chen - AI Product Resume</title>
+  <title>Nero(Yi) Chen - AI Strategy Resume</title>
   <style>
     :root {
       --brand: #1f4e5f;
@@ -90,7 +90,11 @@
       font-size: 14px;
     }
 
-    .summary strong { color: var(--brand); }
+    .summary strong,
+    .summary .priority {
+      color: var(--brand);
+      font-weight: 800;
+    }
 
     .hero-tags {
       display: flex;
@@ -250,6 +254,42 @@
       line-height: 1.35;
     }
 
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .proof {
+      min-height: 114px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      background: #fbfcfc;
+    }
+
+    .proof b {
+      display: block;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.32;
+    }
+
+    .proof em {
+      display: block;
+      margin-top: 7px;
+      color: var(--brand);
+      font: 800 17px/1.1 var(--mono);
+      font-style: normal;
+    }
+
+    .proof span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
     .job {
       border-top: 2px solid var(--brand);
       padding-top: 14px;
@@ -322,6 +362,49 @@
       text-transform: uppercase;
     }
 
+    .mini-heading {
+      margin: 16px 0 8px;
+      color: var(--brand);
+      font: 800 11px/1.2 var(--mono);
+      text-transform: uppercase;
+    }
+
+    .deal-table {
+      display: grid;
+      border: 1px solid var(--line);
+      border-bottom: 0;
+      background: var(--paper);
+    }
+
+    .deal-row {
+      display: grid;
+      grid-template-columns: 1fr 0.72fr 1.4fr 1.35fr;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .deal-row.header {
+      background: var(--soft);
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .deal-cell {
+      min-width: 0;
+      padding: 9px 10px;
+      border-left: 1px solid var(--line);
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .deal-cell:first-child {
+      border-left: 0;
+    }
+
+    .deal-cell strong {
+      color: var(--ink);
+    }
+
     .project-list {
       display: grid;
       gap: 12px;
@@ -371,6 +454,67 @@
       color: var(--muted);
       font-size: 11px;
       line-height: 1.25;
+    }
+
+    .system-matrix {
+      display: grid;
+      gap: 14px;
+    }
+
+    .system-card {
+      border-top: 2px solid var(--brand);
+      padding-top: 12px;
+    }
+
+    .system-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 138px;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 10px;
+    }
+
+    .system-head p {
+      margin-top: 5px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .system-stat {
+      border-left: 3px solid var(--accent);
+      background: var(--soft);
+      padding: 8px 10px;
+      color: var(--brand);
+      font: 800 14px/1.25 var(--mono);
+      text-align: right;
+      overflow-wrap: anywhere;
+    }
+
+    .system-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+
+    .system-cell {
+      min-width: 0;
+      padding: 10px;
+      border-left: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .system-cell:first-child {
+      border-left: 0;
+    }
+
+    .system-cell b {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 12px;
     }
 
     .side-block + .side-block { margin-top: 24px; }
@@ -471,8 +615,45 @@
       }
 
       .target-strip,
-      .project {
+      .proof-grid,
+      .project,
+      .deal-row,
+      .system-head,
+      .system-grid {
         grid-template-columns: 1fr;
+      }
+
+      .deal-cell,
+      .system-cell {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .deal-cell:first-child,
+      .system-cell:first-child {
+        border-top: 0;
+      }
+
+      .system-stat {
+        text-align: left;
+        white-space: normal;
+      }
+
+      .deal-row.header {
+        display: none;
+      }
+
+      .deal-cell {
+        display: grid;
+        grid-template-columns: 86px minmax(0, 1fr);
+        gap: 10px;
+      }
+
+      .deal-cell::before {
+        content: attr(data-label);
+        color: var(--brand);
+        font: 800 11px/1.35 var(--mono);
+        text-transform: uppercase;
       }
 
       .job-head {
@@ -508,16 +689,16 @@
     <div class="topbar"></div>
     <header>
       <div>
-        <div class="eyebrow">Resume / AI Product & Capital Markets</div>
+        <div class="eyebrow">Resume / AI Strategy & Investment Research</div>
         <h1>Nero(Yi) Chen</h1>
-        <div class="title">Investment Banking Business Director | AI Workflow Builder | Capital Markets Product Candidate</div>
+        <div class="title">Investment Banking Business Director | AI Strategy & Investment Research Candidate | AI Workflow Builder</div>
         <p class="summary">
-          投资银行从业 <strong>6 yrs 10 mos</strong>，代表项目覆盖创业板 IPO 申报、披露核查、问询回复和业财证据链。过去 1 个月借助 CLI + Codex 搭建 Hermes、Loki、AIpha 与 NERO Design Team，把资本市场高敏知识工作产品化为可审计的 AI workflow。
+          投资银行从业 <strong>6 yrs 10 mos</strong>，代表项目覆盖创业板 IPO 申报、业务财务核查、交易所沟通文件、招股书和问询回复。目标优先级为 <span class="priority">AI 战略 / 投研</span>，其次为解决方案；base 上海，可远程，也接受海外 AI 机会。
         </p>
         <div class="hero-tags" aria-label="Candidate positioning">
-          <span class="hero-tag">Capital Markets</span>
-          <span class="hero-tag">Evidence Workflow</span>
-          <span class="hero-tag">AI Product Builder</span>
+          <span class="hero-tag">AI Strategy</span>
+          <span class="hero-tag">Investment Research</span>
+          <span class="hero-tag">Solutions</span>
         </div>
       </div>
       <div class="profile-panel">
@@ -529,7 +710,6 @@
           <div class="contact-row"><b>Tenure</b><span>Sep 2019 - Present · 6 yrs 10 mos</span></div>
           <div class="contact-row"><b>Location</b><span>Shanghai, China · Hybrid open</span></div>
           <div class="contact-row"><b>LinkedIn</b><span><a href="https://www.linkedin.com/in/frech/">linkedin.com/in/frech</a></span></div>
-          <div class="contact-row"><b>Languages</b><span>Chinese native · English full professional</span></div>
         </div>
       </div>
     </header>
@@ -539,9 +719,30 @@
         <section>
           <h2>Target Roles</h2>
           <div class="target-strip">
-            <div class="target"><b>AI Workflow Product</b><span>金融、法务、合规等企业知识工作流</span></div>
-            <div class="target"><b>Financial / Legal / Compliance AI</b><span>证据链、人审节点、质量门与交付规范</span></div>
-            <div class="target"><b>Research / Capital Markets Product</b><span>AI / 半导体 / A 股研究资产化</span></div>
+            <div class="target"><b>AI Strategy / Capital Markets</b><span>AI 公司战略、融资叙事、商业化和资本市场接口</span></div>
+            <div class="target"><b>AI Investment Research</b><span>AI / 半导体产业研究、资产映射和投研数据产品</span></div>
+            <div class="target"><b>AI Solutions</b><span>金融、投研、合规等高证据密度 workflow 落地</span></div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Proof Matrix</h2>
+          <div class="proof-grid">
+            <div class="proof">
+              <b>Capital markets execution</b>
+              <em>6 yrs 10 mos</em>
+              <span>创业板 IPO 核心执行；参与港股 IPO 承揽承销、小公募承揽。</span>
+            </div>
+            <div class="proof">
+              <b>AI systems shipped locally</b>
+              <em>4 systems</em>
+              <span>Hermes、AIpha、Loki、NERO Design Team；覆盖投行、投研、设计输出和 QA。</span>
+            </div>
+            <div class="proof">
+              <b>AI-company role fit</b>
+              <em>Strategy + Research</em>
+              <span>优先 AI 领域战略与投研；可转解决方案、战略 BD 和研究数据产品。</span>
+            </div>
           </div>
         </section>
 
@@ -560,74 +761,114 @@
               <div class="case-kicker">IPO Representative Case</div>
               <b>云汉芯城（301563）创业板 IPO</b>
               <div class="case-grid">
-                <p><strong>Public role</strong>招股说明书公开披露为项目协办人。</p>
-                <p><strong>Execution scope</strong>全程参与项目签字与申报工作，负责业务和财务板块核查。</p>
-                <p><strong>Review coverage</strong>业务模式、收入成本、客户/供应商、毛利率、期间费用、底稿证据与披露一致性。</p>
+                <p><strong>Role</strong>核心执行人员；负责业务和财务部分所有事项及常规/专项核查。</p>
+                <p><strong>Finance scope</strong>主责收入、成本、毛利率、客户和供应商核查，围绕财务真实性形成证据链。</p>
+                <p><strong>Outputs</strong>全程参与问询回复，负责业务财务问题；输出交易所沟通文件、招股书和审核问询回复。</p>
               </div>
               <a class="case-source" href="https://static.cninfo.com.cn/finalpage/2025-09-25/1224679402.PDF">Source: CNINFO prospectus</a>
             </div>
 
+            <div class="mini-heading">Representative Projects</div>
+            <div class="deal-table" role="table" aria-label="Representative capital markets projects">
+              <div class="deal-row header" role="row">
+                <div class="deal-cell" role="columnheader">Project</div>
+                <div class="deal-cell" role="columnheader">Market</div>
+                <div class="deal-cell" role="columnheader">Role</div>
+                <div class="deal-cell" role="columnheader">Deliverables</div>
+              </div>
+              <div class="deal-row" role="row">
+                <div class="deal-cell" role="cell" data-label="Project"><strong>云汉芯城</strong></div>
+                <div class="deal-cell" role="cell" data-label="Market">创业板 IPO</div>
+                <div class="deal-cell" role="cell" data-label="Role">核心执行；业务与财务主责核查，围绕财务真实性覆盖常规和专项事项。</div>
+                <div class="deal-cell" role="cell" data-label="Deliverables">交易所沟通文件、招股书、审核问询回复、底稿证据链。</div>
+              </div>
+              <div class="deal-row" role="row">
+                <div class="deal-cell" role="cell" data-label="Project"><strong>脱敏港股 IPO</strong></div>
+                <div class="deal-cell" role="cell" data-label="Market">香港主板 IPO</div>
+                <div class="deal-cell" role="cell" data-label="Role">参与承揽承销，支持项目材料、发行沟通和客户推进。</div>
+                <div class="deal-cell" role="cell" data-label="Deliverables">承揽材料、发行/承销沟通支持、项目推进记录。</div>
+              </div>
+              <div class="deal-row" role="row">
+                <div class="deal-cell" role="cell" data-label="Project"><strong>脱敏小公募</strong></div>
+                <div class="deal-cell" role="cell" data-label="Market">小公募债券</div>
+                <div class="deal-cell" role="cell" data-label="Role">参与承揽，支持发行人沟通、项目材料组织和内部推进。</div>
+                <div class="deal-cell" role="cell" data-label="Deliverables">承揽材料、发行人沟通材料、项目推进支持。</div>
+              </div>
+            </div>
+
             <ul>
-              <li><strong>资本市场执行：</strong>在国金证券投行体系内连续参与 IPO 申报核查、发行上市文件、问询回复、持续督导衔接及小公募承揽，覆盖香港主板、科创板、创业板和债券项目。</li>
+              <li><strong>资本市场执行：</strong>在国金证券投行体系内连续参与 IPO 申报核查、发行上市文件、问询回复、承揽承销和债券项目推进。</li>
               <li><strong>披露与证据链：</strong>围绕监管问题、申报材料、财务口径、底稿证据、访谈记录和内部质量要求，形成从问题拆解、资料索引到复核留痕的工作方式。</li>
               <li><strong>业财分析与核验：</strong>将业务流程、财务数据、合同/流水/底稿证据和披露文本交叉校验，关注口径一致性、来源可信度和可复核性。</li>
-              <li><strong>AI 公司可迁移能力：</strong>能把专家型知识工作拆成产品需求、数据结构、证据链、人审节点、质量门和输出规范，适合 AI 应用产品与企业 workflow 场景。</li>
+              <li><strong>AI 公司可迁移能力：</strong>能把战略问题、研究框架和专家型知识工作拆成产品需求、数据结构、证据链、人审节点、质量门和输出规范。</li>
             </ul>
           </div>
         </section>
 
         <section>
-          <h2>Selected AI Build Work</h2>
-          <div class="project-list">
-            <div class="project">
-              <div>
-                <div class="meta">CLI + Codex / 1-month sprint</div>
-                <h3>Hermes System · IPO/NEEQ disclosure and evidence workbench</h3>
-                <p>面向披露审阅、问询回复、尽调底稿、银行流水核查、Shared Evidence、质量门和 Codex 协作边界，把投行高敏流程拆为可审计工作台。</p>
+          <h2>AI Systems Evidence</h2>
+          <div class="system-matrix">
+            <div class="system-card">
+              <div class="system-head">
+                <div>
+                  <h3>Hermes System · IPO/NEEQ disclosure and evidence workbench</h3>
+                  <p>IPO 事实链、证据链、问询回复、披露一致性、底稿交付、质量门和人审边界。</p>
+                </div>
+                <div class="system-stat">720 py files<br>135k LOC</div>
               </div>
-              <div class="metrics">
-                <div class="metric"><b>12</b><span>workflow nodes</span></div>
-                <div class="metric"><b>QC</b><span>review gates</span></div>
-                <div class="metric"><b>Evidence</b><span>traceability</span></div>
-              </div>
-            </div>
-
-            <div class="project">
-              <div>
-                <div class="meta">CLI + Codex / 1-month sprint</div>
-                <h3>AIpha · AI and semiconductor research asset system</h3>
-                <p>沉淀海外事实、Serenity 推文、A 股映射、行情、特征和后验评估，把 AI 与半导体产业链研究从资讯搬运转为可查询资产。</p>
-              </div>
-              <div class="metrics">
-                <div class="metric"><b>202k</b><span>market rows</span></div>
-                <div class="metric"><b>5.9k</b><span>research notes</span></div>
-                <div class="metric"><b>329</b><span>asset mappings</span></div>
+              <div class="system-grid">
+                <div class="system-cell"><b>Scenario</b>披露审阅、问询回复、尽调底稿、银行流水核查。</div>
+                <div class="system-cell"><b>Modules</b>Gold/M2、Shared Evidence、workflow node registry、quality gates。</div>
+                <div class="system-cell"><b>Outputs</b>Word/Excel 底稿、审阅报告、manifest、freeze links。</div>
+                <div class="system-cell"><b>Governance</b>12 个业务节点；人审、事实源和模型调用边界。</div>
               </div>
             </div>
 
-            <div class="project">
-              <div>
-                <div class="meta">CLI + Codex / 1-month sprint</div>
-                <h3>Loki · A-share research committee and monitoring system</h3>
-                <p>个人增强型 A 股投研投委会系统，覆盖日度盘面、盘中风险、周度投委会、月度战略审计和长期投研记忆；仅作为系统能力展示，不构成投资建议。</p>
+            <div class="system-card">
+              <div class="system-head">
+                <div>
+                  <h3>AIpha · AI and semiconductor research asset system</h3>
+                  <p>海外 AI/半导体事实、Serenity 推文、A 股映射、行情、特征和后验评估的投研资产系统。</p>
+                </div>
+                <div class="system-stat">202k market rows<br>5.9k tweets</div>
               </div>
-              <div class="metrics">
-                <div class="metric"><b>Daily</b><span>risk board</span></div>
-                <div class="metric"><b>Weekly</b><span>committee memo</span></div>
-                <div class="metric"><b>Memory</b><span>research trail</span></div>
+              <div class="system-grid">
+                <div class="system-cell"><b>Fact layer</b>A-share Fact Store、Feature Store、Evaluation Ledger。</div>
+                <div class="system-cell"><b>Assets</b>329 条 A 股映射、132 个 leaf id、678 个 ticker profiles。</div>
+                <div class="system-cell"><b>Outputs</b>AIpha Radar、Serenity Lens、AIpha-Close HTML research package。</div>
+                <div class="system-cell"><b>Research fit</b>把 AI/半导体资讯转为可查询、可复盘、可验证资产。</div>
               </div>
             </div>
 
-            <div class="project">
-              <div>
-                <div class="meta">CLI + Codex / 1-month sprint</div>
-                <h3>NERO Design Team · Research output design system</h3>
-                <p>面向投行、AI 产业研究和内部分析工具的设计系统，沉淀 token、HTML/PPT 输出规范、视觉 QA 和专业信息密度标准。</p>
+            <div class="system-card">
+              <div class="system-head">
+                <div>
+                  <h3>Loki · A-share research committee and monitoring system</h3>
+                  <p>个人增强型 A 股投研投委会系统，覆盖日度盘面、盘中风险、周度投委会和月度战略审计。</p>
+                </div>
+                <div class="system-stat">462 files<br>12 menus</div>
               </div>
-              <div class="metrics">
-                <div class="metric"><b>HTML</b><span>deliverables</span></div>
-                <div class="metric"><b>PPT</b><span>output rules</span></div>
-                <div class="metric"><b>QA</b><span>visual gates</span></div>
+              <div class="system-grid">
+                <div class="system-cell"><b>Agents</b>盘中风险、日度复盘、周度投委会、月度战略四类 agent。</div>
+                <div class="system-cell"><b>Workflow</b>菜单化研究入口、风险提醒、投委会 memo、战略审计。</div>
+                <div class="system-cell"><b>Data layer</b>daily_k、portfolio ledger、research profiles、evidence items。</div>
+                <div class="system-cell"><b>Boundary</b>系统能力展示和个人研究辅助，不构成投资建议。</div>
+              </div>
+            </div>
+
+            <div class="system-card">
+              <div class="system-head">
+                <div>
+                  <h3>NERO Design Team · Research output design system</h3>
+                  <p>投行、AI 产业研究和内部分析工具的设计系统，沉淀视觉规则、token、模板和 QA。</p>
+                </div>
+                <div class="system-stat">154 files<br>20 source files</div>
+              </div>
+              <div class="system-grid">
+                <div class="system-cell"><b>Routes</b>frontend UI、PPT、image report、web PPT、visual audit。</div>
+                <div class="system-cell"><b>Assets</b>brand profile、tokens、case library、templates、restricted references。</div>
+                <div class="system-cell"><b>QA</b>visual QA、visual score、production check、projection typography audit。</div>
+                <div class="system-cell"><b>Value</b>让专业材料从可读变成可交付、可验证、可复用。</div>
               </div>
             </div>
           </div>
@@ -636,29 +877,42 @@
 
       <aside>
         <section class="side-block">
-          <h2>AI Positioning</h2>
+          <h2>Role Focus</h2>
           <div class="role-tags">
-            <span class="tag primary">AI application product</span>
-            <span class="tag primary">Vertical workflow owner</span>
-            <span class="tag primary">Financial intelligence product</span>
-            <span class="tag">Domain AI product builder</span>
+            <span class="tag primary">AI strategy</span>
+            <span class="tag primary">AI investment research</span>
+            <span class="tag primary">AI solutions</span>
+            <span class="tag">Shanghai base / remote open</span>
+            <span class="tag">Overseas AI opportunities open</span>
           </div>
         </section>
 
         <section class="side-block">
-          <h2>Core Skills</h2>
+          <h2>AI Stack & Delivery</h2>
           <div class="skill-tags">
-            <span class="tag">IPO verification</span>
-            <span class="tag">Disclosure review</span>
-            <span class="tag">Inquiry workflow</span>
-            <span class="tag">Due diligence</span>
-            <span class="tag">Financial tie-out</span>
-            <span class="tag">Evidence traceability</span>
-            <span class="tag">Agent workflow design</span>
+            <span class="tag">CLI + Codex workflow</span>
+            <span class="tag">Agent orchestration</span>
+            <span class="tag">Evidence schema</span>
+            <span class="tag">Review gates</span>
+            <span class="tag">HTML report rendering</span>
+            <span class="tag">Browser QA</span>
             <span class="tag">Python</span>
             <span class="tag">SQL / SQLite / DuckDB</span>
             <span class="tag">Streamlit</span>
             <span class="tag">HTML / CSS</span>
+          </div>
+        </section>
+
+        <section class="side-block">
+          <h2>Domain Skills</h2>
+          <div class="skill-tags">
+            <span class="tag">IPO verification</span>
+            <span class="tag">Financial authenticity review</span>
+            <span class="tag">Revenue / cost / gross margin</span>
+            <span class="tag">Customer / supplier diligence</span>
+            <span class="tag">Inquiry response</span>
+            <span class="tag">Evidence traceability</span>
+            <span class="tag">Capital markets narrative</span>
             <span class="tag">AI semiconductor research</span>
             <span class="tag">Bilingual communication</span>
           </div>
@@ -679,9 +933,9 @@
         <section class="side-block">
           <h2>Best Fit</h2>
           <div class="fit-list">
-            <p><strong>AI workflow products</strong><br>金融、法律、合规、投研等高证据密度场景。</p>
-            <p><strong>Hybrid operating role</strong><br>业务专家 + 产品 owner + AI agent workflow builder。</p>
-            <p><strong>Execution style</strong><br>从问题拆解、证据结构到人审质量门闭环。</p>
+            <p><strong>AI strategy</strong><br>把产业逻辑、资本市场叙事和商业化路径翻译成公司战略。</p>
+            <p><strong>Investment research</strong><br>AI / 半导体产业链事实、映射、特征和后验验证。</p>
+            <p><strong>Solutions</strong><br>高证据密度 workflow 的客户问题拆解、系统方案和交付闭环。</p>
           </div>
         </section>
       </aside>
