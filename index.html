@@ -54,7 +54,7 @@
 
     header {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 300px;
+      grid-template-columns: minmax(0, 1fr) 330px;
       gap: 28px;
       padding: 34px 42px 26px;
       border-bottom: 1px solid var(--line);
@@ -91,6 +91,40 @@
     }
 
     .summary strong { color: var(--brand); }
+
+    .profile-panel {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .visual-card {
+      position: relative;
+      margin: 0;
+      min-height: 172px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .visual-card img {
+      display: block;
+      width: 100%;
+      height: 172px;
+      object-fit: cover;
+      object-position: 74% center;
+      filter: saturate(0.92) contrast(1.02);
+    }
+
+    .visual-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.42)),
+        linear-gradient(90deg, rgba(255,255,255,0.72), rgba(255,255,255,0.04) 46%);
+      pointer-events: none;
+    }
 
     .contact {
       display: grid;
@@ -379,6 +413,19 @@
         padding: 28px 22px 22px;
       }
 
+      .profile-panel {
+        gap: 14px;
+      }
+
+      .visual-card {
+        min-height: 156px;
+      }
+
+      .visual-card img {
+        height: 156px;
+        object-position: 70% center;
+      }
+
       .contact {
         border-left: 0;
         border-top: 3px solid var(--accent);
@@ -425,6 +472,11 @@
         box-shadow: none;
       }
       a { color: var(--brand); }
+      .visual-card {
+        min-height: 120px;
+        print-color-adjust: exact;
+      }
+      .visual-card img { height: 120px; }
     }
   </style>
 </head>
@@ -440,12 +492,17 @@
           投资银行从业 <strong>6 yrs 10 mos</strong>，覆盖 IPO 申报核查、披露审阅、问询拆解、尽调底稿和业财证据链。近 1 个月借助 CLI + Codex vibe coding 搭建 Hermes、Loki、AIpha 与 NERO Design Team，把高敏知识工作拆成可复核的数据、证据和 Agent workflow。目标方向是 AI 应用产品、金融/法律/合规科技、企业知识工作流、AI/半导体研究数据产品或 AI 公司战略/资本市场岗位。
         </p>
       </div>
-      <div class="contact" aria-label="Profile facts">
-        <div class="contact-row"><b>Current</b><span>国金证券 · 投资银行业务总监</span></div>
-        <div class="contact-row"><b>Tenure</b><span>Sep 2019 - Present · 6 yrs 10 mos</span></div>
-        <div class="contact-row"><b>Location</b><span>Shanghai, China · Hybrid open</span></div>
-        <div class="contact-row"><b>LinkedIn</b><span><a href="https://www.linkedin.com/in/frech/">linkedin.com/in/frech</a></span></div>
-        <div class="contact-row"><b>Languages</b><span>Chinese native · English full professional</span></div>
+      <div class="profile-panel">
+        <figure class="visual-card" aria-label="AI workflow and capital markets visual">
+          <img src="assets/nero-ai-workflow-visual.png" alt="Abstract visual of evidence layers, data workflows and semiconductor research">
+        </figure>
+        <div class="contact" aria-label="Profile facts">
+          <div class="contact-row"><b>Current</b><span>国金证券 · 投资银行业务总监</span></div>
+          <div class="contact-row"><b>Tenure</b><span>Sep 2019 - Present · 6 yrs 10 mos</span></div>
+          <div class="contact-row"><b>Location</b><span>Shanghai, China · Hybrid open</span></div>
+          <div class="contact-row"><b>LinkedIn</b><span><a href="https://www.linkedin.com/in/frech/">linkedin.com/in/frech</a></span></div>
+          <div class="contact-row"><b>Languages</b><span>Chinese native · English full professional</span></div>
+        </div>
       </div>
     </header>
 
@@ -610,7 +667,7 @@
       </div>
       <div>
         <b>Design route</b>
-        <p>NERO Design Team · frontend-ui + visual-audit. Visual style: resume-first, restrained, evidence-aware, print-friendly.</p>
+        <p>NERO Design Team · frontend-ui + ai-image-generation + visual-audit. Image2 visual is used as non-evidence header art only; exact facts remain HTML text.</p>
       </div>
     </footer>
   </article>
