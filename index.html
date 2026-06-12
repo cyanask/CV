@@ -104,6 +104,20 @@
       border-bottom: 1px solid var(--line);
     }
 
+    header > *,
+    .body > *,
+    main,
+    aside,
+    .case-stage,
+    .case-room,
+    .profile-panel,
+    .contact,
+    .capability-portals,
+    .mobile-evidence-bar,
+    .evidence-summary-strip {
+      min-width: 0;
+    }
+
     .eyebrow {
       color: var(--brand);
       font: 700 12px/1.2 var(--mono);
@@ -125,6 +139,11 @@
       font-size: 18px;
       font-weight: 750;
       line-height: 1.38;
+      overflow-wrap: anywhere;
+    }
+
+    .title-extra {
+      white-space: nowrap;
     }
 
     .summary {
@@ -132,6 +151,7 @@
       max-width: 720px;
       color: var(--text);
       font-size: 14px;
+      overflow-wrap: anywhere;
     }
 
     .summary strong,
@@ -145,6 +165,10 @@
       flex-wrap: wrap;
       gap: 8px;
       margin-top: 12px;
+    }
+
+    .mobile-evidence-bar {
+      display: none;
     }
 
     .hero-tag {
@@ -366,6 +390,7 @@
       padding: 15px 16px;
       text-align: left;
       cursor: pointer;
+      overflow-wrap: anywhere;
       transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
     }
 
@@ -432,6 +457,19 @@
       font: 800 10px/1.2 var(--mono);
       text-transform: uppercase;
       white-space: nowrap;
+    }
+
+    .portal-action {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      margin-top: 12px;
+      border: 1px solid rgba(31, 78, 95, 0.22);
+      background: #ffffff;
+      color: var(--brand);
+      padding: 5px 8px;
+      font: 900 10px/1.2 var(--mono);
+      text-transform: uppercase;
     }
 
     .case-room {
@@ -742,6 +780,10 @@
       max-width: 210px;
     }
 
+    .visual-module-summary {
+      display: none;
+    }
+
     .audit-flow {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -832,6 +874,10 @@
     .map-signal {
       color: var(--ink);
       background: #fbfcfc;
+    }
+
+    .ai-system-cards {
+      display: none;
     }
 
     .evidence-boundary {
@@ -1580,6 +1626,23 @@
 
     .side-block + .side-block { margin-top: 24px; }
 
+    .side-details {
+      display: block;
+    }
+
+    .side-details > summary {
+      list-style: none;
+      cursor: default;
+    }
+
+    .side-details > summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .side-details > summary h2 {
+      margin-bottom: 12px;
+    }
+
     .role-tags,
     .skill-tags {
       display: flex;
@@ -1843,6 +1906,11 @@
         gap: 16px;
       }
 
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
       h1 {
         font-size: 42px;
       }
@@ -1851,6 +1919,11 @@
         margin-top: 8px;
         font-size: 16px;
         line-height: 1.32;
+        word-break: break-word;
+      }
+
+      .title-extra {
+        display: none;
       }
 
       .summary {
@@ -1864,9 +1937,42 @@
         margin-top: 10px;
       }
 
+      .mobile-evidence-bar {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+        margin-top: 10px;
+      }
+
+      .mobile-evidence-card {
+        min-height: 48px;
+        border: 1px solid var(--line);
+        border-left: 3px solid var(--accent);
+        background: #fbfcfc;
+        padding: 7px 8px;
+      }
+
+      .mobile-evidence-card b {
+        display: block;
+        color: var(--brand);
+        font: 900 11px/1.1 var(--mono);
+      }
+
+      .mobile-evidence-card span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 10px;
+        line-height: 1.22;
+      }
+
       .hero-tag {
         padding: 5px 7px;
         font-size: 10px;
+      }
+
+      .signal-grid {
+        display: none;
       }
 
       .signal-grid {
@@ -1893,7 +1999,7 @@
       }
 
       .visual-card {
-        min-height: 96px;
+        display: none;
       }
 
       .visual-card img {
@@ -1901,14 +2007,34 @@
       }
 
       .contact {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 7px;
         padding-top: 10px;
+        min-width: 0;
       }
 
       .contact-row {
-        grid-template-columns: 64px minmax(0, 1fr);
-        gap: 8px;
-        padding-bottom: 7px;
+        display: block;
+        min-width: 0;
+        min-height: 50px;
+        border: 1px solid var(--line);
+        background: #fbfcfc;
+        padding: 7px 8px;
+        overflow-wrap: anywhere;
+      }
+
+      .contact-row b {
+        display: block;
+        color: var(--brand);
+        font-size: 11px;
+      }
+
+      .contact-row span {
+        display: block;
+        margin-top: 3px;
+        font-size: 11px;
+        line-height: 1.25;
       }
 
       main,
@@ -1964,14 +2090,14 @@
       }
 
       .capability-portals {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 6px;
         margin-bottom: 10px;
       }
 
       .portal-card {
         min-height: 0;
-        padding: 11px 9px;
+        padding: 11px 10px;
         border-top-width: 3px;
       }
 
@@ -2000,6 +2126,16 @@
         padding: 4px 5px;
         font-size: 8.5px;
         white-space: normal;
+      }
+
+      .portal-action {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        min-height: 28px;
+        margin-top: 9px;
+        padding: 5px 6px;
+        font-size: 9px;
       }
 
       .case-room {
@@ -2101,6 +2237,46 @@
         margin: 10px 0;
       }
 
+      .architecture-module {
+        padding: 0;
+        background: #ffffff;
+      }
+
+      .architecture-module .visual-module-head {
+        display: none;
+      }
+
+      .visual-module-summary {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 10px;
+        align-items: center;
+        list-style: none;
+        cursor: pointer;
+        padding: 10px;
+        color: var(--brand);
+        font: 900 12px/1.2 var(--mono);
+        text-transform: uppercase;
+      }
+
+      .visual-module-summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .visual-module-summary::after {
+        content: "+";
+        color: var(--accent);
+        font-weight: 900;
+      }
+
+      .architecture-module[open] .visual-module-summary::after {
+        content: "-";
+      }
+
+      .architecture-content {
+        padding: 0 10px 10px;
+      }
+
       .flow-step {
         min-height: 0;
         padding: 9px 10px;
@@ -2117,6 +2293,48 @@
         padding: 8px 10px 10px;
       }
 
+      .ai-system-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6px;
+        margin: 0 0 10px;
+      }
+
+      .ai-system-card {
+        min-height: 58px;
+        min-width: 0;
+        border: 1px solid var(--line);
+        border-left: 3px solid rgba(184, 138, 61, 0.72);
+        background: #fbfcfc;
+        color: var(--text);
+        padding: 8px 9px;
+        text-align: left;
+        cursor: pointer;
+        overflow-wrap: anywhere;
+      }
+
+      .ai-system-card[aria-pressed="true"] {
+        border-color: rgba(31, 78, 95, 0.46);
+        border-left-color: var(--brand);
+        background: #ffffff;
+        box-shadow: inset 0 -2px 0 var(--accent);
+      }
+
+      .ai-system-card b {
+        display: block;
+        color: var(--brand);
+        font: 900 11px/1.15 var(--mono);
+      }
+
+      .ai-system-card span {
+        display: block;
+        margin-top: 4px;
+        color: var(--ink);
+        font-size: 11px;
+        font-weight: 800;
+        line-height: 1.22;
+      }
+
       aside {
         display: grid;
         gap: 14px;
@@ -2129,6 +2347,34 @@
       .side-block {
         padding-top: 12px;
         border-top: 1px solid var(--line);
+      }
+
+      .side-details {
+        padding: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .side-details > summary {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 8px;
+        align-items: center;
+        min-height: 38px;
+        cursor: pointer;
+      }
+
+      .side-details > summary::after {
+        content: "+";
+        color: var(--accent);
+        font: 900 14px/1 var(--mono);
+      }
+
+      .side-details[open] > summary::after {
+        content: "-";
+      }
+
+      .side-details > summary h2 {
+        margin: 0;
       }
 
       .side-block:first-child {
@@ -2198,7 +2444,7 @@
       <div>
         <div class="eyebrow">简历 / 人工智能战略与投研</div>
         <h1>陈祎</h1>
-        <div class="title">投资银行业务总监 | 人工智能战略与投研候选人 | 智能体工作流构建者</div>
+        <div class="title">投资银行业务总监 | 人工智能战略与投研候选人 <span class="title-extra">| 智能体工作流构建者</span></div>
         <p class="summary">
           投资银行从业 <strong>6 年 10 个月</strong>，代表项目覆盖创业板上市申报、业务财务核查、交易所沟通文件、招股书和问询回复。目标优先级为 <span class="priority">人工智能战略 / 产业投研</span>，其次为解决方案；base 上海，可远程，也接受海外人工智能机会。
         </p>
@@ -2206,6 +2452,11 @@
           <span class="hero-tag">人工智能战略</span>
           <span class="hero-tag">产业投研</span>
           <span class="hero-tag">解决方案</span>
+        </div>
+        <div class="mobile-evidence-bar" aria-label="移动端核心证据">
+          <div class="mobile-evidence-card"><b>6Y10M</b><span>投行执行</span></div>
+          <div class="mobile-evidence-card"><b>301563</b><span>创业板 IPO</span></div>
+          <div class="mobile-evidence-card"><b>4 AI</b><span>AI 系统</span></div>
         </div>
         <div class="signal-grid" aria-label="能力桥接">
           <div class="signal-card"><b>业务判断</b><span>财务真实性、商业合理性、审核关注点。</span></div>
@@ -2219,7 +2470,7 @@
         </figure>
         <div class="contact" aria-label="个人信息">
           <div class="contact-row"><b>当前</b><span>国金证券 · 投资银行业务总监</span></div>
-          <div class="contact-row"><b>年限</b><span>2019 年 9 月至今 · 6 年 10 个月</span></div>
+          <div class="contact-row"><b>年限</b><span>2019.09 至今 · 6年10月</span></div>
           <div class="contact-row"><b>地点</b><span>上海 · 可接受远程</span></div>
           <div class="contact-row"><b>主页</b><span><a href="https://www.linkedin.com/in/frech/">linkedin.com/in/frech</a></span></div>
         </div>
@@ -2242,12 +2493,14 @@
               <span class="portal-title">云汉芯城 IPO 项目经历</span>
               <span class="portal-text">电子元器件 B2B 销售及 PCBA 业务创业板 IPO，用来证明复杂业务解释、业财核查和监管交付能力。</span>
               <span class="portal-metrics"><span>301563</span><span>B2B / PCBA</span><span>长周期审核</span></span>
+              <span class="portal-action">查看案例 <span>→</span></span>
             </button>
             <button class="portal-card" type="button" role="tab" aria-selected="false" data-case-tab="ai">
               <span class="portal-kicker">1 个月构建 4 个本地 AI 系统</span>
               <span class="portal-title">AI 工作流构建</span>
               <span class="portal-text">一个 1 个月本地系统组合，覆盖 IPO 证据工作台、AI/半导体研究资产、A 股投委会和设计质检体系。</span>
               <span class="portal-metrics"><span>4 个系统</span><span>数据账本</span><span>质量门</span></span>
+              <span class="portal-action">查看项目 <span>→</span></span>
             </button>
           </div>
 
@@ -2320,44 +2573,54 @@
               <div class="ai-stat">4 个本地系统<br>证据 / 数据 / 输出闭环</div>
             </div>
 
-            <div class="visual-module" aria-label="AI 本地系统架构图">
-              <div class="visual-module-head">
-                <h4>AI 本地系统架构图</h4>
-                <div class="visual-source-note">Unit: system modules · Source: local readonly scan</div>
-              </div>
-              <div class="architecture-map">
-                <div class="map-cell map-head">System</div>
-                <div class="map-cell map-head">Evidence</div>
-                <div class="map-cell map-head">Data</div>
-                <div class="map-cell map-head">Agent Loop</div>
-                <div class="map-cell map-head">Quality Gate</div>
-                <div class="map-cell map-head">Output</div>
-                <div class="map-cell map-row-head">Hermes</div>
-                <div class="map-cell map-signal">共享证据库</div>
-                <div class="map-cell map-signal">Gold / M2</div>
-                <div class="map-cell map-signal">披露审阅</div>
-                <div class="map-cell map-signal">人审 / 冻结</div>
-                <div class="map-cell map-signal">问询 / 底稿</div>
-                <div class="map-cell map-row-head">AIpha</div>
-                <div class="map-cell map-signal">公开事实</div>
-                <div class="map-cell map-signal">Fact / Feature</div>
-                <div class="map-cell map-signal">Radar / Lens</div>
-                <div class="map-cell map-signal">Gate / Ledger</div>
-                <div class="map-cell map-signal">HTML-only</div>
-                <div class="map-cell map-row-head">Loki</div>
-                <div class="map-cell map-signal">研究档案</div>
-                <div class="map-cell map-signal">组合台账</div>
-                <div class="map-cell map-signal">4 主智能体</div>
-                <div class="map-cell map-signal">后验校准</div>
-                <div class="map-cell map-signal">投委会 memo</div>
-                <div class="map-cell map-row-head">Design</div>
-                <div class="map-cell map-signal">案例库</div>
-                <div class="map-cell map-signal">tokens</div>
-                <div class="map-cell map-signal">生成器</div>
-                <div class="map-cell map-signal">Visual QA</div>
-                <div class="map-cell map-signal">网页 / 图片</div>
-              </div>
+            <div class="ai-system-cards" aria-label="AI 系统摘要">
+              <button class="ai-system-card" type="button" aria-pressed="true" data-ai-jump="hermes"><b>Hermes</b><span>IPO 证据工作台</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="aipha"><b>AIpha</b><span>产业研究资产</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="loki"><b>Loki</b><span>投研投委会</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="design"><b>Design</b><span>输出设计系统</span></button>
             </div>
+
+            <details class="visual-module architecture-module" aria-label="AI 本地系统架构图" open>
+              <summary class="visual-module-summary">AI 本地系统架构图</summary>
+              <div class="architecture-content">
+                <div class="visual-module-head">
+                  <h4>AI 本地系统架构图</h4>
+                  <div class="visual-source-note">Unit: system modules · Source: local readonly scan</div>
+                </div>
+                <div class="architecture-map">
+                  <div class="map-cell map-head">System</div>
+                  <div class="map-cell map-head">Evidence</div>
+                  <div class="map-cell map-head">Data</div>
+                  <div class="map-cell map-head">Agent Loop</div>
+                  <div class="map-cell map-head">Quality Gate</div>
+                  <div class="map-cell map-head">Output</div>
+                  <div class="map-cell map-row-head">Hermes</div>
+                  <div class="map-cell map-signal">共享证据库</div>
+                  <div class="map-cell map-signal">Gold / M2</div>
+                  <div class="map-cell map-signal">披露审阅</div>
+                  <div class="map-cell map-signal">人审 / 冻结</div>
+                  <div class="map-cell map-signal">问询 / 底稿</div>
+                  <div class="map-cell map-row-head">AIpha</div>
+                  <div class="map-cell map-signal">公开事实</div>
+                  <div class="map-cell map-signal">Fact / Feature</div>
+                  <div class="map-cell map-signal">Radar / Lens</div>
+                  <div class="map-cell map-signal">Gate / Ledger</div>
+                  <div class="map-cell map-signal">HTML-only</div>
+                  <div class="map-cell map-row-head">Loki</div>
+                  <div class="map-cell map-signal">研究档案</div>
+                  <div class="map-cell map-signal">组合台账</div>
+                  <div class="map-cell map-signal">4 主智能体</div>
+                  <div class="map-cell map-signal">后验校准</div>
+                  <div class="map-cell map-signal">投委会 memo</div>
+                  <div class="map-cell map-row-head">Design</div>
+                  <div class="map-cell map-signal">案例库</div>
+                  <div class="map-cell map-signal">tokens</div>
+                  <div class="map-cell map-signal">生成器</div>
+                  <div class="map-cell map-signal">Visual QA</div>
+                  <div class="map-cell map-signal">网页 / 图片</div>
+                </div>
+              </div>
+            </details>
 
             <div class="ai-project-pills" role="tablist" aria-label="AI 项目">
               <button class="ai-project-pill" type="button" role="tab" aria-selected="true" data-ai-project="hermes">Hermes</button>
@@ -2397,8 +2660,8 @@
       </main>
 
       <aside>
-        <section class="side-block">
-          <h2>目标场景</h2>
+        <details class="side-block side-details" open data-mobile-default="open">
+          <summary><h2>目标场景</h2></summary>
           <div class="role-tags">
             <span class="tag primary">AI 战略分析</span>
             <span class="tag primary">产业投研产品化</span>
@@ -2406,10 +2669,10 @@
             <span class="tag">复杂项目 owner</span>
             <span class="tag">业务-工程翻译</span>
           </div>
-        </section>
+        </details>
 
-        <section class="side-block">
-          <h2>工具与实现</h2>
+        <details class="side-block side-details" open data-mobile-default="open">
+          <summary><h2>工具与实现</h2></summary>
           <div class="skill-tags">
             <span class="tag">CLI + Codex 工作流</span>
             <span class="tag">本地优先系统</span>
@@ -2420,10 +2683,10 @@
             <span class="tag">Streamlit</span>
             <span class="tag">HTML / CSS</span>
           </div>
-        </section>
+        </details>
 
-        <section class="side-block">
-          <h2>金融与研究主题</h2>
+        <details class="side-block side-details" open data-mobile-default="closed">
+          <summary><h2>金融与研究主题</h2></summary>
           <div class="skill-tags">
             <span class="tag">IPO 审核逻辑</span>
             <span class="tag">业财一致性</span>
@@ -2433,10 +2696,10 @@
             <span class="tag">人工智能半导体研究</span>
             <span class="tag">双语沟通</span>
           </div>
-        </section>
+        </details>
 
-        <section class="side-block">
-          <h2>教育经历</h2>
+        <details class="side-block side-details" open data-mobile-default="closed">
+          <summary><h2>教育经历</h2></summary>
           <div class="compact-list">
             <div>
               <h3>上海对外经贸大学</h3>
@@ -2445,17 +2708,17 @@
               <p>全国挑战杯学术竞赛三等奖；第三届研究生大会学生代表；优秀毕业论文</p>
             </div>
           </div>
-        </section>
+        </details>
 
-        <section class="side-block">
-          <h2>可接受条件</h2>
+        <details class="side-block side-details" open data-mobile-default="closed">
+          <summary><h2>可接受条件</h2></summary>
           <div class="skill-tags">
             <span class="tag">上海 base</span>
             <span class="tag">远程开放</span>
             <span class="tag">海外机会开放</span>
             <span class="tag">解决方案可转</span>
           </div>
-        </section>
+        </details>
       </aside>
     </div>
   </article>
@@ -2466,7 +2729,7 @@
       <div>
         <div class="eyebrow">Resume / AI Strategy & Investment Research</div>
         <h1>Nero Chen</h1>
-        <div class="title">Investment Banking Business Director | AI Strategy & Investment Research Candidate | Agent Workflow Builder</div>
+        <div class="title">Investment Banking Business Director | AI Strategy & Investment Research Candidate <span class="title-extra">| Agent Workflow Builder</span></div>
         <p class="summary">
           Investment banking professional with <strong>6 years 10 months</strong> of experience across Growth Enterprise Market IPO filing, business and financial verification, exchange communication materials, prospectus drafting and inquiry responses. Target roles prioritize <span class="priority">AI strategy / investment research</span>, followed by solutions roles; Shanghai-based, remote-ready and open to overseas AI opportunities.
         </p>
@@ -2474,6 +2737,11 @@
           <span class="hero-tag">AI Strategy</span>
           <span class="hero-tag">Industry Research</span>
           <span class="hero-tag">Solutions</span>
+        </div>
+        <div class="mobile-evidence-bar" aria-label="Mobile core evidence">
+          <div class="mobile-evidence-card"><b>6Y10M</b><span>banking execution</span></div>
+          <div class="mobile-evidence-card"><b>301563</b><span>GEM IPO</span></div>
+          <div class="mobile-evidence-card"><b>4 AI</b><span>systems</span></div>
         </div>
         <div class="signal-grid" aria-label="Capability bridge">
           <div class="signal-card"><b>Business judgement</b><span>Financial authenticity, business logic and regulatory focus.</span></div>
@@ -2487,7 +2755,7 @@
         </figure>
         <div class="contact" aria-label="Profile facts">
           <div class="contact-row"><b>Current</b><span>Sinolink Securities · Investment Banking Business Director</span></div>
-          <div class="contact-row"><b>Tenure</b><span>Sep 2019 - Present · 6 years 10 months</span></div>
+          <div class="contact-row"><b>Tenure</b><span>Sep 2019 - now · 6y10m</span></div>
           <div class="contact-row"><b>Location</b><span>Shanghai · remote-ready</span></div>
           <div class="contact-row"><b>Profile</b><span><a href="https://www.linkedin.com/in/frech/">linkedin.com/in/frech</a></span></div>
         </div>
@@ -2510,12 +2778,14 @@
               <span class="portal-title">Yunhan IPO Execution Case</span>
               <span class="portal-text">A GEM IPO for an electronic components B2B sales and PCBA business, proving complex business explanation, business-finance verification and regulatory delivery.</span>
               <span class="portal-metrics"><span>301563</span><span>B2B / PCBA</span><span>Long-cycle review</span></span>
+              <span class="portal-action">View case <span>→</span></span>
             </button>
             <button class="portal-card" type="button" role="tab" aria-selected="false" data-case-tab="ai">
               <span class="portal-kicker">4 local AI systems built in one month</span>
               <span class="portal-title">AI Workflow Builder</span>
               <span class="portal-text">A one-month local systems portfolio covering IPO evidence workbench, AI/semiconductor research assets, A-share committee workflows and design QA.</span>
               <span class="portal-metrics"><span>4 systems</span><span>Data ledgers</span><span>Quality gates</span></span>
+              <span class="portal-action">View projects <span>→</span></span>
             </button>
           </div>
 
@@ -2588,44 +2858,54 @@
               <div class="ai-stat">4 local systems<br>Evidence / data / output loop</div>
             </div>
 
-            <div class="visual-module" aria-label="Local AI systems architecture map">
-              <div class="visual-module-head">
-                <h4>Local AI Systems Architecture</h4>
-                <div class="visual-source-note">Unit: system modules · Source: local readonly scan</div>
-              </div>
-              <div class="architecture-map">
-                <div class="map-cell map-head">System</div>
-                <div class="map-cell map-head">Evidence</div>
-                <div class="map-cell map-head">Data</div>
-                <div class="map-cell map-head">Agent Loop</div>
-                <div class="map-cell map-head">Quality Gate</div>
-                <div class="map-cell map-head">Output</div>
-                <div class="map-cell map-row-head">Hermes</div>
-                <div class="map-cell map-signal">Evidence store</div>
-                <div class="map-cell map-signal">Gold / M2</div>
-                <div class="map-cell map-signal">Disclosure review</div>
-                <div class="map-cell map-signal">Human freeze</div>
-                <div class="map-cell map-signal">Inquiry / WP</div>
-                <div class="map-cell map-row-head">AIpha</div>
-                <div class="map-cell map-signal">Public facts</div>
-                <div class="map-cell map-signal">Fact / Feature</div>
-                <div class="map-cell map-signal">Radar / Lens</div>
-                <div class="map-cell map-signal">Gate / Ledger</div>
-                <div class="map-cell map-signal">HTML-only</div>
-                <div class="map-cell map-row-head">Loki</div>
-                <div class="map-cell map-signal">Research profiles</div>
-                <div class="map-cell map-signal">Portfolio ledger</div>
-                <div class="map-cell map-signal">4 main agents</div>
-                <div class="map-cell map-signal">Calibration</div>
-                <div class="map-cell map-signal">Committee memo</div>
-                <div class="map-cell map-row-head">Design</div>
-                <div class="map-cell map-signal">Case library</div>
-                <div class="map-cell map-signal">tokens</div>
-                <div class="map-cell map-signal">Generator</div>
-                <div class="map-cell map-signal">Visual QA</div>
-                <div class="map-cell map-signal">Web / image</div>
-              </div>
+            <div class="ai-system-cards" aria-label="AI system summary">
+              <button class="ai-system-card" type="button" aria-pressed="true" data-ai-jump="hermes"><b>Hermes</b><span>IPO evidence workbench</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="aipha"><b>AIpha</b><span>research asset system</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="loki"><b>Loki</b><span>investment committee</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="design"><b>Design</b><span>output design system</span></button>
             </div>
+
+            <details class="visual-module architecture-module" aria-label="Local AI systems architecture map" open>
+              <summary class="visual-module-summary">Local AI Systems Architecture</summary>
+              <div class="architecture-content">
+                <div class="visual-module-head">
+                  <h4>Local AI Systems Architecture</h4>
+                  <div class="visual-source-note">Unit: system modules · Source: local readonly scan</div>
+                </div>
+                <div class="architecture-map">
+                  <div class="map-cell map-head">System</div>
+                  <div class="map-cell map-head">Evidence</div>
+                  <div class="map-cell map-head">Data</div>
+                  <div class="map-cell map-head">Agent Loop</div>
+                  <div class="map-cell map-head">Quality Gate</div>
+                  <div class="map-cell map-head">Output</div>
+                  <div class="map-cell map-row-head">Hermes</div>
+                  <div class="map-cell map-signal">Evidence store</div>
+                  <div class="map-cell map-signal">Gold / M2</div>
+                  <div class="map-cell map-signal">Disclosure review</div>
+                  <div class="map-cell map-signal">Human freeze</div>
+                  <div class="map-cell map-signal">Inquiry / WP</div>
+                  <div class="map-cell map-row-head">AIpha</div>
+                  <div class="map-cell map-signal">Public facts</div>
+                  <div class="map-cell map-signal">Fact / Feature</div>
+                  <div class="map-cell map-signal">Radar / Lens</div>
+                  <div class="map-cell map-signal">Gate / Ledger</div>
+                  <div class="map-cell map-signal">HTML-only</div>
+                  <div class="map-cell map-row-head">Loki</div>
+                  <div class="map-cell map-signal">Research profiles</div>
+                  <div class="map-cell map-signal">Portfolio ledger</div>
+                  <div class="map-cell map-signal">4 main agents</div>
+                  <div class="map-cell map-signal">Calibration</div>
+                  <div class="map-cell map-signal">Committee memo</div>
+                  <div class="map-cell map-row-head">Design</div>
+                  <div class="map-cell map-signal">Case library</div>
+                  <div class="map-cell map-signal">tokens</div>
+                  <div class="map-cell map-signal">Generator</div>
+                  <div class="map-cell map-signal">Visual QA</div>
+                  <div class="map-cell map-signal">Web / image</div>
+                </div>
+              </div>
+            </details>
 
             <div class="ai-project-pills" role="tablist" aria-label="AI projects">
               <button class="ai-project-pill" type="button" role="tab" aria-selected="true" data-ai-project="hermes">Hermes</button>
@@ -2665,8 +2945,8 @@
       </main>
 
       <aside>
-        <section class="side-block">
-          <h2>Target Scenarios</h2>
+        <details class="side-block side-details" open data-mobile-default="open">
+          <summary><h2>Target Scenarios</h2></summary>
           <div class="role-tags">
             <span class="tag primary">AI strategy analysis</span>
             <span class="tag primary">research productization</span>
@@ -2674,10 +2954,10 @@
             <span class="tag">complex project owner</span>
             <span class="tag">business-engineering translation</span>
           </div>
-        </section>
+        </details>
 
-        <section class="side-block">
-          <h2>Tools & Implementation</h2>
+        <details class="side-block side-details" open data-mobile-default="open">
+          <summary><h2>Tools & Implementation</h2></summary>
           <div class="skill-tags">
             <span class="tag">CLI + Codex workflow</span>
             <span class="tag">local-first systems</span>
@@ -2688,10 +2968,10 @@
             <span class="tag">Streamlit</span>
             <span class="tag">HTML / CSS</span>
           </div>
-        </section>
+        </details>
 
-        <section class="side-block">
-          <h2>Finance & Research Themes</h2>
+        <details class="side-block side-details" open data-mobile-default="closed">
+          <summary><h2>Finance & Research Themes</h2></summary>
           <div class="skill-tags">
             <span class="tag">IPO review logic</span>
             <span class="tag">business-finance consistency</span>
@@ -2701,10 +2981,10 @@
             <span class="tag">AI semiconductor research</span>
             <span class="tag">bilingual communication</span>
           </div>
-        </section>
+        </details>
 
-        <section class="side-block">
-          <h2>Education</h2>
+        <details class="side-block side-details" open data-mobile-default="closed">
+          <summary><h2>Education</h2></summary>
           <div class="compact-list">
             <div>
               <h3>Shanghai University of International Business and Economics</h3>
@@ -2713,17 +2993,17 @@
               <p>National Challenge Cup third prize; graduate congress student representative; excellent master's thesis.</p>
             </div>
           </div>
-        </section>
+        </details>
 
-        <section class="side-block">
-          <h2>Working Conditions</h2>
+        <details class="side-block side-details" open data-mobile-default="closed">
+          <summary><h2>Working Conditions</h2></summary>
           <div class="skill-tags">
             <span class="tag">Shanghai base</span>
             <span class="tag">remote open</span>
             <span class="tag">overseas open</span>
             <span class="tag">solutions transferable</span>
           </div>
-        </section>
+        </details>
       </aside>
     </div>
   </article>
@@ -2750,6 +3030,25 @@
         initial = window.localStorage.getItem("nero-resume-lang") === "en" ? "en" : "zh";
       } catch (_) {}
       setLanguage(initial);
+
+      const mobileQuery = window.matchMedia("(max-width: 600px)");
+
+      function syncMobileLayout() {
+        const isMobile = mobileQuery.matches;
+        document.querySelectorAll(".architecture-module").forEach(function (module) {
+          module.open = !isMobile;
+        });
+        document.querySelectorAll(".side-details").forEach(function (detail) {
+          detail.open = !isMobile || detail.dataset.mobileDefault !== "closed";
+        });
+      }
+
+      syncMobileLayout();
+      if (mobileQuery.addEventListener) {
+        mobileQuery.addEventListener("change", syncMobileLayout);
+      } else if (mobileQuery.addListener) {
+        mobileQuery.addListener(syncMobileLayout);
+      }
 
       button.addEventListener("click", function () {
         setLanguage(body.dataset.lang === "zh" ? "en" : "zh");
@@ -2900,6 +3199,7 @@
         const nodeTitle = lab.querySelector("[data-case-node-title]");
         const nodeBody = lab.querySelector("[data-case-node-body]");
         const projectButtons = Array.from(lab.querySelectorAll("[data-ai-project]"));
+        const projectJumpButtons = Array.from(lab.querySelectorAll("[data-ai-jump]"));
         const aiKicker = lab.querySelector("[data-ai-kicker]");
         const aiTitle = lab.querySelector("[data-ai-title]");
         const aiSummary = lab.querySelector("[data-ai-summary]");
@@ -2935,6 +3235,9 @@
           activeProject = projectKey;
           projectButtons.forEach(function (button) {
             button.setAttribute("aria-selected", button.dataset.aiProject === projectKey ? "true" : "false");
+          });
+          projectJumpButtons.forEach(function (button) {
+            button.setAttribute("aria-pressed", button.dataset.aiJump === projectKey ? "true" : "false");
           });
           aiKicker.textContent = item.kicker;
           aiTitle.textContent = item.title;
@@ -2972,6 +3275,12 @@
         projectButtons.forEach(function (button) {
           button.addEventListener("click", function () {
             renderProject(button.dataset.aiProject);
+          });
+        });
+
+        projectJumpButtons.forEach(function (button) {
+          button.addEventListener("click", function () {
+            renderProject(button.dataset.aiJump);
           });
         });
 
