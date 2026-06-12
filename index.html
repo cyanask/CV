@@ -372,23 +372,6 @@
       line-height: 1.48;
     }
 
-    footer {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 24px;
-      padding: 18px 42px 22px;
-      border-top: 1px solid var(--line);
-      background: #fbfcfc;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    footer b {
-      display: block;
-      color: var(--ink);
-      margin-bottom: 4px;
-    }
-
     @media (max-width: 900px) {
       .resume {
         width: 100%;
@@ -398,8 +381,7 @@
       }
 
       header,
-      .body,
-      footer {
+      .body {
         grid-template-columns: 1fr;
       }
 
@@ -451,9 +433,6 @@
         white-space: normal;
       }
 
-      footer {
-        padding: 18px 22px 22px;
-      }
     }
 
     @media print {
@@ -637,30 +616,11 @@
         </section>
 
         <section class="side-block">
-          <h2>Languages</h2>
-          <div class="compact-list">
-            <p><strong>Chinese</strong><br>Native or bilingual proficiency</p>
-            <p><strong>English</strong><br>Full professional proficiency</p>
-          </div>
-        </section>
-
-        <section class="side-block">
           <h2>Resume Notes</h2>
           <p class="note">对 AI 公司，核心叙事不是“从投行转码”，而是“懂资本市场与证据链的行业专家，能用 AI 工具把高敏知识工作产品化”。对外版本建议补充邮箱、手机、是否公开保荐代表人资格，以及 Hermes / Loki / AIpha 项目名是否可公开。</p>
         </section>
       </aside>
     </div>
-
-    <footer>
-      <div>
-        <b>Evidence boundary</b>
-        <p>LinkedIn 字段来自 2026-06-11 Chrome 视图；云汉芯城（301563）项目事实来自巨潮资讯网<a href="https://static.cninfo.com.cn/finalpage/2025-09-25/1224679402.PDF">公开招股说明书</a>，个人职责来自用户补充说明；系统资产来自本机顶层文档、设计团队规则、会话摘要和用户补充说明。客户名称、敏感项目细节已脱敏。</p>
-      </div>
-      <div>
-        <b>Design route</b>
-        <p>NERO Design Team · frontend-ui + ai-image-generation + visual-audit. Image2 visual is used as non-evidence header art only; exact facts remain HTML text.</p>
-      </div>
-    </footer>
   </article>
 </body>
 </html>
