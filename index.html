@@ -666,50 +666,6 @@
       font-size: 12px;
     }
 
-    .method-chain {
-      display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: 12px;
-    }
-
-    .method-step {
-      min-height: 82px;
-      border: 1px solid var(--line);
-      background: var(--paper);
-      padding: 9px 10px;
-      position: relative;
-    }
-
-    .method-step::after {
-      content: ">";
-      position: absolute;
-      top: 10px;
-      right: 8px;
-      color: var(--accent);
-      font: 900 13px/1 var(--mono);
-    }
-
-    .method-step:last-child::after {
-      content: "";
-    }
-
-    .method-step b {
-      display: block;
-      color: var(--brand);
-      font: 800 10px/1.2 var(--mono);
-      text-transform: uppercase;
-    }
-
-    .method-step span {
-      display: block;
-      margin-top: 7px;
-      color: var(--ink);
-      font-size: 12px;
-      font-weight: 800;
-      line-height: 1.28;
-    }
-
     .fit-navigator {
       border: 1px solid var(--line);
       background:
@@ -1572,8 +1528,7 @@
       .case-workbench,
       .case-proof-grid,
       .ai-project-layout,
-      .ai-detail-grid,
-      .method-chain {
+      .ai-detail-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1590,10 +1545,6 @@
       .case-node-detail,
       .ai-project-detail {
         min-height: 0;
-      }
-
-      .method-step::after {
-        content: "";
       }
 
     }
@@ -1846,20 +1797,6 @@
         font-size: 11px;
       }
 
-      .method-chain {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 6px;
-      }
-
-      .method-step {
-        min-height: 52px;
-        padding: 8px;
-      }
-
-      .method-step span {
-        font-size: 11px;
-      }
-
       .role-tags,
       .skill-tags {
         gap: 6px;
@@ -2032,13 +1969,6 @@
               </div>
             </div>
 
-            <div class="method-chain" aria-label="AI 落地方法链">
-              <div class="method-step"><b>01</b><span>场景识别</span></div>
-              <div class="method-step"><b>02</b><span>证据/数据结构</span></div>
-              <div class="method-step"><b>03</b><span>Agent Loop</span></div>
-              <div class="method-step"><b>04</b><span>质量门</span></div>
-              <div class="method-step"><b>05</b><span>输出物</span></div>
-            </div>
           </div>
         </section>
       </main>
@@ -2239,13 +2169,6 @@
               </div>
             </div>
 
-            <div class="method-chain" aria-label="AI implementation method chain">
-              <div class="method-step"><b>01</b><span>Scenario framing</span></div>
-              <div class="method-step"><b>02</b><span>Evidence/data schema</span></div>
-              <div class="method-step"><b>03</b><span>Agent Loop</span></div>
-              <div class="method-step"><b>04</b><span>Quality gate</span></div>
-              <div class="method-step"><b>05</b><span>Deliverable</span></div>
-            </div>
           </div>
         </section>
       </main>
