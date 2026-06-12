@@ -680,6 +680,221 @@
       font-size: 12px;
     }
 
+    .evidence-summary-strip {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin: 0 0 14px;
+    }
+
+    .evidence-summary-card {
+      border: 1px solid rgba(31, 78, 95, 0.18);
+      border-left: 4px solid var(--accent);
+      background: #ffffff;
+      padding: 11px 12px;
+    }
+
+    .evidence-summary-card b {
+      display: block;
+      color: var(--brand);
+      font: 900 12px/1.2 var(--mono);
+      text-transform: uppercase;
+    }
+
+    .evidence-summary-card span {
+      display: block;
+      margin-top: 5px;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.32;
+    }
+
+    .visual-module {
+      margin: 12px 0;
+      border: 1px solid rgba(31, 78, 95, 0.18);
+      background:
+        linear-gradient(135deg, rgba(31, 78, 95, 0.04), rgba(184, 138, 61, 0.035)),
+        #ffffff;
+      padding: 13px 14px;
+    }
+
+    .visual-module-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 11px;
+    }
+
+    .visual-module-head h4 {
+      margin: 0;
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    .visual-source-note {
+      color: var(--muted);
+      font: 700 10px/1.35 var(--mono);
+      text-transform: uppercase;
+      text-align: right;
+      max-width: 210px;
+    }
+
+    .audit-flow {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 8px;
+      counter-reset: flow;
+    }
+
+    .flow-step {
+      position: relative;
+      min-height: 112px;
+      border-top: 3px solid var(--brand);
+      background: #f8fafb;
+      padding: 10px 11px;
+    }
+
+    .flow-step::before {
+      counter-increment: flow;
+      content: "0" counter(flow);
+      display: block;
+      color: var(--brand);
+      font: 900 11px/1 var(--mono);
+      margin-bottom: 8px;
+    }
+
+    .flow-step:not(:last-child)::after {
+      content: ">";
+      position: absolute;
+      right: 6px;
+      top: 43px;
+      z-index: 2;
+      color: var(--accent);
+      font: 900 17px/1 var(--mono);
+    }
+
+    .flow-step b {
+      display: block;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.28;
+    }
+
+    .flow-step span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.38;
+    }
+
+    .architecture-map {
+      display: grid;
+      grid-template-columns: 92px repeat(5, minmax(0, 1fr));
+      border: 1px solid rgba(31, 78, 95, 0.18);
+      background: #ffffff;
+    }
+
+    .map-cell {
+      min-width: 0;
+      min-height: 42px;
+      border-left: 1px solid var(--line);
+      border-top: 1px solid var(--line);
+      padding: 8px 9px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.32;
+    }
+
+    .map-cell:first-child,
+    .map-head + .map-cell {
+      border-left: 0;
+    }
+
+    .map-head {
+      border-top: 0;
+      background: var(--brand);
+      color: #ffffff;
+      font: 800 10px/1.25 var(--mono);
+      text-transform: uppercase;
+    }
+
+    .map-row-head {
+      border-left: 0;
+      color: var(--brand);
+      background: #f4f7f8;
+      font: 900 11px/1.25 var(--mono);
+    }
+
+    .map-signal {
+      color: var(--ink);
+      background: #fbfcfc;
+    }
+
+    .evidence-boundary {
+      margin-top: 12px;
+      border: 1px solid rgba(31, 78, 95, 0.18);
+      background: #fbfcfc;
+    }
+
+    .evidence-boundary summary {
+      min-height: 36px;
+      cursor: pointer;
+      list-style: none;
+      padding: 9px 12px;
+      color: var(--brand);
+      font: 900 12px/1.2 var(--mono);
+      text-transform: uppercase;
+    }
+
+    .evidence-boundary summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .evidence-boundary summary::after {
+      content: "+";
+      float: right;
+      color: var(--accent);
+      font-weight: 900;
+    }
+
+    .evidence-boundary[open] summary::after {
+      content: "-";
+    }
+
+    .boundary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      border-top: 1px solid var(--line);
+      padding: 10px 12px 12px;
+    }
+
+    .boundary-item {
+      border-left: 3px solid rgba(184, 138, 61, 0.72);
+      background: #ffffff;
+      padding: 8px 9px;
+      min-height: 72px;
+    }
+
+    .boundary-item b {
+      display: block;
+      color: var(--ink);
+      font-size: 12px;
+      line-height: 1.3;
+    }
+
+    .boundary-item span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.38;
+    }
+
     .fit-navigator {
       border: 1px solid var(--line);
       background:
@@ -1537,14 +1752,73 @@
       }
 
       .capability-portals,
+      .evidence-summary-strip,
       .case-hero,
       .case-kpis,
       .case-workbench,
       .case-proof-grid,
+      .audit-flow,
       .ai-project-layout,
-      .ai-detail-grid {
+      .ai-detail-grid,
+      .boundary-grid {
         grid-template-columns: 1fr;
       }
+
+      .flow-step:not(:last-child)::after {
+        content: "v";
+        right: 12px;
+        top: auto;
+        bottom: -12px;
+      }
+
+      .visual-module-head {
+        grid-template-columns: 1fr;
+      }
+
+      .visual-source-note {
+        text-align: left;
+        max-width: none;
+      }
+
+      .architecture-map {
+        display: grid;
+        grid-template-columns: 1fr;
+        border: 0;
+        background: transparent;
+        gap: 6px;
+      }
+
+      .map-head {
+        display: none;
+      }
+
+      .map-cell {
+        border: 1px solid var(--line);
+      }
+
+      .map-row-head {
+        border-color: rgba(31, 78, 95, 0.2);
+        border-left: 3px solid var(--accent);
+        margin-top: 4px;
+      }
+
+      .map-signal {
+        display: grid;
+        grid-template-columns: 84px minmax(0, 1fr);
+        gap: 8px;
+      }
+
+      .map-signal::before {
+        color: var(--brand);
+        font: 800 10px/1.25 var(--mono);
+        text-transform: uppercase;
+      }
+
+      .architecture-map .map-cell:nth-child(6n+2)::before { content: "Evidence"; }
+      .architecture-map .map-cell:nth-child(6n+3)::before { content: "Data"; }
+      .architecture-map .map-cell:nth-child(6n+4)::before { content: "Loop"; }
+      .architecture-map .map-cell:nth-child(6n+5)::before { content: "Gate"; }
+      .architecture-map .map-cell:nth-child(6n+6)::before { content: "Output"; }
 
       .portal-card {
         min-height: 148px;
@@ -1673,6 +1947,20 @@
         background: #f8fafb;
         font-size: 12px;
         line-height: 1.48;
+      }
+
+      .evidence-summary-strip {
+        gap: 6px;
+        margin-bottom: 10px;
+      }
+
+      .evidence-summary-card {
+        padding: 9px 10px;
+      }
+
+      .evidence-summary-card span {
+        font-size: 12px;
+        line-height: 1.3;
       }
 
       .capability-portals {
@@ -1808,6 +2096,46 @@
         padding: 8px 9px;
       }
 
+      .visual-module {
+        padding: 11px 10px;
+        margin: 10px 0;
+      }
+
+      .flow-step {
+        min-height: 0;
+        padding: 9px 10px;
+      }
+
+      .evidence-boundary summary {
+        min-height: 34px;
+        padding: 8px 10px;
+        font-size: 10px;
+      }
+
+      .boundary-grid {
+        gap: 6px;
+        padding: 8px 10px 10px;
+      }
+
+      aside {
+        display: grid;
+        gap: 14px;
+      }
+
+      .side-block + .side-block {
+        margin-top: 0;
+      }
+
+      .side-block {
+        padding-top: 12px;
+        border-top: 1px solid var(--line);
+      }
+
+      .side-block:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
       .ai-project-pills {
         gap: 6px;
       }
@@ -1903,6 +2231,10 @@
         <section class="case-stage" data-case-lab data-lang-key="zh">
           <h2>核心能力案例</h2>
           <p class="case-stage-intro">简历主线压缩为两个证据入口：一个展示真实 IPO 项目的高约束执行，一个展示把投行和投研工作抽象成可运行系统的能力。</p>
+          <div class="evidence-summary-strip" aria-label="核心证据摘要">
+            <div class="evidence-summary-card"><b>IPO Evidence</b><span>云汉芯城（301563）创业板上市项目核心执行人员</span></div>
+            <div class="evidence-summary-card"><b>AI Systems</b><span>1 个月构建 Hermes / AIpha / Loki / NERO Design Team</span></div>
+          </div>
 
           <div class="capability-portals" role="tablist" aria-label="能力入口">
             <button class="portal-card" type="button" role="tab" aria-selected="true" data-case-tab="yunhan">
@@ -1936,6 +2268,19 @@
               <div class="case-kpi"><b>个人职责</b><span>业务/财务主责；收入、成本、毛利率、客户供应商和问询回复。</span></div>
             </div>
 
+            <div class="visual-module" aria-label="云汉芯城 IPO 核查链路图">
+              <div class="visual-module-head">
+                <h4>IPO 核查链路图</h4>
+                <div class="visual-source-note">Unit: workstream nodes · Source: disclosure + user-confirmed role</div>
+              </div>
+              <div class="audit-flow">
+                <div class="flow-step"><b>业务与交易事实</b><span>B2B / PCBA、SKU、仓储交付、客户服务和供应链边界。</span></div>
+                <div class="flow-step"><b>财务真实性核查</b><span>收入、成本、毛利率、客户供应商和库存管理交叉验证。</span></div>
+                <div class="flow-step"><b>审核问询与披露</b><span>业务财务问询回复、交易所沟通材料、招股书口径一致。</span></div>
+                <div class="flow-step"><b>公开结果</b><span>2025 年 9 月 30 日创业板上市，募资总额 43,953.37 万元。</span></div>
+              </div>
+            </div>
+
             <div class="case-workbench">
               <div class="case-node-nav" aria-label="云汉项目节点">
                 <button class="case-node-button" type="button" aria-pressed="true" data-case-node="background"><b>01</b><span>项目背景</span></button>
@@ -1954,6 +2299,15 @@
                 </div>
               </div>
             </div>
+
+            <details class="evidence-boundary">
+              <summary>证据边界 / 来源口径</summary>
+              <div class="boundary-grid">
+                <div class="boundary-item"><b>公开事实</b><span>股票代码、上市日期、发行价和募资总额来自公开披露文件。</span></div>
+                <div class="boundary-item"><b>个人职责</b><span>核心执行人员、业务/财务主责、问询全程参与来自用户确认。</span></div>
+                <div class="boundary-item"><b>敏感边界</b><span>不披露未公开客户细节、底稿细节、交易对手敏感信息。</span></div>
+              </div>
+            </details>
           </div>
 
           <div class="case-room" data-case-panel="ai" hidden>
@@ -1964,6 +2318,45 @@
                 <p>1 个月内借助 CLI 与 Codex vibe coding，围绕“证据工作台、产业研究资产、投研投委会、设计质量系统”搭出 4 个本地系统：既有代码、数据账本和 HTML 输出，也有质量门、审计和人工复核边界。</p>
               </div>
               <div class="ai-stat">4 个本地系统<br>证据 / 数据 / 输出闭环</div>
+            </div>
+
+            <div class="visual-module" aria-label="AI 本地系统架构图">
+              <div class="visual-module-head">
+                <h4>AI 本地系统架构图</h4>
+                <div class="visual-source-note">Unit: system modules · Source: local readonly scan</div>
+              </div>
+              <div class="architecture-map">
+                <div class="map-cell map-head">System</div>
+                <div class="map-cell map-head">Evidence</div>
+                <div class="map-cell map-head">Data</div>
+                <div class="map-cell map-head">Agent Loop</div>
+                <div class="map-cell map-head">Quality Gate</div>
+                <div class="map-cell map-head">Output</div>
+                <div class="map-cell map-row-head">Hermes</div>
+                <div class="map-cell map-signal">共享证据库</div>
+                <div class="map-cell map-signal">Gold / M2</div>
+                <div class="map-cell map-signal">披露审阅</div>
+                <div class="map-cell map-signal">人审 / 冻结</div>
+                <div class="map-cell map-signal">问询 / 底稿</div>
+                <div class="map-cell map-row-head">AIpha</div>
+                <div class="map-cell map-signal">公开事实</div>
+                <div class="map-cell map-signal">Fact / Feature</div>
+                <div class="map-cell map-signal">Radar / Lens</div>
+                <div class="map-cell map-signal">Gate / Ledger</div>
+                <div class="map-cell map-signal">HTML-only</div>
+                <div class="map-cell map-row-head">Loki</div>
+                <div class="map-cell map-signal">研究档案</div>
+                <div class="map-cell map-signal">组合台账</div>
+                <div class="map-cell map-signal">4 主智能体</div>
+                <div class="map-cell map-signal">后验校准</div>
+                <div class="map-cell map-signal">投委会 memo</div>
+                <div class="map-cell map-row-head">Design</div>
+                <div class="map-cell map-signal">案例库</div>
+                <div class="map-cell map-signal">tokens</div>
+                <div class="map-cell map-signal">生成器</div>
+                <div class="map-cell map-signal">Visual QA</div>
+                <div class="map-cell map-signal">网页 / 图片</div>
+              </div>
             </div>
 
             <div class="ai-project-pills" role="tablist" aria-label="AI 项目">
@@ -1989,6 +2382,15 @@
                 <div class="ai-detail-cell"><b>能力迁移</b><span data-ai-value>把投行专家工作拆成受控数据源、证据 ID、质量门和人审节点，适合金融/合规类 agent 产品。</span></div>
               </div>
             </div>
+
+            <details class="evidence-boundary">
+              <summary>证据边界 / 统计口径</summary>
+              <div class="boundary-grid">
+                <div class="boundary-item"><b>本地统计</b><span>代码文件数和行数来自本机项目目录只读 git / wc 统计。</span></div>
+                <div class="boundary-item"><b>项目边界</b><span>项目名可公开；不公开本地截图、客户资料和敏感路径。</span></div>
+                <div class="boundary-item"><b>结论边界</b><span>AI 项目证明工作流构建能力，不把模型输出包装成投资或监管结论。</span></div>
+              </div>
+            </details>
 
           </div>
         </section>
@@ -2097,6 +2499,10 @@
         <section class="case-stage" data-case-lab data-lang-key="en">
           <h2>Core Capability Cases</h2>
           <p class="case-stage-intro">The resume is organized around two evidence entries: one real IPO execution case under regulatory constraints, and one local-system build track that turns banking and research workflows into runnable products.</p>
+          <div class="evidence-summary-strip" aria-label="Core evidence summary">
+            <div class="evidence-summary-card"><b>IPO Evidence</b><span>Core execution member on Yunhan Chip City (301563) GEM IPO</span></div>
+            <div class="evidence-summary-card"><b>AI Systems</b><span>Built Hermes / AIpha / Loki / NERO Design Team in one month</span></div>
+          </div>
 
           <div class="capability-portals" role="tablist" aria-label="Capability portals">
             <button class="portal-card" type="button" role="tab" aria-selected="true" data-case-tab="yunhan">
@@ -2130,6 +2536,19 @@
               <div class="case-kpi"><b>My workstream</b><span>Business/finance owner: revenue, cost, gross margin, customers, suppliers and inquiries.</span></div>
             </div>
 
+            <div class="visual-module" aria-label="Yunhan IPO verification flow chart">
+              <div class="visual-module-head">
+                <h4>IPO Verification Flow</h4>
+                <div class="visual-source-note">Unit: workstream nodes · Source: disclosure + user-confirmed role</div>
+              </div>
+              <div class="audit-flow">
+                <div class="flow-step"><b>Business and transaction facts</b><span>B2B / PCBA, SKUs, warehousing delivery, customer service and supply-chain boundaries.</span></div>
+                <div class="flow-step"><b>Financial authenticity</b><span>Cross-checks over revenue, cost, gross margin, customers, suppliers and inventory management.</span></div>
+                <div class="flow-step"><b>Inquiry and disclosure</b><span>Business-finance inquiry response, exchange communication and prospectus consistency.</span></div>
+                <div class="flow-step"><b>Public outcome</b><span>Listed on GEM on Sep 30, 2025, with RMB 439.53m proceeds.</span></div>
+              </div>
+            </div>
+
             <div class="case-workbench">
               <div class="case-node-nav" aria-label="Yunhan case nodes">
                 <button class="case-node-button" type="button" aria-pressed="true" data-case-node="background"><b>01</b><span>Case context</span></button>
@@ -2148,6 +2567,15 @@
                 </div>
               </div>
             </div>
+
+            <details class="evidence-boundary">
+              <summary>Evidence Boundary / Source Basis</summary>
+              <div class="boundary-grid">
+                <div class="boundary-item"><b>Public facts</b><span>Ticker, listing date, issue price and proceeds come from public disclosure.</span></div>
+                <div class="boundary-item"><b>Personal scope</b><span>Core execution, business/finance ownership and inquiry involvement are user-confirmed.</span></div>
+                <div class="boundary-item"><b>Sensitive boundary</b><span>No non-public customer details, workpaper details or sensitive counterparty data are disclosed.</span></div>
+              </div>
+            </details>
           </div>
 
           <div class="case-room" data-case-panel="ai" hidden>
@@ -2158,6 +2586,45 @@
                 <p>In one month, using CLI and Codex-assisted vibe coding, I built four local systems around evidence workbench, industry research assets, investment committee workflows and design quality control, with code, data ledgers, HTML outputs, quality gates, audit trails and human review boundaries.</p>
               </div>
               <div class="ai-stat">4 local systems<br>Evidence / data / output loop</div>
+            </div>
+
+            <div class="visual-module" aria-label="Local AI systems architecture map">
+              <div class="visual-module-head">
+                <h4>Local AI Systems Architecture</h4>
+                <div class="visual-source-note">Unit: system modules · Source: local readonly scan</div>
+              </div>
+              <div class="architecture-map">
+                <div class="map-cell map-head">System</div>
+                <div class="map-cell map-head">Evidence</div>
+                <div class="map-cell map-head">Data</div>
+                <div class="map-cell map-head">Agent Loop</div>
+                <div class="map-cell map-head">Quality Gate</div>
+                <div class="map-cell map-head">Output</div>
+                <div class="map-cell map-row-head">Hermes</div>
+                <div class="map-cell map-signal">Evidence store</div>
+                <div class="map-cell map-signal">Gold / M2</div>
+                <div class="map-cell map-signal">Disclosure review</div>
+                <div class="map-cell map-signal">Human freeze</div>
+                <div class="map-cell map-signal">Inquiry / WP</div>
+                <div class="map-cell map-row-head">AIpha</div>
+                <div class="map-cell map-signal">Public facts</div>
+                <div class="map-cell map-signal">Fact / Feature</div>
+                <div class="map-cell map-signal">Radar / Lens</div>
+                <div class="map-cell map-signal">Gate / Ledger</div>
+                <div class="map-cell map-signal">HTML-only</div>
+                <div class="map-cell map-row-head">Loki</div>
+                <div class="map-cell map-signal">Research profiles</div>
+                <div class="map-cell map-signal">Portfolio ledger</div>
+                <div class="map-cell map-signal">4 main agents</div>
+                <div class="map-cell map-signal">Calibration</div>
+                <div class="map-cell map-signal">Committee memo</div>
+                <div class="map-cell map-row-head">Design</div>
+                <div class="map-cell map-signal">Case library</div>
+                <div class="map-cell map-signal">tokens</div>
+                <div class="map-cell map-signal">Generator</div>
+                <div class="map-cell map-signal">Visual QA</div>
+                <div class="map-cell map-signal">Web / image</div>
+              </div>
             </div>
 
             <div class="ai-project-pills" role="tablist" aria-label="AI projects">
@@ -2183,6 +2650,15 @@
                 <div class="ai-detail-cell"><b>Transferable value</b><span data-ai-value>Breaks expert banking work into governed data sources, evidence IDs, quality gates and human review nodes for financial / compliance agent products.</span></div>
               </div>
             </div>
+
+            <details class="evidence-boundary">
+              <summary>Evidence Boundary / Measurement Basis</summary>
+              <div class="boundary-grid">
+                <div class="boundary-item"><b>Local stats</b><span>Code file counts and LOC come from read-only git / wc scans of local project directories.</span></div>
+                <div class="boundary-item"><b>Project boundary</b><span>Project names are public; screenshots, client data and sensitive local paths are not disclosed.</span></div>
+                <div class="boundary-item"><b>Conclusion boundary</b><span>AI projects demonstrate workflow-building ability, not investment or regulatory conclusions.</span></div>
+              </div>
+            </details>
 
           </div>
         </section>
