@@ -92,6 +92,22 @@
 
     .summary strong { color: var(--brand); }
 
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .hero-tag {
+      border-left: 3px solid var(--accent);
+      background: var(--tag);
+      color: var(--brand);
+      font: 700 11px/1.2 var(--mono);
+      padding: 6px 8px 6px 7px;
+      text-transform: uppercase;
+    }
+
     .profile-panel {
       display: grid;
       gap: 14px;
@@ -208,7 +224,7 @@
 
     .target-strip {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 8px;
     }
 
@@ -267,17 +283,43 @@
       background: #fbfcf8;
     }
 
+    .case-kicker {
+      color: var(--brand);
+      font: 700 11px/1.2 var(--mono);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
     .deal-highlight b {
       display: block;
       color: var(--ink);
       line-height: 1.32;
     }
 
-    .deal-highlight p {
+    .case-grid {
+      display: grid;
+      gap: 4px;
+      margin-top: 8px;
+    }
+
+    .case-grid p {
       margin: 6px 0 0;
       color: var(--muted);
       font-size: 13px;
       line-height: 1.55;
+    }
+
+    .case-grid strong {
+      color: var(--ink);
+      margin-right: 6px;
+    }
+
+    .case-source {
+      display: inline-block;
+      margin-top: 9px;
+      color: var(--brand);
+      font: 700 11px/1.2 var(--mono);
+      text-transform: uppercase;
     }
 
     .project-list {
@@ -365,6 +407,15 @@
     }
 
     .compact-list p + p { margin-top: 3px; }
+
+    .fit-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .fit-list strong {
+      color: var(--ink);
+    }
 
     .note {
       color: var(--muted);
@@ -461,8 +512,13 @@
         <h1>Nero(Yi) Chen</h1>
         <div class="title">Investment Banking Business Director | AI Workflow Builder | Capital Markets Product Candidate</div>
         <p class="summary">
-          投资银行从业 <strong>6 yrs 10 mos</strong>，覆盖 IPO 申报核查、披露审阅、问询拆解、尽调底稿和业财证据链。近 1 个月借助 CLI + Codex vibe coding 搭建 Hermes、Loki、AIpha 与 NERO Design Team，把高敏知识工作拆成可复核的数据、证据和 Agent workflow。目标方向是 AI 应用产品、金融/法律/合规科技、企业知识工作流、AI/半导体研究数据产品或 AI 公司战略/资本市场岗位。
+          投资银行从业 <strong>6 yrs 10 mos</strong>，代表项目覆盖创业板 IPO 申报、披露核查、问询回复和业财证据链。过去 1 个月借助 CLI + Codex 搭建 Hermes、Loki、AIpha 与 NERO Design Team，把资本市场高敏知识工作产品化为可审计的 AI workflow。
         </p>
+        <div class="hero-tags" aria-label="Candidate positioning">
+          <span class="hero-tag">Capital Markets</span>
+          <span class="hero-tag">Evidence Workflow</span>
+          <span class="hero-tag">AI Product Builder</span>
+        </div>
       </div>
       <div class="profile-panel">
         <figure class="visual-card" aria-label="AI workflow and capital markets visual">
@@ -483,10 +539,9 @@
         <section>
           <h2>Target Roles</h2>
           <div class="target-strip">
-            <div class="target"><b>AI Product / Workflow PM</b><span>金融、法务、合规、企业知识工作流</span></div>
-            <div class="target"><b>AI Solutions / GTM</b><span>把复杂业务场景翻译成可交付系统</span></div>
-            <div class="target"><b>Research Data Product</b><span>AI / 半导体 / A 股研究资产化</span></div>
-            <div class="target"><b>AI Company Strategy</b><span>融资、资本市场、商业化与客户价值</span></div>
+            <div class="target"><b>AI Workflow Product</b><span>金融、法务、合规等企业知识工作流</span></div>
+            <div class="target"><b>Financial / Legal / Compliance AI</b><span>证据链、人审节点、质量门与交付规范</span></div>
+            <div class="target"><b>Research / Capital Markets Product</b><span>AI / 半导体 / A 股研究资产化</span></div>
           </div>
         </section>
 
@@ -502,8 +557,14 @@
             </div>
 
             <div class="deal-highlight">
-              <b>Representative IPO case · 云汉芯城（301563）创业板 IPO</b>
-              <p>招股说明书公开披露为项目协办人；全程参与项目签字与申报工作，负责业务和财务板块核查，覆盖业务模式、收入成本、客户/供应商、毛利率、期间费用、底稿证据与招股书披露一致性。</p>
+              <div class="case-kicker">IPO Representative Case</div>
+              <b>云汉芯城（301563）创业板 IPO</b>
+              <div class="case-grid">
+                <p><strong>Public role</strong>招股说明书公开披露为项目协办人。</p>
+                <p><strong>Execution scope</strong>全程参与项目签字与申报工作，负责业务和财务板块核查。</p>
+                <p><strong>Review coverage</strong>业务模式、收入成本、客户/供应商、毛利率、期间费用、底稿证据与披露一致性。</p>
+              </div>
+              <a class="case-source" href="https://static.cninfo.com.cn/finalpage/2025-09-25/1224679402.PDF">Source: CNINFO prospectus</a>
             </div>
 
             <ul>
@@ -525,9 +586,9 @@
                 <p>面向披露审阅、问询回复、尽调底稿、银行流水核查、Shared Evidence、质量门和 Codex 协作边界，把投行高敏流程拆为可审计工作台。</p>
               </div>
               <div class="metrics">
-                <div class="metric"><b>719</b><span>Python files</span></div>
-                <div class="metric"><b>134,724</b><span>Python LOC</span></div>
                 <div class="metric"><b>12</b><span>workflow nodes</span></div>
+                <div class="metric"><b>QC</b><span>review gates</span></div>
+                <div class="metric"><b>Evidence</b><span>traceability</span></div>
               </div>
             </div>
 
@@ -538,9 +599,9 @@
                 <p>沉淀海外事实、Serenity 推文、A 股映射、行情、特征和后验评估，把 AI 与半导体产业链研究从资讯搬运转为可查询资产。</p>
               </div>
               <div class="metrics">
-                <div class="metric"><b>202,466</b><span>OHLCV rows</span></div>
-                <div class="metric"><b>5,857</b><span>tweets</span></div>
-                <div class="metric"><b>329</b><span>mapping rows</span></div>
+                <div class="metric"><b>202k</b><span>market rows</span></div>
+                <div class="metric"><b>5.9k</b><span>research notes</span></div>
+                <div class="metric"><b>329</b><span>asset mappings</span></div>
               </div>
             </div>
 
@@ -551,9 +612,9 @@
                 <p>个人增强型 A 股投研投委会系统，覆盖日度盘面、盘中风险、周度投委会、月度战略审计和长期投研记忆；仅作为系统能力展示，不构成投资建议。</p>
               </div>
               <div class="metrics">
-                <div class="metric"><b>462</b><span>files</span></div>
-                <div class="metric"><b>62,914</b><span>Python LOC</span></div>
-                <div class="metric"><b>12</b><span>menus</span></div>
+                <div class="metric"><b>Daily</b><span>risk board</span></div>
+                <div class="metric"><b>Weekly</b><span>committee memo</span></div>
+                <div class="metric"><b>Memory</b><span>research trail</span></div>
               </div>
             </div>
 
@@ -580,7 +641,7 @@
             <span class="tag primary">AI application product</span>
             <span class="tag primary">Vertical workflow owner</span>
             <span class="tag primary">Financial intelligence product</span>
-            <span class="tag">Not pure algorithm engineer</span>
+            <span class="tag">Domain AI product builder</span>
           </div>
         </section>
 
@@ -616,8 +677,12 @@
         </section>
 
         <section class="side-block">
-          <h2>Resume Notes</h2>
-          <p class="note">对 AI 公司，核心叙事不是“从投行转码”，而是“懂资本市场与证据链的行业专家，能用 AI 工具把高敏知识工作产品化”。对外版本建议补充邮箱、手机、是否公开保荐代表人资格，以及 Hermes / Loki / AIpha 项目名是否可公开。</p>
+          <h2>Best Fit</h2>
+          <div class="fit-list">
+            <p><strong>AI workflow products</strong><br>金融、法律、合规、投研等高证据密度场景。</p>
+            <p><strong>Hybrid operating role</strong><br>业务专家 + 产品 owner + AI agent workflow builder。</p>
+            <p><strong>Execution style</strong><br>从问题拆解、证据结构到人审质量门闭环。</p>
+          </div>
         </section>
       </aside>
     </div>
