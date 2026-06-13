@@ -843,6 +843,15 @@
       box-shadow: inset 0 -3px 0 var(--accent);
     }
 
+    .showcase-link[aria-disabled="true"] {
+      border-color: rgba(31, 78, 95, 0.2);
+      background: #eef3f4;
+      color: var(--brand);
+      cursor: default;
+      pointer-events: none;
+      box-shadow: none;
+    }
+
     .ai-detail-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2815,26 +2824,26 @@
                 </div>
                 <div class="ai-stat" data-ai-stat>737 Python 文件<br>约 13.7 万行 Python</div>
               </div>
-              <div class="ai-live-showcase" data-ai-showcase hidden>
+              <div class="ai-live-showcase" data-ai-showcase>
                 <div class="showcase-copy">
-                  <span class="showcase-label" data-ai-showcase-label>在线作品橱窗</span>
-                  <h5 data-ai-showcase-title>AIpha Research Desk</h5>
-                  <p data-ai-showcase-copy>已发布的 GitHub Pages 统一入口，集中展示 AIpha-Radar、AIpha Serenity 和 AIpha-Close 三个 HTML-only 研究资产。</p>
-                  <div class="showcase-tags" aria-label="showcase tags">
-                    <span data-ai-showcase-tag-a>GitHub Pages</span>
-                    <span data-ai-showcase-tag-b>HTML-only</span>
-                    <span data-ai-showcase-tag-c>Research asset</span>
+                  <span class="showcase-label" data-ai-showcase-label>项目证明面板</span>
+                  <h5 data-ai-showcase-title>Hermes Evidence Workbench</h5>
+                  <p data-ai-showcase-copy>本地投行披露与证据工作台。因客户与投行业务边界不公开截图，以代码规模、模块链路和输出物证明系统化能力。</p>
+                  <div class="showcase-tags" aria-label="proof tags">
+                    <span data-ai-showcase-tag-a>私有本地系统</span>
+                    <span data-ai-showcase-tag-b>证据工作流</span>
+                    <span data-ai-showcase-tag-c>人工复核</span>
                   </div>
                 </div>
                 <div class="showcase-preview" aria-hidden="true">
-                  <div class="preview-chrome"><i></i><i></i><i></i><span data-ai-showcase-url>cyanask.github.io/AIpha</span></div>
+                  <div class="preview-chrome"><i></i><i></i><i></i><span data-ai-showcase-url>local/private</span></div>
                   <div class="preview-rows">
-                    <div class="preview-row"><b data-ai-showcase-row-a-title>AIpha-Radar</b><span data-ai-showcase-row-a-copy>产业链事件雷达</span></div>
-                    <div class="preview-row"><b data-ai-showcase-row-b-title>AIpha Serenity</b><span data-ai-showcase-row-b-copy>公开推文研究资产</span></div>
-                    <div class="preview-row"><b data-ai-showcase-row-c-title>AIpha-Close</b><span data-ai-showcase-row-c-copy>收盘研究视图</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-a-title>Evidence</b><span data-ai-showcase-row-a-copy>共享证据库 / 证据冻结 / 审阅记录</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-b-title>Workflow</b><span data-ai-showcase-row-b-copy>资料入库 → 业财分析 → 披露审阅 → 问询/底稿</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-c-title>Quality gate</b><span data-ai-showcase-row-c-copy>证据 ID / 人审节点 / 口径边界</span></div>
                   </div>
                 </div>
-                <a class="showcase-link" data-ai-showcase-link href="https://cyanask.github.io/AIpha/" target="_blank" rel="noopener noreferrer">打开作品</a>
+                <a class="showcase-link" data-ai-showcase-link aria-disabled="true">敏感场景不公开</a>
               </div>
               <div class="ai-detail-grid">
                 <div class="ai-detail-cell"><b>场景</b><span data-ai-scenario>IPO/新三板披露审阅、问询回复、尽调底稿、银行流水、访谈函证。</span></div>
@@ -3121,26 +3130,26 @@
                 </div>
                 <div class="ai-stat" data-ai-stat>737 Python files<br>approx. 137k Python LOC</div>
               </div>
-              <div class="ai-live-showcase" data-ai-showcase hidden>
+              <div class="ai-live-showcase" data-ai-showcase>
                 <div class="showcase-copy">
-                  <span class="showcase-label" data-ai-showcase-label>Live Work Showcase</span>
-                  <h5 data-ai-showcase-title>AIpha Research Desk</h5>
-                  <p data-ai-showcase-copy>A published GitHub Pages entry for three HTML-only research assets: AIpha-Radar, AIpha Serenity and AIpha-Close.</p>
-                  <div class="showcase-tags" aria-label="showcase tags">
-                    <span data-ai-showcase-tag-a>GitHub Pages</span>
-                    <span data-ai-showcase-tag-b>HTML-only</span>
-                    <span data-ai-showcase-tag-c>Research asset</span>
+                  <span class="showcase-label" data-ai-showcase-label>Project Proof Panel</span>
+                  <h5 data-ai-showcase-title>Hermes Evidence Workbench</h5>
+                  <p data-ai-showcase-copy>A private local disclosure and evidence workbench for investment-banking workflows. Screenshots stay private; code scale, module chain and outputs prove system-building ability.</p>
+                  <div class="showcase-tags" aria-label="proof tags">
+                    <span data-ai-showcase-tag-a>Private local system</span>
+                    <span data-ai-showcase-tag-b>Evidence workflow</span>
+                    <span data-ai-showcase-tag-c>Human review</span>
                   </div>
                 </div>
                 <div class="showcase-preview" aria-hidden="true">
-                  <div class="preview-chrome"><i></i><i></i><i></i><span data-ai-showcase-url>cyanask.github.io/AIpha</span></div>
+                  <div class="preview-chrome"><i></i><i></i><i></i><span data-ai-showcase-url>local/private</span></div>
                   <div class="preview-rows">
-                    <div class="preview-row"><b data-ai-showcase-row-a-title>AIpha-Radar</b><span data-ai-showcase-row-a-copy>Supply-chain event radar</span></div>
-                    <div class="preview-row"><b data-ai-showcase-row-b-title>AIpha Serenity</b><span data-ai-showcase-row-b-copy>Public-post research asset</span></div>
-                    <div class="preview-row"><b data-ai-showcase-row-c-title>AIpha-Close</b><span data-ai-showcase-row-c-copy>After-close research view</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-a-title>Evidence</b><span data-ai-showcase-row-a-copy>shared evidence store / evidence freeze / review logs</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-b-title>Workflow</b><span data-ai-showcase-row-b-copy>intake → financial analysis → disclosure review → inquiry/workpapers</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-c-title>Quality gate</b><span data-ai-showcase-row-c-copy>evidence IDs / human review / conclusion boundary</span></div>
                   </div>
                 </div>
-                <a class="showcase-link" data-ai-showcase-link href="https://cyanask.github.io/AIpha/" target="_blank" rel="noopener noreferrer">Open live project</a>
+                <a class="showcase-link" data-ai-showcase-link aria-disabled="true">Private workflow</a>
               </div>
               <div class="ai-detail-grid">
                 <div class="ai-detail-cell"><b>Scenario</b><span data-ai-scenario>IPO / NEEQ disclosure review, inquiry response, due diligence workpapers, bank flows, interviews and confirmations.</span></div>
@@ -3306,7 +3315,23 @@
               scenario: "IPO/新三板披露审阅、问询回复、尽调底稿、银行流水、访谈函证。",
               modules: "M1 Raw/Bronze/Silver/Gold、M2 业财分析、共享证据库、多数据库治理、披露工作台。",
               outputs: "审阅报告、问询/底稿草稿、运行记录、证据冻结、Word/HTML/GUI 工作台。",
-              value: "把投行专家工作拆成受控数据源、证据 ID、质量门和人审节点，适合金融/合规类 agent 产品。"
+              value: "把投行专家工作拆成受控数据源、证据 ID、质量门和人审节点，适合金融/合规类 agent 产品。",
+              showcase: {
+                label: "项目证明面板",
+                title: "Hermes Evidence Workbench",
+                copy: "本地投行披露与证据工作台。因客户与投行业务边界不公开截图，以代码规模、模块链路和输出物证明系统化能力。",
+                tagA: "私有本地系统",
+                tagB: "证据工作流",
+                tagC: "人工复核",
+                url: "",
+                urlText: "local/private",
+                cta: "敏感场景不公开",
+                rows: [
+                  ["Evidence", "共享证据库 / 证据冻结 / 审阅记录"],
+                  ["Workflow", "资料入库 → 业财分析 → 披露审阅 → 问询/底稿"],
+                  ["Quality gate", "证据 ID / 人审节点 / 口径边界"]
+                ]
+              }
             },
             aipha: {
               kicker: "产业投研资产系统",
@@ -3318,12 +3343,12 @@
               outputs: "AIpha-Radar、Serenity Lens、AIpha-Close、映射审计、HTML-only 公开包。",
               value: "把公开事实和市场数据变成可查询、可复盘、可降级的研究资产，不把模型输出直接当交易结论。",
               showcase: {
-                label: "在线作品橱窗",
+                label: "项目证明面板",
                 title: "AIpha Research Desk",
                 copy: "已发布的 GitHub Pages 统一入口，集中展示 AIpha-Radar、AIpha Serenity 和 AIpha-Close 三个 HTML-only 研究资产。",
-                tagA: "GitHub Pages",
-                tagB: "HTML-only",
-                tagC: "Research asset",
+                tagA: "公开页面",
+                tagB: "静态 HTML",
+                tagC: "研究资产",
                 url: "https://cyanask.github.io/AIpha/",
                 urlText: "cyanask.github.io/AIpha",
                 cta: "打开作品",
@@ -3342,17 +3367,49 @@
               scenario: "核心池/观察池/持仓池管理，盘中提醒、收盘复盘、周度投委会、月度战略审计、深审报告。",
               modules: "IntradayRiskAlert、DailyMarketReview、WeeklyInvestmentCommittee、MonthlyStrategy、Prime 深审、学习治理。",
               outputs: "风险提示、日度样本、周度 memo、月度策略、状态机、深审候选和策略版本履历。",
-              value: "把主观投研流程产品化为菜单、状态机、专家分工和后验校准，能迁移到研究/策略类 AI 产品。"
+              value: "把主观投研流程产品化为菜单、状态机、专家分工和后验校准，能迁移到研究/策略类 AI 产品。",
+              showcase: {
+                label: "项目证明面板",
+                title: "Loki Research Committee",
+                copy: "本地 A 股投研投委会与监控系统。以智能体分工、状态机和复盘输出证明投研流程产品化能力，不公开持仓与策略细节。",
+                tagA: "私有本地系统",
+                tagB: "投研工作流",
+                tagC: "策略审计",
+                url: "",
+                urlText: "local/private",
+                cta: "私有投研系统",
+                rows: [
+                  ["Agent roles", "盘中风险 / 日度复盘 / 周度投委会 / 月度战略"],
+                  ["State machine", "核心池 / 观察池 / 持仓池 / 深审候选"],
+                  ["Outputs", "风险提示 / memo / 策略版本履历"]
+                ]
+              }
             },
             design: {
               kicker: "研究输出设计系统",
               title: "NERO Design Team · 研究输出设计系统",
-              summary: "面向研究输出的设计系统，沉淀品牌资产、tokens、模板、案例库、视觉 QA、评分和 production check。",
+              summary: "已开源的 agent-native 设计系统，面向研究输出沉淀品牌资产、tokens、模板、案例库、视觉 QA、评分和 production check。",
               stat: "92 核心文件<br>17 个脚本/前端文件",
               scenario: "简历、研究卡片、网页 PPT、报告图、前端界面、视觉审查。",
               modules: "brand、tokens、templates、case-library、mcp-lite、visual-qa、scorecards、production-check。",
               outputs: "HTML 简历、图片报告、网页演示、视觉 QA 报告、设计规则和可复用模板。",
-              value: "把专业内容从“能读”推进到“能交付、能验证、能复用”，补足 AI 产品的展示和交互层。"
+              value: "把专业内容从“能读”推进到“能交付、能验证、能复用”，补足 AI 产品的展示和交互层。",
+              showcase: {
+                label: "开源作品证明",
+                title: "NERO Design Team",
+                copy: "已开源的 Codex 风格 agent-native 设计系统，不只是 UI 组件库，而是把设计路由、tokens、模板、案例库和 QA/评分/发布检查组织成可复用工作流。",
+                tagA: "GitHub 公开",
+                tagB: "Apache 2.0",
+                tagC: "Agent-native 设计",
+                url: "https://github.com/cyanask/nero-design-team",
+                urlText: "github.com/cyanask/nero-design-team",
+                cta: "查看开源仓库",
+                rows: [
+                  ["Routes", "frontend-ui / image-report / ppt / short-video"],
+                  ["Assets", "skills / tokens / templates / case-library / mcp-lite"],
+                  ["Checks", "visual QA / scoring / production-check"]
+                ]
+              }
             }
           }
         },
@@ -3388,7 +3445,23 @@
               scenario: "IPO / NEEQ disclosure review, inquiry response, due diligence workpapers, bank flows, interviews and confirmations.",
               modules: "M1 Raw/Bronze/Silver/Gold, M2 business-finance analysis, shared evidence store, multi-database governance and disclosure workbench.",
               outputs: "Review reports, inquiry/workpaper drafts, run records, evidence freezes, Word/HTML/GUI workbench.",
-              value: "Breaks expert banking work into governed data sources, evidence IDs, quality gates and human review nodes for financial / compliance agent products."
+              value: "Breaks expert banking work into governed data sources, evidence IDs, quality gates and human review nodes for financial / compliance agent products.",
+              showcase: {
+                label: "Project Proof Panel",
+                title: "Hermes Evidence Workbench",
+                copy: "A private local disclosure and evidence workbench for investment-banking workflows. Screenshots stay private; code scale, module chain and outputs prove system-building ability.",
+                tagA: "Private local system",
+                tagB: "Evidence workflow",
+                tagC: "Human review",
+                url: "",
+                urlText: "local/private",
+                cta: "Private workflow",
+                rows: [
+                  ["Evidence", "shared evidence store / evidence freeze / review logs"],
+                  ["Workflow", "intake → financial analysis → disclosure review → inquiry/workpapers"],
+                  ["Quality gate", "evidence IDs / human review / conclusion boundary"]
+                ]
+              }
             },
             aipha: {
               kicker: "Industry research asset system",
@@ -3400,10 +3473,10 @@
               outputs: "AIpha-Radar, Serenity Lens, AIpha-Close, mapping audits and HTML-only public packages.",
               value: "Turns public facts and market data into queryable, reviewable and degradable research assets without treating model output as trading conclusions.",
               showcase: {
-                label: "Live Work Showcase",
+                label: "Project Proof Panel",
                 title: "AIpha Research Desk",
                 copy: "A published GitHub Pages entry for three HTML-only research assets: AIpha-Radar, AIpha Serenity and AIpha-Close.",
-                tagA: "GitHub Pages",
+                tagA: "Public page",
                 tagB: "HTML-only",
                 tagC: "Research asset",
                 url: "https://cyanask.github.io/AIpha/",
@@ -3424,17 +3497,49 @@
               scenario: "Core/watch/holding pool management, intraday alerts, after-close review, weekly committee, monthly strategy audit and deep-review reports.",
               modules: "IntradayRiskAlert, DailyMarketReview, WeeklyInvestmentCommittee, MonthlyStrategy, Prime deep review and learning governance.",
               outputs: "Risk alerts, daily samples, weekly memos, monthly strategy, state machine, deep-review candidates and strategy-version history.",
-              value: "Productizes a discretionary research process into menus, state machines, expert roles and ex-post calibration for research / strategy AI products."
+              value: "Productizes a discretionary research process into menus, state machines, expert roles and ex-post calibration for research / strategy AI products.",
+              showcase: {
+                label: "Project Proof Panel",
+                title: "Loki Research Committee",
+                copy: "A private local A-share research committee and monitoring system. Agent roles, state machines and review outputs prove research workflow productization without exposing holdings or strategy details.",
+                tagA: "Private local system",
+                tagB: "Research workflow",
+                tagC: "Strategy audit",
+                url: "",
+                urlText: "local/private",
+                cta: "Private research system",
+                rows: [
+                  ["Agent roles", "intraday risk / daily review / weekly committee / monthly strategy"],
+                  ["State machine", "core pool / watch pool / holdings / deep-review candidates"],
+                  ["Outputs", "risk alerts / memos / strategy-version history"]
+                ]
+              }
             },
             design: {
               kicker: "Research output design system",
               title: "NERO Design Team · Research output design system",
-              summary: "A design system for research output, covering brand assets, tokens, templates, case library, visual QA, scoring and production checks.",
+              summary: "An open-source agent-native design system for research output, covering brand assets, tokens, templates, case library, visual QA, scoring and production checks.",
               stat: "92 core files<br>17 script/frontend files",
               scenario: "Resume, research cards, web presentations, report visuals, frontend interfaces and visual audits.",
               modules: "brand, tokens, templates, case-library, mcp-lite, visual-qa, scorecards and production-check.",
               outputs: "HTML resumes, image reports, web demos, visual QA reports, design rules and reusable templates.",
-              value: "Moves professional content from readable to deliverable, verifiable and reusable, completing the presentation and interaction layer of AI products."
+              value: "Moves professional content from readable to deliverable, verifiable and reusable, completing the presentation and interaction layer of AI products.",
+              showcase: {
+                label: "Open-source proof",
+                title: "NERO Design Team",
+                copy: "A public Codex-style agent-native design system. It is not only a UI kit; it organizes design routing, tokens, templates, case references and QA/score/release checks into a reusable workflow.",
+                tagA: "GitHub public",
+                tagB: "Apache 2.0",
+                tagC: "Agent-native design",
+                url: "https://github.com/cyanask/nero-design-team",
+                urlText: "github.com/cyanask/nero-design-team",
+                cta: "View open-source repo",
+                rows: [
+                  ["Routes", "frontend-ui / image-report / ppt / short-video"],
+                  ["Assets", "skills / tokens / templates / case-library / mcp-lite"],
+                  ["Checks", "visual QA / scoring / production-check"]
+                ]
+              }
             }
           }
         }
@@ -3522,8 +3627,18 @@
             aiShowcaseTagB.textContent = item.showcase.tagB;
             aiShowcaseTagC.textContent = item.showcase.tagC;
             aiShowcaseUrl.textContent = item.showcase.urlText;
-            aiShowcaseLink.href = item.showcase.url;
             aiShowcaseLink.textContent = item.showcase.cta;
+            if (item.showcase.url) {
+              aiShowcaseLink.href = item.showcase.url;
+              aiShowcaseLink.target = "_blank";
+              aiShowcaseLink.rel = "noopener noreferrer";
+              aiShowcaseLink.removeAttribute("aria-disabled");
+            } else {
+              aiShowcaseLink.removeAttribute("href");
+              aiShowcaseLink.removeAttribute("target");
+              aiShowcaseLink.removeAttribute("rel");
+              aiShowcaseLink.setAttribute("aria-disabled", "true");
+            }
             aiShowcaseRowATitle.textContent = item.showcase.rows[0][0];
             aiShowcaseRowACopy.textContent = item.showcase.rows[0][1];
             aiShowcaseRowBTitle.textContent = item.showcase.rows[1][0];
