@@ -694,6 +694,155 @@
       overflow-wrap: anywhere;
     }
 
+    .ai-live-showcase {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 0.72fr) auto;
+      gap: 12px;
+      align-items: stretch;
+      margin-top: 14px;
+      padding: 13px;
+      border: 1px solid rgba(31, 78, 95, 0.28);
+      border-left: 4px solid var(--accent);
+      background:
+        linear-gradient(135deg, rgba(31, 78, 95, 0.08), rgba(184, 138, 61, 0.1)),
+        #fbfcfc;
+    }
+
+    .ai-live-showcase[hidden] {
+      display: none;
+    }
+
+    .showcase-copy {
+      min-width: 0;
+    }
+
+    .showcase-label {
+      display: inline-flex;
+      min-height: 24px;
+      align-items: center;
+      border: 1px solid rgba(31, 78, 95, 0.22);
+      background: #ffffff;
+      padding: 0 8px;
+      color: var(--brand);
+      font: 900 10px/1 var(--mono);
+      text-transform: uppercase;
+    }
+
+    .showcase-copy h5 {
+      margin: 9px 0 0;
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.18;
+    }
+
+    .showcase-copy p {
+      margin: 6px 0 0;
+      color: var(--text);
+      font-size: 12px;
+      line-height: 1.52;
+    }
+
+    .showcase-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 9px;
+    }
+
+    .showcase-tags span {
+      border: 1px solid rgba(31, 78, 95, 0.16);
+      background: #ffffff;
+      padding: 4px 7px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.1;
+      font-weight: 800;
+    }
+
+    .showcase-preview {
+      min-width: 0;
+      border: 1px solid rgba(31, 78, 95, 0.18);
+      background: #ffffff;
+      overflow: hidden;
+    }
+
+    .preview-chrome {
+      display: grid;
+      grid-template-columns: 8px 8px 8px minmax(0, 1fr);
+      gap: 5px;
+      align-items: center;
+      min-height: 28px;
+      padding: 0 8px;
+      border-bottom: 1px solid rgba(31, 78, 95, 0.12);
+      color: var(--muted);
+      font: 800 9px/1 var(--mono);
+    }
+
+    .preview-chrome i {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: rgba(31, 78, 95, 0.22);
+    }
+
+    .preview-chrome i:nth-child(2) {
+      background: rgba(184, 138, 61, 0.54);
+    }
+
+    .preview-chrome span {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .preview-rows {
+      display: grid;
+      gap: 6px;
+      padding: 9px;
+    }
+
+    .preview-row {
+      display: grid;
+      grid-template-columns: minmax(92px, 0.68fr) minmax(0, 1fr);
+      gap: 8px;
+      align-items: center;
+      min-height: 28px;
+      border-left: 3px solid rgba(184, 138, 61, 0.68);
+      background: #f5f8f9;
+      padding: 6px 8px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.25;
+    }
+
+    .preview-row b {
+      color: var(--brand);
+      font: 900 10px/1.1 var(--mono);
+      overflow-wrap: anywhere;
+    }
+
+    .showcase-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 104px;
+      min-height: 100%;
+      border: 1px solid var(--brand);
+      background: var(--brand);
+      color: #ffffff;
+      padding: 10px 12px;
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 900;
+      text-align: center;
+    }
+
+    .showcase-link:hover {
+      background: #173e4d;
+      box-shadow: inset 0 -3px 0 var(--accent);
+    }
+
     .ai-detail-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2227,6 +2376,33 @@
         margin-top: 10px;
       }
 
+      .ai-live-showcase {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        margin-top: 10px;
+        padding: 10px;
+      }
+
+      .showcase-copy h5 {
+        font-size: 15px;
+      }
+
+      .showcase-copy p {
+        font-size: 11px;
+        line-height: 1.45;
+      }
+
+      .preview-row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+        min-height: 0;
+      }
+
+      .showcase-link {
+        min-height: 44px;
+        width: 100%;
+      }
+
       .case-proof {
         min-height: 0;
         padding: 8px 9px;
@@ -2639,6 +2815,27 @@
                 </div>
                 <div class="ai-stat" data-ai-stat>737 Python 文件<br>约 13.7 万行 Python</div>
               </div>
+              <div class="ai-live-showcase" data-ai-showcase hidden>
+                <div class="showcase-copy">
+                  <span class="showcase-label" data-ai-showcase-label>在线作品橱窗</span>
+                  <h5 data-ai-showcase-title>AIpha Research Desk</h5>
+                  <p data-ai-showcase-copy>已发布的 GitHub Pages 统一入口，集中展示 AIpha-Radar、AIpha Serenity 和 AIpha-Close 三个 HTML-only 研究资产。</p>
+                  <div class="showcase-tags" aria-label="showcase tags">
+                    <span data-ai-showcase-tag-a>GitHub Pages</span>
+                    <span data-ai-showcase-tag-b>HTML-only</span>
+                    <span data-ai-showcase-tag-c>Research asset</span>
+                  </div>
+                </div>
+                <div class="showcase-preview" aria-hidden="true">
+                  <div class="preview-chrome"><i></i><i></i><i></i><span data-ai-showcase-url>cyanask.github.io/AIpha</span></div>
+                  <div class="preview-rows">
+                    <div class="preview-row"><b data-ai-showcase-row-a-title>AIpha-Radar</b><span data-ai-showcase-row-a-copy>产业链事件雷达</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-b-title>AIpha Serenity</b><span data-ai-showcase-row-b-copy>公开推文研究资产</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-c-title>AIpha-Close</b><span data-ai-showcase-row-c-copy>收盘研究视图</span></div>
+                  </div>
+                </div>
+                <a class="showcase-link" data-ai-showcase-link href="https://cyanask.github.io/AIpha/" target="_blank" rel="noopener noreferrer">打开作品</a>
+              </div>
               <div class="ai-detail-grid">
                 <div class="ai-detail-cell"><b>场景</b><span data-ai-scenario>IPO/新三板披露审阅、问询回复、尽调底稿、银行流水、访谈函证。</span></div>
                 <div class="ai-detail-cell"><b>模块</b><span data-ai-modules>M1 Raw/Bronze/Silver/Gold、M2 业财分析、共享证据库、多数据库治理、披露工作台。</span></div>
@@ -2924,6 +3121,27 @@
                 </div>
                 <div class="ai-stat" data-ai-stat>737 Python files<br>approx. 137k Python LOC</div>
               </div>
+              <div class="ai-live-showcase" data-ai-showcase hidden>
+                <div class="showcase-copy">
+                  <span class="showcase-label" data-ai-showcase-label>Live Work Showcase</span>
+                  <h5 data-ai-showcase-title>AIpha Research Desk</h5>
+                  <p data-ai-showcase-copy>A published GitHub Pages entry for three HTML-only research assets: AIpha-Radar, AIpha Serenity and AIpha-Close.</p>
+                  <div class="showcase-tags" aria-label="showcase tags">
+                    <span data-ai-showcase-tag-a>GitHub Pages</span>
+                    <span data-ai-showcase-tag-b>HTML-only</span>
+                    <span data-ai-showcase-tag-c>Research asset</span>
+                  </div>
+                </div>
+                <div class="showcase-preview" aria-hidden="true">
+                  <div class="preview-chrome"><i></i><i></i><i></i><span data-ai-showcase-url>cyanask.github.io/AIpha</span></div>
+                  <div class="preview-rows">
+                    <div class="preview-row"><b data-ai-showcase-row-a-title>AIpha-Radar</b><span data-ai-showcase-row-a-copy>Supply-chain event radar</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-b-title>AIpha Serenity</b><span data-ai-showcase-row-b-copy>Public-post research asset</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-c-title>AIpha-Close</b><span data-ai-showcase-row-c-copy>After-close research view</span></div>
+                  </div>
+                </div>
+                <a class="showcase-link" data-ai-showcase-link href="https://cyanask.github.io/AIpha/" target="_blank" rel="noopener noreferrer">Open live project</a>
+              </div>
               <div class="ai-detail-grid">
                 <div class="ai-detail-cell"><b>Scenario</b><span data-ai-scenario>IPO / NEEQ disclosure review, inquiry response, due diligence workpapers, bank flows, interviews and confirmations.</span></div>
                 <div class="ai-detail-cell"><b>Modules</b><span data-ai-modules>M1 Raw/Bronze/Silver/Gold, M2 business-finance analysis, shared evidence store, multi-database governance and disclosure workbench.</span></div>
@@ -3098,7 +3316,23 @@
               scenario: "海外 AI 产业链硬事件发现、A 股产业链映射、收盘后复盘、Serenity Lens 研究资产。",
               modules: "329 行 A 股映射、Fact Store、Feature Store、Evaluation Ledger、Radar、Serenity Lens、AIpha-Close。",
               outputs: "AIpha-Radar、Serenity Lens、AIpha-Close、映射审计、HTML-only 公开包。",
-              value: "把公开事实和市场数据变成可查询、可复盘、可降级的研究资产，不把模型输出直接当交易结论。"
+              value: "把公开事实和市场数据变成可查询、可复盘、可降级的研究资产，不把模型输出直接当交易结论。",
+              showcase: {
+                label: "在线作品橱窗",
+                title: "AIpha Research Desk",
+                copy: "已发布的 GitHub Pages 统一入口，集中展示 AIpha-Radar、AIpha Serenity 和 AIpha-Close 三个 HTML-only 研究资产。",
+                tagA: "GitHub Pages",
+                tagB: "HTML-only",
+                tagC: "Research asset",
+                url: "https://cyanask.github.io/AIpha/",
+                urlText: "cyanask.github.io/AIpha",
+                cta: "打开作品",
+                rows: [
+                  ["AIpha-Radar", "产业链事件雷达"],
+                  ["AIpha Serenity", "公开推文研究资产"],
+                  ["AIpha-Close", "收盘研究视图"]
+                ]
+              }
             },
             loki: {
               kicker: "投委会与监控系统",
@@ -3164,7 +3398,23 @@
               scenario: "Overseas AI supply-chain event discovery, A-share mapping, after-close review and Serenity Lens research assets.",
               modules: "329-row A-share mapping, Fact Store, Feature Store, Evaluation Ledger, Radar, Serenity Lens and AIpha-Close.",
               outputs: "AIpha-Radar, Serenity Lens, AIpha-Close, mapping audits and HTML-only public packages.",
-              value: "Turns public facts and market data into queryable, reviewable and degradable research assets without treating model output as trading conclusions."
+              value: "Turns public facts and market data into queryable, reviewable and degradable research assets without treating model output as trading conclusions.",
+              showcase: {
+                label: "Live Work Showcase",
+                title: "AIpha Research Desk",
+                copy: "A published GitHub Pages entry for three HTML-only research assets: AIpha-Radar, AIpha Serenity and AIpha-Close.",
+                tagA: "GitHub Pages",
+                tagB: "HTML-only",
+                tagC: "Research asset",
+                url: "https://cyanask.github.io/AIpha/",
+                urlText: "cyanask.github.io/AIpha",
+                cta: "Open live project",
+                rows: [
+                  ["AIpha-Radar", "Supply-chain event radar"],
+                  ["AIpha Serenity", "Public-post research asset"],
+                  ["AIpha-Close", "After-close research view"]
+                ]
+              }
             },
             loki: {
               kicker: "Research committee and monitoring system",
@@ -3209,6 +3459,21 @@
         const aiModules = lab.querySelector("[data-ai-modules]");
         const aiOutputs = lab.querySelector("[data-ai-outputs]");
         const aiValue = lab.querySelector("[data-ai-value]");
+        const aiShowcase = lab.querySelector("[data-ai-showcase]");
+        const aiShowcaseLabel = lab.querySelector("[data-ai-showcase-label]");
+        const aiShowcaseTitle = lab.querySelector("[data-ai-showcase-title]");
+        const aiShowcaseCopy = lab.querySelector("[data-ai-showcase-copy]");
+        const aiShowcaseTagA = lab.querySelector("[data-ai-showcase-tag-a]");
+        const aiShowcaseTagB = lab.querySelector("[data-ai-showcase-tag-b]");
+        const aiShowcaseTagC = lab.querySelector("[data-ai-showcase-tag-c]");
+        const aiShowcaseUrl = lab.querySelector("[data-ai-showcase-url]");
+        const aiShowcaseLink = lab.querySelector("[data-ai-showcase-link]");
+        const aiShowcaseRowATitle = lab.querySelector("[data-ai-showcase-row-a-title]");
+        const aiShowcaseRowACopy = lab.querySelector("[data-ai-showcase-row-a-copy]");
+        const aiShowcaseRowBTitle = lab.querySelector("[data-ai-showcase-row-b-title]");
+        const aiShowcaseRowBCopy = lab.querySelector("[data-ai-showcase-row-b-copy]");
+        const aiShowcaseRowCTitle = lab.querySelector("[data-ai-showcase-row-c-title]");
+        const aiShowcaseRowCCopy = lab.querySelector("[data-ai-showcase-row-c-copy]");
         let activeProject = "hermes";
 
         function renderCase(caseKey) {
@@ -3248,6 +3513,26 @@
           aiModules.textContent = item.modules;
           aiOutputs.textContent = item.outputs;
           aiValue.textContent = item.value;
+          if (item.showcase) {
+            aiShowcase.hidden = false;
+            aiShowcaseLabel.textContent = item.showcase.label;
+            aiShowcaseTitle.textContent = item.showcase.title;
+            aiShowcaseCopy.textContent = item.showcase.copy;
+            aiShowcaseTagA.textContent = item.showcase.tagA;
+            aiShowcaseTagB.textContent = item.showcase.tagB;
+            aiShowcaseTagC.textContent = item.showcase.tagC;
+            aiShowcaseUrl.textContent = item.showcase.urlText;
+            aiShowcaseLink.href = item.showcase.url;
+            aiShowcaseLink.textContent = item.showcase.cta;
+            aiShowcaseRowATitle.textContent = item.showcase.rows[0][0];
+            aiShowcaseRowACopy.textContent = item.showcase.rows[0][1];
+            aiShowcaseRowBTitle.textContent = item.showcase.rows[1][0];
+            aiShowcaseRowBCopy.textContent = item.showcase.rows[1][1];
+            aiShowcaseRowCTitle.textContent = item.showcase.rows[2][0];
+            aiShowcaseRowCCopy.textContent = item.showcase.rows[2][1];
+          } else {
+            aiShowcase.hidden = true;
+          }
         }
 
         portalButtons.forEach(function (button, index) {
