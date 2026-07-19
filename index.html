@@ -2480,9 +2480,13 @@
 
       .ai-system-cards {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 6px;
         margin: 0 0 10px;
+      }
+
+      .ai-system-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
       }
 
       .ai-system-card {
@@ -2630,7 +2634,7 @@
       <div>
         <div class="eyebrow">简历 / 人工智能战略与投研</div>
         <h1>陈祎</h1>
-        <div class="title">投资银行业务总监 | 人工智能战略与投研候选人 <span class="title-extra">| 智能体工作流构建者</span></div>
+        <div class="title">投资银行业务总监 | 人工智能战略与投研候选人 <span class="title-extra">| AI-native 业务系统构建者</span></div>
         <p class="summary">
           投资银行从业 <strong>6 年 10 个月</strong>，代表项目覆盖创业板上市申报、业务财务核查、交易所沟通文件、招股书和问询回复。目标优先级为 <span class="priority">人工智能战略 / 产业投研</span>，其次为解决方案；base 上海，可远程，也接受海外人工智能机会。
         </p>
@@ -2642,7 +2646,7 @@
         <div class="mobile-evidence-bar" aria-label="移动端核心证据">
           <div class="mobile-evidence-card"><b>6Y10M</b><span>投行执行</span></div>
           <div class="mobile-evidence-card"><b>301563</b><span>创业板 IPO</span></div>
-          <div class="mobile-evidence-card"><b>4 AI</b><span>AI 系统</span></div>
+          <div class="mobile-evidence-card"><b>9 AI</b><span>系统对象</span></div>
         </div>
         <div class="signal-grid" aria-label="能力桥接">
           <div class="signal-card"><b>业务判断</b><span>财务真实性、商业合理性、审核关注点。</span></div>
@@ -2667,10 +2671,10 @@
       <main>
         <section class="case-stage" data-case-lab data-lang-key="zh">
           <h2>核心能力案例</h2>
-          <p class="case-stage-intro">两类经历构成主线：真实 IPO 项目的高约束执行，以及把投行和投研工作抽象成可运行系统的能力。</p>
+          <p class="case-stage-intro">两类经历构成主线：真实 IPO 项目的高约束执行，以及把投行、投研、知识生产与专业服务工作构造成可运行系统的能力。</p>
           <div class="evidence-summary-strip" aria-label="核心证据摘要">
             <div class="evidence-summary-card"><b>IPO Evidence</b><span>云汉芯城（301563）创业板上市项目核心执行人员</span></div>
-            <div class="evidence-summary-card"><b>AI Systems</b><span>1 个月构建 Hermes / AIpha / Loki / NERO Design Team</span></div>
+            <div class="evidence-summary-card"><b>AI Systems</b><span>9 个当前系统对象，覆盖业务执行、研究、知识生产与治理</span></div>
           </div>
 
           <div class="capability-portals" role="tablist" aria-label="能力入口">
@@ -2682,10 +2686,10 @@
               <span class="portal-action">查看案例 <span>→</span></span>
             </button>
             <button class="portal-card" type="button" role="tab" aria-selected="false" data-case-tab="ai">
-              <span class="portal-kicker">1 个月构建 4 个本地 AI 系统</span>
-              <span class="portal-title">AI 工作流构建</span>
-              <span class="portal-text">一个 1 个月本地系统组合，覆盖 IPO 证据工作台、AI/半导体研究资产、A 股投委会和设计质检体系。</span>
-              <span class="portal-metrics"><span>4 个系统</span><span>数据账本</span><span>质量门</span></span>
+              <span class="portal-kicker">持续构建 9 个 AI-native 系统对象</span>
+              <span class="portal-title">AI-native 业务系统组合</span>
+              <span class="portal-text">围绕投行、投研、知识生产、视觉、内容和商业方法形成一组持续运行、可治理的系统。</span>
+              <span class="portal-metrics"><span>9 个对象</span><span>33 条工作流登记</span><span>57 个 Skills</span></span>
               <span class="portal-action">查看项目 <span>→</span></span>
             </button>
           </div>
@@ -2753,112 +2757,128 @@
             <div class="case-hero">
               <div>
                 <span class="case-kicker-strong">系统组合</span>
-                <h3>把投行业务理解转成可运行的 AI 工作流</h3>
-                <p>1 个月内借助 CLI 与 Codex vibe coding，围绕“证据工作台、产业研究资产、投研投委会、设计质量系统”搭出 4 个本地系统：既有代码、数据账本和 HTML 输出，也有质量门、审计和人工复核边界。</p>
+                <h3>把专业工作持续构造成可运行、可治理的 AI-native 系统</h3>
+                <p>我以 Codex 为主要构建工具，独立开发并持续治理投行、投研、知识生产、设计、内容和商业方法系统。每个系统都明确真源、工作流契约、验证器、质量门和人工责任边界，并已在个人及小团队工作中运行。</p>
               </div>
-              <div class="ai-stat">4 个本地系统<br>证据 / 数据 / 输出闭环</div>
+              <div class="ai-stat">9 个系统对象<br>8 个受管对象 + Atlas</div>
             </div>
 
             <div class="ai-system-cards" aria-label="AI 系统摘要">
-              <button class="ai-system-card" type="button" aria-pressed="true" data-ai-jump="hermes"><b>Hermes</b><span>IPO 证据工作台</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="true" data-ai-jump="ipo"><b>IPO Desk</b><span>投行垂直操作系统</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="ibd"><b>IBD Workbench</b><span>投行任务工作台</span></button>
               <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="aipha"><b>AIpha</b><span>产业研究资产</span></button>
-              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="loki"><b>Loki</b><span>投研投委会</span></button>
-              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="design"><b>Design</b><span>输出设计系统</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="kat"><b>KAT</b><span>知识产物治理</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="ndt"><b>NDT</b><span>设计生产与质检</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="wechat"><b>WeChat</b><span>长期内容生产</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="dbs"><b>DBS</b><span>商业方法路由</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="hermes"><b>Hermes Agent</b><span>Agent Runtime</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="atlas"><b>NERO Atlas</b><span>只读治理控制台</span></button>
             </div>
 
-            <details class="visual-module architecture-module" aria-label="AI 本地系统架构图" open>
-              <summary class="visual-module-summary">AI 本地系统架构图</summary>
+            <details class="visual-module architecture-module" aria-label="AI-native 系统组合架构图" open>
+              <summary class="visual-module-summary">AI-native 系统组合架构图</summary>
               <div class="architecture-content">
                 <div class="visual-module-head">
-                  <h4>AI 本地系统架构图</h4>
-                  <div class="visual-source-note">模块、证据、数据、循环与输出</div>
+                  <h4>AI-native 系统组合架构图</h4>
+                  <div class="visual-source-note">业务真源、工作流、质量门与交付</div>
                 </div>
                 <div class="architecture-map">
-                  <div class="map-cell map-head">System</div>
-                  <div class="map-cell map-head">Evidence</div>
-                  <div class="map-cell map-head">Data</div>
-                  <div class="map-cell map-head">Agent Loop</div>
-                  <div class="map-cell map-head">Quality Gate</div>
-                  <div class="map-cell map-head">Output</div>
-                  <div class="map-cell map-row-head">Hermes</div>
-                  <div class="map-cell map-signal">共享证据库</div>
-                  <div class="map-cell map-signal">Gold / M2</div>
-                  <div class="map-cell map-signal">披露审阅</div>
-                  <div class="map-cell map-signal">人审 / 冻结</div>
-                  <div class="map-cell map-signal">问询 / 底稿</div>
-                  <div class="map-cell map-row-head">AIpha</div>
-                  <div class="map-cell map-signal">公开事实</div>
-                  <div class="map-cell map-signal">Fact / Feature</div>
+                  <div class="map-cell map-head">系统层</div>
+                  <div class="map-cell map-head">系统对象</div>
+                  <div class="map-cell map-head">真源</div>
+                  <div class="map-cell map-head">工作流</div>
+                  <div class="map-cell map-head">质量门</div>
+                  <div class="map-cell map-head">输出</div>
+                  <div class="map-cell map-row-head">业务执行</div>
+                  <div class="map-cell map-signal">IPO Desk / IBD</div>
+                  <div class="map-cell map-signal">证据 / 任务控制</div>
+                  <div class="map-cell map-signal">披露 / 材料</div>
+                  <div class="map-cell map-signal">规则 / 人审</div>
+                  <div class="map-cell map-signal">问询 / 底稿 / 提案</div>
+                  <div class="map-cell map-row-head">产业研究</div>
+                  <div class="map-cell map-signal">AIpha</div>
+                  <div class="map-cell map-signal">事实 / 行情</div>
                   <div class="map-cell map-signal">Radar / Lens</div>
-                  <div class="map-cell map-signal">Gate / Ledger</div>
-                  <div class="map-cell map-signal">HTML-only</div>
-                  <div class="map-cell map-row-head">Loki</div>
-                  <div class="map-cell map-signal">研究档案</div>
-                  <div class="map-cell map-signal">组合台账</div>
-                  <div class="map-cell map-signal">4 主智能体</div>
-                  <div class="map-cell map-signal">后验校准</div>
-                  <div class="map-cell map-signal">投委会 memo</div>
-                  <div class="map-cell map-row-head">Design</div>
-                  <div class="map-cell map-signal">案例库</div>
-                  <div class="map-cell map-signal">tokens</div>
-                  <div class="map-cell map-signal">生成器</div>
-                  <div class="map-cell map-signal">Visual QA</div>
-                  <div class="map-cell map-signal">网页 / 图片</div>
+                  <div class="map-cell map-signal">Verifier / Ledger</div>
+                  <div class="map-cell map-signal">研究资产</div>
+                  <div class="map-cell map-row-head">知识生产</div>
+                  <div class="map-cell map-signal">KAT / NDT / WeChat</div>
+                  <div class="map-cell map-signal">内容 / 设计资产</div>
+                  <div class="map-cell map-signal">生产 / 交接 / 发布</div>
+                  <div class="map-cell map-signal">QA / 评分 / 注册</div>
+                  <div class="map-cell map-signal">文档 / 网页 / 长文</div>
+                  <div class="map-cell map-row-head">能力与运行</div>
+                  <div class="map-cell map-signal">DBS / Hermes Agent</div>
+                  <div class="map-cell map-signal">Skill / 消息</div>
+                  <div class="map-cell map-signal">路由 / Runtime</div>
+                  <div class="map-cell map-signal">权限 / 边界</div>
+                  <div class="map-cell map-signal">方法 / 调度</div>
+                  <div class="map-cell map-row-head">治理观察</div>
+                  <div class="map-cell map-signal">NERO Atlas</div>
+                  <div class="map-cell map-signal">Registry</div>
+                  <div class="map-cell map-signal">只读观测</div>
+                  <div class="map-cell map-signal">健康 / 漂移</div>
+                  <div class="map-cell map-signal">系统地图</div>
                 </div>
               </div>
             </details>
 
             <div class="ai-project-pills" role="tablist" aria-label="AI 项目">
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="true" data-ai-project="hermes">Hermes</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="true" data-ai-project="ipo">NERO IPO Desk</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="ibd">IBD Workbench</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="aipha">AIpha</button>
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="loki">Loki</button>
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="design">NERO Design Team</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="kat">KAT</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="ndt">NERO Design Team</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="wechat">WeChat Workspace</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="dbs">DBS</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="hermes">Hermes Agent</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="atlas">NERO Atlas</button>
             </div>
 
             <div class="ai-project-detail" aria-live="polite">
               <div class="ai-project-layout">
                 <div>
-                  <span class="case-kicker-strong" data-ai-kicker>披露证据工作台</span>
-                  <h4 data-ai-title>Hermes · IPO 披露与证据工作台</h4>
-                  <p data-ai-summary>本地化、证据驱动的 IPO / 新三板项目工作台，把资料入库、Gold/M2 业财分析、披露审阅、问询回复、底稿生成和人工复核放进可验证 workflow。</p>
+                  <span class="case-kicker-strong" data-ai-kicker>核心垂直操作系统</span>
+                  <h4 data-ai-title>NERO IPO Desk · IPO / NEEQ AI-native 垂直操作系统</h4>
+                  <p data-ai-summary>围绕投行受监管工作构建的本地垂直操作系统，把事实与证据、权威工作流、确定性规则、受控 Agent、质量门和人工复核组织为正式交付链路。</p>
                 </div>
-                <div class="ai-stat" data-ai-stat>737 Python 文件<br>约 13.7 万行 Python</div>
+                <div class="ai-stat" data-ai-stat>5 条权威工作流<br>14 个一级 Agents</div>
               </div>
               <div class="ai-live-showcase" data-ai-showcase>
                 <div class="showcase-copy">
-                  <span class="showcase-label" data-ai-showcase-label>本地项目摘要</span>
-                  <h5 data-ai-showcase-title>Hermes Evidence Workbench</h5>
-                  <p data-ai-showcase-copy>本地投行披露与证据工作台。因客户与投行业务边界不公开截图，以代码规模、模块链路和输出物展示系统化交付能力。</p>
+                  <span class="showcase-label" data-ai-showcase-label>私有生产系统</span>
+                  <h5 data-ai-showcase-title>NERO IPO Desk</h5>
+                  <p data-ai-showcase-copy>系统已用于披露审阅、问询回复、底稿生成、实质性底稿复核和银行流水核查；客户事实与正式结论始终由受控证据和人工复核负责。</p>
                   <div class="showcase-tags" aria-label="项目标签">
-                    <span data-ai-showcase-tag-a>私有本地系统</span>
-                    <span data-ai-showcase-tag-b>证据工作流</span>
-                    <span data-ai-showcase-tag-c>人工复核</span>
+                    <span data-ai-showcase-tag-a>投行垂直系统</span>
+                    <span data-ai-showcase-tag-b>权威工作流</span>
+                    <span data-ai-showcase-tag-c>人机责任边界</span>
                   </div>
                 </div>
                 <div class="showcase-preview" aria-hidden="true">
                   <div class="preview-chrome"><i></i><i></i><i></i><span data-ai-showcase-url>local/private</span></div>
                   <div class="preview-rows">
-                    <div class="preview-row"><b data-ai-showcase-row-a-title>Evidence</b><span data-ai-showcase-row-a-copy>共享证据库 / 证据冻结 / 审阅记录</span></div>
-                    <div class="preview-row"><b data-ai-showcase-row-b-title>Workflow</b><span data-ai-showcase-row-b-copy>资料入库 → 业财分析 → 披露审阅 → 问询/底稿</span></div>
-                    <div class="preview-row"><b data-ai-showcase-row-c-title>Quality gate</b><span data-ai-showcase-row-c-copy>证据 ID / 人审节点 / 口径边界</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-a-title>Evidence</b><span data-ai-showcase-row-a-copy>事实系统 / 证据库 / 引用链</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-b-title>Workflow</b><span data-ai-showcase-row-b-copy>审题 → 证据 → 起草 → 复核 → 交付</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-c-title>Quality gate</b><span data-ai-showcase-row-c-copy>确定性规则 / 人审 / 结论边界</span></div>
                   </div>
                 </div>
-                <a class="showcase-link" data-ai-showcase-link aria-disabled="true">敏感场景不公开</a>
+                <a class="showcase-link" data-ai-showcase-link aria-disabled="true">私有生产系统</a>
               </div>
               <div class="ai-detail-grid">
-                <div class="ai-detail-cell"><b>场景</b><span data-ai-scenario>IPO/新三板披露审阅、问询回复、尽调底稿、银行流水、访谈函证。</span></div>
-                <div class="ai-detail-cell"><b>模块</b><span data-ai-modules>M1 Raw/Bronze/Silver/Gold、M2 业财分析、共享证据库、多数据库治理、披露工作台。</span></div>
-                <div class="ai-detail-cell"><b>输出物</b><span data-ai-outputs>审阅报告、问询/底稿草稿、运行记录、证据冻结、Word/HTML/GUI 工作台。</span></div>
-                <div class="ai-detail-cell"><b>能力迁移</b><span data-ai-value>把投行专家工作拆成受控数据源、证据 ID、质量门和人审节点，适合金融/合规类 agent 产品。</span></div>
+                <div class="ai-detail-cell"><b>场景</b><span data-ai-scenario>披露审阅、问询回复、底稿生成、实质性底稿复核、银行流水核查。</span></div>
+                <div class="ai-detail-cell"><b>模块</b><span data-ai-modules>事实与证据系统、工作流治理、披露工作台、Agent 控制平面、产物工厂。</span></div>
+                <div class="ai-detail-cell"><b>输出物</b><span data-ai-outputs>问询回复、披露审阅、核查底稿、银行流水质量报告、Word/HTML/原生工作台。</span></div>
+                <div class="ai-detail-cell"><b>能力迁移</b><span data-ai-value>把强监管、重证据的专业工作转成可追溯、可复核、可交付的业务系统。</span></div>
               </div>
             </div>
 
             <details class="evidence-boundary">
-              <summary>公开范围 / 统计口径</summary>
+              <summary>公开范围 / 当前口径</summary>
               <div class="boundary-grid">
-                <div class="boundary-item"><b>本地统计</b><span>代码文件数和行数来自本机项目目录只读 git / wc 统计。</span></div>
-                <div class="boundary-item"><b>项目边界</b><span>项目名可公开；不公开本地截图、客户资料和敏感路径。</span></div>
-                <div class="boundary-item"><b>结论边界</b><span>AI 项目展示工作流构建能力，不把模型输出包装成投资或监管结论。</span></div>
+                <div class="boundary-item"><b>治理快照</b><span>9 个对象、33 条工作流登记和 57 个 Skills 来自当前 Atlas 只读登记；工作流成熟度并不完全相同。</span></div>
+                <div class="boundary-item"><b>项目边界</b><span>项目名可以公开；不公开客户资料、持仓策略、敏感路径和私有系统截图。</span></div>
+                <div class="boundary-item"><b>结论边界</b><span>系统证明专业工作产品化能力；投资、监管及正式业务结论仍由事实证据和人工责任链负责。</span></div>
               </div>
             </details>
 
@@ -2881,11 +2901,13 @@
         <details class="side-block side-details" open data-mobile-default="open">
           <summary><h2>工具与实现</h2></summary>
           <div class="skill-tags">
-            <span class="tag">CLI + Codex 工作流</span>
+            <span class="tag">Codex 原生构建</span>
             <span class="tag">本地优先系统</span>
+            <span class="tag">Registry / Verifier</span>
             <span class="tag">HTML 报告渲染</span>
             <span class="tag">浏览器质检</span>
             <span class="tag">Python</span>
+            <span class="tag">Swift / macOS</span>
             <span class="tag">SQL / SQLite / DuckDB</span>
             <span class="tag">Streamlit</span>
             <span class="tag">HTML / CSS</span>
@@ -2936,7 +2958,7 @@
       <div>
         <div class="eyebrow">Resume / AI Strategy & Investment Research</div>
         <h1>Nero Chen</h1>
-        <div class="title">Investment Banking Business Director | AI Strategy & Investment Research Candidate <span class="title-extra">| Agent Workflow Builder</span></div>
+        <div class="title">Investment Banking Business Director | AI Strategy & Investment Research Candidate <span class="title-extra">| AI-native Business Systems Builder</span></div>
         <p class="summary">
           Investment banking professional with <strong>6 years 10 months</strong> of experience across Growth Enterprise Market IPO filing, business and financial verification, exchange communication materials, prospectus drafting and inquiry responses. Target roles prioritize <span class="priority">AI strategy / investment research</span>, followed by solutions roles; Shanghai-based, remote-ready and open to overseas AI opportunities.
         </p>
@@ -2948,7 +2970,7 @@
         <div class="mobile-evidence-bar" aria-label="Mobile core evidence">
           <div class="mobile-evidence-card"><b>6Y10M</b><span>banking execution</span></div>
           <div class="mobile-evidence-card"><b>301563</b><span>GEM IPO</span></div>
-          <div class="mobile-evidence-card"><b>4 AI</b><span>systems</span></div>
+          <div class="mobile-evidence-card"><b>9 AI</b><span>system objects</span></div>
         </div>
         <div class="signal-grid" aria-label="Capability bridge">
           <div class="signal-card"><b>Business judgement</b><span>Financial authenticity, business logic and regulatory focus.</span></div>
@@ -2973,10 +2995,10 @@
       <main>
         <section class="case-stage" data-case-lab data-lang-key="en">
           <h2>Core Capability Cases</h2>
-          <p class="case-stage-intro">Two workstreams define the profile: a high-constraint IPO execution case, and a local-system build track that turns banking and research workflows into runnable products.</p>
+          <p class="case-stage-intro">Two workstreams define the profile: high-constraint IPO execution, and the ability to turn banking, research, knowledge production and professional-service work into runnable systems.</p>
           <div class="evidence-summary-strip" aria-label="Core evidence summary">
             <div class="evidence-summary-card"><b>IPO Evidence</b><span>Core execution member on ICKey (301563) GEM IPO</span></div>
-            <div class="evidence-summary-card"><b>AI Systems</b><span>Built Hermes / AIpha / Loki / NERO Design Team in one month</span></div>
+            <div class="evidence-summary-card"><b>AI Systems</b><span>9 current system objects across execution, research, production and governance</span></div>
           </div>
 
           <div class="capability-portals" role="tablist" aria-label="Capability portals">
@@ -2988,10 +3010,10 @@
               <span class="portal-action">View case <span>→</span></span>
             </button>
             <button class="portal-card" type="button" role="tab" aria-selected="false" data-case-tab="ai">
-              <span class="portal-kicker">4 local AI systems built in one month</span>
-              <span class="portal-title">AI Workflow Builder</span>
-              <span class="portal-text">A one-month local systems portfolio covering IPO evidence workbench, AI/semiconductor research assets, A-share committee workflows and design QA.</span>
-              <span class="portal-metrics"><span>4 systems</span><span>Data ledgers</span><span>Quality gates</span></span>
+              <span class="portal-kicker">A continuously evolving portfolio of 9 AI-native system objects</span>
+              <span class="portal-title">AI-native Business Systems</span>
+              <span class="portal-text">A governed portfolio spanning investment banking, research, knowledge production, design, publishing and business methods.</span>
+              <span class="portal-metrics"><span>9 objects</span><span>33 workflow records</span><span>57 Skills</span></span>
               <span class="portal-action">View projects <span>→</span></span>
             </button>
           </div>
@@ -3059,112 +3081,128 @@
             <div class="case-hero">
               <div>
                 <span class="case-kicker-strong">System portfolio</span>
-                <h3>Turning banking judgement into runnable AI workflows</h3>
-                <p>In one month, using CLI and Codex-assisted vibe coding, I built four local systems around evidence workbench, industry research assets, investment committee workflows and design quality control, with code, data ledgers, HTML outputs, quality gates, audit trails and human review boundaries.</p>
+                <h3>Turning professional work into runnable, governed AI-native systems</h3>
+                <p>Using Codex as the primary build environment, I independently develop and govern systems for investment banking, research, knowledge production, design, publishing and business methods. Each system defines its source of truth, workflow contracts, verifiers, quality gates and human accountability, and has been used in individual and small-team work.</p>
               </div>
-              <div class="ai-stat">4 local systems<br>Evidence / data / output loop</div>
+              <div class="ai-stat">9 system objects<br>8 managed objects + Atlas</div>
             </div>
 
             <div class="ai-system-cards" aria-label="AI system summary">
-              <button class="ai-system-card" type="button" aria-pressed="true" data-ai-jump="hermes"><b>Hermes</b><span>IPO evidence workbench</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="true" data-ai-jump="ipo"><b>IPO Desk</b><span>vertical banking OS</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="ibd"><b>IBD Workbench</b><span>banking task workbench</span></button>
               <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="aipha"><b>AIpha</b><span>research asset system</span></button>
-              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="loki"><b>Loki</b><span>investment committee</span></button>
-              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="design"><b>Design</b><span>output design system</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="kat"><b>KAT</b><span>artifact governance</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="ndt"><b>NDT</b><span>design production and QA</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="wechat"><b>WeChat</b><span>long-form publishing</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="dbs"><b>DBS</b><span>business-method routing</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="hermes"><b>Hermes Agent</b><span>Agent Runtime</span></button>
+              <button class="ai-system-card" type="button" aria-pressed="false" data-ai-jump="atlas"><b>NERO Atlas</b><span>read-only control plane</span></button>
             </div>
 
-            <details class="visual-module architecture-module" aria-label="Local AI systems architecture map" open>
-              <summary class="visual-module-summary">Local AI Systems Architecture</summary>
+            <details class="visual-module architecture-module" aria-label="AI-native systems portfolio architecture" open>
+              <summary class="visual-module-summary">AI-native Systems Portfolio</summary>
               <div class="architecture-content">
                 <div class="visual-module-head">
-                  <h4>Local AI Systems Architecture</h4>
-                  <div class="visual-source-note">Modules, evidence, data, loop and outputs</div>
+                  <h4>AI-native Systems Portfolio</h4>
+                  <div class="visual-source-note">Sources of truth, workflows, quality gates and outputs</div>
                 </div>
                 <div class="architecture-map">
-                  <div class="map-cell map-head">System</div>
-                  <div class="map-cell map-head">Evidence</div>
-                  <div class="map-cell map-head">Data</div>
-                  <div class="map-cell map-head">Agent Loop</div>
+                  <div class="map-cell map-head">Layer</div>
+                  <div class="map-cell map-head">Systems</div>
+                  <div class="map-cell map-head">Truth</div>
+                  <div class="map-cell map-head">Workflow</div>
                   <div class="map-cell map-head">Quality Gate</div>
                   <div class="map-cell map-head">Output</div>
-                  <div class="map-cell map-row-head">Hermes</div>
-                  <div class="map-cell map-signal">Evidence store</div>
-                  <div class="map-cell map-signal">Gold / M2</div>
-                  <div class="map-cell map-signal">Disclosure review</div>
-                  <div class="map-cell map-signal">Human freeze</div>
-                  <div class="map-cell map-signal">Inquiry / WP</div>
-                  <div class="map-cell map-row-head">AIpha</div>
-                  <div class="map-cell map-signal">Public facts</div>
-                  <div class="map-cell map-signal">Fact / Feature</div>
+                  <div class="map-cell map-row-head">Business</div>
+                  <div class="map-cell map-signal">IPO Desk / IBD</div>
+                  <div class="map-cell map-signal">Evidence / task control</div>
+                  <div class="map-cell map-signal">Disclosure / materials</div>
+                  <div class="map-cell map-signal">Rules / human review</div>
+                  <div class="map-cell map-signal">Inquiry / WP / proposal</div>
+                  <div class="map-cell map-row-head">Research</div>
+                  <div class="map-cell map-signal">AIpha</div>
+                  <div class="map-cell map-signal">Facts / market data</div>
                   <div class="map-cell map-signal">Radar / Lens</div>
-                  <div class="map-cell map-signal">Gate / Ledger</div>
-                  <div class="map-cell map-signal">HTML-only</div>
-                  <div class="map-cell map-row-head">Loki</div>
-                  <div class="map-cell map-signal">Research profiles</div>
-                  <div class="map-cell map-signal">Portfolio ledger</div>
-                  <div class="map-cell map-signal">4 main agents</div>
-                  <div class="map-cell map-signal">Calibration</div>
-                  <div class="map-cell map-signal">Committee memo</div>
-                  <div class="map-cell map-row-head">Design</div>
-                  <div class="map-cell map-signal">Case library</div>
-                  <div class="map-cell map-signal">tokens</div>
-                  <div class="map-cell map-signal">Generator</div>
-                  <div class="map-cell map-signal">Visual QA</div>
-                  <div class="map-cell map-signal">Web / image</div>
+                  <div class="map-cell map-signal">Verifier / Ledger</div>
+                  <div class="map-cell map-signal">Research assets</div>
+                  <div class="map-cell map-row-head">Production</div>
+                  <div class="map-cell map-signal">KAT / NDT / WeChat</div>
+                  <div class="map-cell map-signal">Content / design assets</div>
+                  <div class="map-cell map-signal">Produce / hand off / publish</div>
+                  <div class="map-cell map-signal">QA / score / registry</div>
+                  <div class="map-cell map-signal">Docs / web / articles</div>
+                  <div class="map-cell map-row-head">Capability</div>
+                  <div class="map-cell map-signal">DBS / Hermes Agent</div>
+                  <div class="map-cell map-signal">Skills / messages</div>
+                  <div class="map-cell map-signal">Routing / Runtime</div>
+                  <div class="map-cell map-signal">Permission / scope</div>
+                  <div class="map-cell map-signal">Methods / dispatch</div>
+                  <div class="map-cell map-row-head">Governance</div>
+                  <div class="map-cell map-signal">NERO Atlas</div>
+                  <div class="map-cell map-signal">Registry</div>
+                  <div class="map-cell map-signal">Read-only observe</div>
+                  <div class="map-cell map-signal">Health / drift</div>
+                  <div class="map-cell map-signal">System map</div>
                 </div>
               </div>
             </details>
 
             <div class="ai-project-pills" role="tablist" aria-label="AI projects">
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="true" data-ai-project="hermes">Hermes</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="true" data-ai-project="ipo">NERO IPO Desk</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="ibd">IBD Workbench</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="aipha">AIpha</button>
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="loki">Loki</button>
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="design">NERO Design Team</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="kat">KAT</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="ndt">NERO Design Team</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="wechat">WeChat Workspace</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="dbs">DBS</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="hermes">Hermes Agent</button>
+              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="atlas">NERO Atlas</button>
             </div>
 
             <div class="ai-project-detail" aria-live="polite">
               <div class="ai-project-layout">
                 <div>
-                  <span class="case-kicker-strong" data-ai-kicker>Disclosure evidence workbench</span>
-                  <h4 data-ai-title>Hermes · IPO disclosure and evidence workbench</h4>
-                  <p data-ai-summary>A local, evidence-driven IPO / NEEQ project workbench that connects document intake, Gold/M2 business-finance analysis, disclosure review, inquiry response, workpaper generation and human review into a verifiable workflow.</p>
+                  <span class="case-kicker-strong" data-ai-kicker>Core vertical operating system</span>
+                  <h4 data-ai-title>NERO IPO Desk · AI-native operating system for IPO / NEEQ work</h4>
+                  <p data-ai-summary>A local vertical operating system for regulated investment-banking work, connecting facts and evidence, authoritative workflows, deterministic rules, controlled agents, quality gates and human review into formal delivery.</p>
                 </div>
-                <div class="ai-stat" data-ai-stat>737 Python files<br>approx. 137k Python LOC</div>
+                <div class="ai-stat" data-ai-stat>5 authoritative workflows<br>14 primary Agents</div>
               </div>
               <div class="ai-live-showcase" data-ai-showcase>
                 <div class="showcase-copy">
-                  <span class="showcase-label" data-ai-showcase-label>Local project snapshot</span>
-                  <h5 data-ai-showcase-title>Hermes Evidence Workbench</h5>
-                  <p data-ai-showcase-copy>A private local disclosure and evidence workbench for investment-banking workflows. Screenshots stay private; code scale, module chain and outputs show system-building ability.</p>
+                  <span class="showcase-label" data-ai-showcase-label>Private production system</span>
+                  <h5 data-ai-showcase-title>NERO IPO Desk</h5>
+                  <p data-ai-showcase-copy>Used for disclosure review, inquiry responses, workpaper generation, substantive workpaper review and bank-flow checks. Customer facts and formal conclusions remain governed by controlled evidence and human review.</p>
                   <div class="showcase-tags" aria-label="project tags">
-                    <span data-ai-showcase-tag-a>Private local system</span>
-                    <span data-ai-showcase-tag-b>Evidence workflow</span>
-                    <span data-ai-showcase-tag-c>Human review</span>
+                    <span data-ai-showcase-tag-a>Banking vertical system</span>
+                    <span data-ai-showcase-tag-b>Authoritative workflows</span>
+                    <span data-ai-showcase-tag-c>Human accountability</span>
                   </div>
                 </div>
                 <div class="showcase-preview" aria-hidden="true">
                   <div class="preview-chrome"><i></i><i></i><i></i><span data-ai-showcase-url>local/private</span></div>
                   <div class="preview-rows">
-                    <div class="preview-row"><b data-ai-showcase-row-a-title>Evidence</b><span data-ai-showcase-row-a-copy>shared evidence store / evidence freeze / review logs</span></div>
-                    <div class="preview-row"><b data-ai-showcase-row-b-title>Workflow</b><span data-ai-showcase-row-b-copy>intake → financial analysis → disclosure review → inquiry/workpapers</span></div>
-                    <div class="preview-row"><b data-ai-showcase-row-c-title>Quality gate</b><span data-ai-showcase-row-c-copy>evidence IDs / human review / conclusion boundary</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-a-title>Evidence</b><span data-ai-showcase-row-a-copy>fact system / evidence store / citation chain</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-b-title>Workflow</b><span data-ai-showcase-row-b-copy>scope → evidence → draft → review → delivery</span></div>
+                    <div class="preview-row"><b data-ai-showcase-row-c-title>Quality gate</b><span data-ai-showcase-row-c-copy>deterministic rules / human review / conclusion scope</span></div>
                   </div>
                 </div>
-                <a class="showcase-link" data-ai-showcase-link aria-disabled="true">Private workflow</a>
+                <a class="showcase-link" data-ai-showcase-link aria-disabled="true">Private production system</a>
               </div>
               <div class="ai-detail-grid">
-                <div class="ai-detail-cell"><b>Scenario</b><span data-ai-scenario>IPO / NEEQ disclosure review, inquiry response, due diligence workpapers, bank flows, interviews and confirmations.</span></div>
-                <div class="ai-detail-cell"><b>Modules</b><span data-ai-modules>M1 Raw/Bronze/Silver/Gold, M2 business-finance analysis, shared evidence store, multi-database governance and disclosure workbench.</span></div>
-                <div class="ai-detail-cell"><b>Outputs</b><span data-ai-outputs>Review reports, inquiry/workpaper drafts, run records, evidence freezes, Word/HTML/GUI workbench.</span></div>
-                <div class="ai-detail-cell"><b>Transferable value</b><span data-ai-value>Breaks expert banking work into governed data sources, evidence IDs, quality gates and human review nodes for financial / compliance agent products.</span></div>
+                <div class="ai-detail-cell"><b>Scenario</b><span data-ai-scenario>Disclosure review, inquiry response, workpaper generation, substantive workpaper review and bank-flow checks.</span></div>
+                <div class="ai-detail-cell"><b>Modules</b><span data-ai-modules>Fact and evidence system, workflow governance, disclosure workbench, agent control plane and artifact factory.</span></div>
+                <div class="ai-detail-cell"><b>Outputs</b><span data-ai-outputs>Inquiry responses, disclosure reviews, workpapers, bank-flow quality reports and Word/HTML/native workbenches.</span></div>
+                <div class="ai-detail-cell"><b>Transferable value</b><span data-ai-value>Turns regulated, evidence-heavy professional work into a traceable, reviewable and deliverable business system.</span></div>
               </div>
             </div>
 
             <details class="evidence-boundary">
-              <summary>Public Scope / Measurement Basis</summary>
+              <summary>Public Scope / Current Snapshot</summary>
               <div class="boundary-grid">
-                <div class="boundary-item"><b>Local stats</b><span>Code file counts and LOC come from read-only git / wc scans of local project directories.</span></div>
-                <div class="boundary-item"><b>Project boundary</b><span>Project names are public; screenshots, client data and sensitive local paths are not disclosed.</span></div>
-                <div class="boundary-item"><b>Conclusion boundary</b><span>AI projects demonstrate workflow-building ability, not investment or regulatory conclusions.</span></div>
+                <div class="boundary-item"><b>Governance snapshot</b><span>9 objects, 33 workflow records and 57 Skills come from the current read-only Atlas registry; workflow maturity is not uniform.</span></div>
+                <div class="boundary-item"><b>Project boundary</b><span>Project names are public; client materials, portfolio strategies, sensitive paths and private-system screenshots are not.</span></div>
+                <div class="boundary-item"><b>Conclusion boundary</b><span>The systems demonstrate professional-work productization; investment, regulatory and formal business conclusions remain governed by facts, evidence and human accountability.</span></div>
               </div>
             </details>
 
@@ -3187,11 +3225,13 @@
         <details class="side-block side-details" open data-mobile-default="open">
           <summary><h2>Tools & Implementation</h2></summary>
           <div class="skill-tags">
-            <span class="tag">CLI + Codex workflow</span>
+            <span class="tag">Codex-native building</span>
             <span class="tag">local-first systems</span>
+            <span class="tag">Registry / Verifier</span>
             <span class="tag">HTML report rendering</span>
             <span class="tag">browser QA</span>
             <span class="tag">Python</span>
+            <span class="tag">Swift / macOS</span>
             <span class="tag">SQL / SQLite / DuckDB</span>
             <span class="tag">Streamlit</span>
             <span class="tag">HTML / CSS</span>
@@ -3307,45 +3347,71 @@
             }
           },
           projects: {
-            hermes: {
-              kicker: "披露证据工作台",
-              title: "Hermes · IPO 披露与证据工作台",
-              summary: "本地化、证据驱动的 IPO / 新三板项目工作台，把资料入库、Gold/M2 业财分析、披露审阅、问询回复、底稿生成和人工复核放进可验证 workflow。",
-              stat: "737 Python 文件<br>约 13.7 万行 Python",
-              scenario: "IPO/新三板披露审阅、问询回复、尽调底稿、银行流水、访谈函证。",
-              modules: "M1 Raw/Bronze/Silver/Gold、M2 业财分析、共享证据库、多数据库治理、披露工作台。",
-              outputs: "审阅报告、问询/底稿草稿、运行记录、证据冻结、Word/HTML/GUI 工作台。",
-              value: "把投行专家工作拆成受控数据源、证据 ID、质量门和人审节点，适合金融/合规类 agent 产品。",
+            ipo: {
+              kicker: "核心垂直操作系统",
+              title: "NERO IPO Desk · IPO / NEEQ AI-native 垂直操作系统",
+              summary: "围绕投行受监管工作构建的本地垂直操作系统，把事实与证据、权威工作流、确定性规则、受控 Agent、质量门和人工复核组织为正式交付链路。",
+              stat: "5 条权威工作流<br>14 个一级 Agents",
+              scenario: "披露审阅、问询回复、底稿生成、实质性底稿复核、银行流水核查。",
+              modules: "事实与证据系统、工作流治理、披露工作台、Agent 控制平面、产物工厂。",
+              outputs: "问询回复、披露审阅、核查底稿、银行流水质量报告、Word/HTML/原生工作台。",
+              value: "把强监管、重证据的专业工作转成可追溯、可复核、可交付的业务系统。",
               showcase: {
-                label: "本地项目摘要",
-                title: "Hermes Evidence Workbench",
-                copy: "本地投行披露与证据工作台。因客户与投行业务边界不公开截图，以代码规模、模块链路和输出物展示系统化交付能力。",
-                tagA: "私有本地系统",
-                tagB: "证据工作流",
-                tagC: "人工复核",
+                label: "私有生产系统",
+                title: "NERO IPO Desk",
+                copy: "系统已用于披露审阅、问询回复、底稿生成、实质性底稿复核和银行流水核查；客户事实与正式结论始终由受控证据和人工复核负责。",
+                tagA: "投行垂直系统",
+                tagB: "权威工作流",
+                tagC: "人机责任边界",
                 url: "",
                 urlText: "local/private",
-                cta: "敏感场景不公开",
+                cta: "私有生产系统",
                 rows: [
-                  ["Evidence", "共享证据库 / 证据冻结 / 审阅记录"],
-                  ["Workflow", "资料入库 → 业财分析 → 披露审阅 → 问询/底稿"],
-                  ["Quality gate", "证据 ID / 人审节点 / 口径边界"]
+                  ["Evidence", "事实系统 / 证据库 / 引用链"],
+                  ["Workflow", "审题 → 证据 → 起草 → 复核 → 交付"],
+                  ["Quality gate", "确定性规则 / 人审 / 结论边界"]
+                ]
+              }
+            },
+            ibd: {
+              kicker: "投行任务工作台",
+              title: "NERO Ibd Workbench · 文件优先的投行任务系统",
+              summary: "面向短周期投行任务的本地工作台，把任务受理、范围冻结、证据与内容生产、视觉和 Office 交付、收尾归档及知识沉淀连接起来。",
+              stat: "5 条权威工作流<br>任务到资产闭环",
+              scenario: "PitchBook、IPO 诊断、访前研究、项目建议书和资本市场材料。",
+              modules: "任务控制、证据与内容生产、视觉与 Office 交付、收尾归档、知识与 Skill 晋升。",
+              outputs: "访前材料、诊断报告、项目提案、资本市场材料、归档包和可复用方法。",
+              value: "把非标准投行任务稳定转成范围清晰、证据可查、交付可复用的执行链。",
+              showcase: {
+                label: "私有任务系统",
+                title: "NERO Ibd Workbench",
+                copy: "一个以文件为真源的投行工作台，强调任务范围、证据、正式交付和归档之间的完整责任链。",
+                tagA: "文件优先",
+                tagB: "投行任务",
+                tagC: "交付治理",
+                url: "",
+                urlText: "local/private",
+                cta: "私有工作台",
+                rows: [
+                  ["Intake", "任务受理 / 范围冻结 / 控制文件"],
+                  ["Delivery", "证据 → 内容 → 视觉 / Office 交付"],
+                  ["Closeout", "归档 → 复盘 → 知识 / Skill 晋升"]
                 ]
               }
             },
             aipha: {
               kicker: "产业投研资产系统",
               title: "AIpha · AI 与半导体投研资产系统",
-              summary: "AI/半导体产业链研究资产系统，把海外硬事件、Serenity 推文线索、A 股映射、本地行情、Feature Store 和 Evaluation Ledger 沉淀为 HTML-only 输出。",
-              stat: "72 Python 文件<br>2.39 万行 Python",
-              scenario: "海外 AI 产业链硬事件发现、A 股产业链映射、收盘后复盘、Serenity Lens 研究资产。",
-              modules: "329 行 A 股映射、Fact Store、Feature Store、Evaluation Ledger、Radar、Serenity Lens、AIpha-Close。",
-              outputs: "AIpha-Radar、Serenity Lens、AIpha-Close、映射审计、HTML-only 公开包。",
-              value: "把公开事实和市场数据变成可查询、可复盘、可降级的研究资产，不把模型输出直接当交易结论。",
+              summary: "面向 AI 与半导体产业链的本地优先研究系统，把公开事实、产业映射、本地行情、Feature Store、Verifier 和 Evaluation Ledger 组织为可复核研究资产。Loki 的存续研究界面已并入 AIpha。",
+              stat: "6 项能力 · 17 个 Verifier<br>13 类产物 · 5 条运行记录",
+              scenario: "海外产业事件发现、A 股映射、持仓与观察池研究、收盘复盘、Serenity Lens。",
+              modules: "Fact Store、Feature Store、Evaluation Ledger、Radar、Serenity Lens、AIpha-Close、Loki Portfolio Web。",
+              outputs: "事件雷达、公开推文研究、收盘视图、组合研究界面、映射审计和 HTML-only 公开包。",
+              value: "把公开事实和本地市场数据变成可查询、可复盘、可降级的研究资产，不把模型输出直接当交易结论。",
               showcase: {
                 label: "公开作品入口",
                 title: "AIpha Research Desk",
-                copy: "已发布的 GitHub Pages 统一入口，集中展示 AIpha-Radar、AIpha Serenity 和 AIpha-Close 三个 HTML-only 研究资产。",
+                copy: "已发布的 GitHub Pages 入口，展示 AIpha 的公开研究资产；组合、持仓和策略细节继续保留在本地真源。",
                 tagA: "公开页面",
                 tagB: "静态 HTML",
                 tagC: "研究资产",
@@ -3355,49 +3421,49 @@
                 rows: [
                   ["AIpha-Radar", "产业链事件雷达"],
                   ["AIpha Serenity", "公开推文研究资产"],
-                  ["AIpha-Close", "收盘研究视图"]
+                  ["AIpha-Close", "收盘研究视图与验证账本"]
                 ]
               }
             },
-            loki: {
-              kicker: "投委会与监控系统",
-              title: "Loki · A 股投研投委会与监控系统",
-              summary: "个人增强型 A 股投研投委会系统，Loki Prime + Expert Swarm，4 个主智能体负责盘中风险、每日复盘、周度投委会和月度战略。",
-              stat: "387 Python 文件<br>约 7.9 万行 Python",
-              scenario: "核心池/观察池/持仓池管理，盘中提醒、收盘复盘、周度投委会、月度战略审计、深审报告。",
-              modules: "IntradayRiskAlert、DailyMarketReview、WeeklyInvestmentCommittee、MonthlyStrategy、Prime 深审、学习治理。",
-              outputs: "风险提示、日度样本、周度 memo、月度策略、状态机、深审候选和策略版本履历。",
-              value: "把主观投研流程产品化为菜单、状态机、专家分工和后验校准，能迁移到研究/策略类 AI 产品。",
+            kat: {
+              kicker: "知识产物治理后端",
+              title: "Knowledge Artifact Team · 结构化知识产物系统",
+              summary: "面向文档、演示和结构化研究产物的生产与治理后端，负责内容流水线、演示交接和质量修复，不替代业务系统的事实与结论责任。",
+              stat: "3 条权威工作流<br>内容 / 交接 / QA 修复",
+              scenario: "结构化内容生产、演示材料交接、文档与视觉质量修复。",
+              modules: "Content Pipeline、Presentation Handoff、QA Repair、静态 Contract Registry。",
+              outputs: "结构化文档、演示交接包、修复记录、质量检查和可复用产物规范。",
+              value: "让一次性交付沉淀为有契约、可检查、可修复的知识生产能力。",
               showcase: {
-                label: "本地项目摘要",
-                title: "Loki Research Committee",
-                copy: "本地 A 股投研投委会与监控系统。以智能体分工、状态机和复盘输出体现投研流程产品化能力，不公开持仓与策略细节。",
-                tagA: "私有本地系统",
-                tagB: "投研工作流",
-                tagC: "策略审计",
+                label: "私有生产后端",
+                title: "Knowledge Artifact Team",
+                copy: "KAT 只负责知识产物的生产契约和 QA，不持有投行、投研或客户事实，保持业务真源与产物工厂的边界。",
+                tagA: "知识产物",
+                tagB: "生产契约",
+                tagC: "QA 修复",
                 url: "",
                 urlText: "local/private",
-                cta: "私有投研系统",
+                cta: "私有生产后端",
                 rows: [
-                  ["Agent roles", "盘中风险 / 日度复盘 / 周度投委会 / 月度战略"],
-                  ["State machine", "核心池 / 观察池 / 持仓池 / 深审候选"],
-                  ["Outputs", "风险提示 / memo / 策略版本履历"]
+                  ["Pipeline", "结构化内容生产"],
+                  ["Handoff", "演示与正式材料交接"],
+                  ["QA", "检查 → 定位 → 修复 → 复核"]
                 ]
               }
             },
-            design: {
-              kicker: "研究输出设计系统",
-              title: "NERO Design Team · 研究输出设计系统",
-              summary: "已开源的 agent-native 设计系统，面向研究输出沉淀品牌资产、tokens、模板、案例库、视觉 QA、评分和 production check。",
-              stat: "92 核心文件<br>17 个脚本/前端文件",
-              scenario: "简历、研究卡片、网页 PPT、报告图、前端界面、视觉审查。",
-              modules: "brand、tokens、templates、case-library、mcp-lite、visual-qa、scorecards、production-check。",
-              outputs: "HTML 简历、图片报告、网页演示、视觉 QA 报告、设计规则和可复用模板。",
-              value: "把专业内容从“能读”推进到“能交付、能验证、能复用”，补足 AI 产品的展示和交互层。",
+            ndt: {
+              kicker: "设计生产与质量治理",
+              title: "NERO Design Team · Agent-native 设计系统",
+              summary: "面向专业产物的设计生产和质量治理系统，以登记资产、设计配方、路由、模板、视觉 QA、评分和发布检查支持多种交付形态。",
+              stat: "71 个登记设计资产<br>10 类资产 · 7 条配方",
+              scenario: "简历、研究卡片、网页演示、报告图、前端界面和正式材料视觉审查。",
+              modules: "Registry、brand、tokens、templates、case-library、mcp-lite、visual-qa、scorecards。",
+              outputs: "HTML、图片报告、网页演示、视觉 QA 报告、设计规则、模板和 Atlas 安全导出。",
+              value: "把设计从一次性美化转成有资产真源、路由、检查和复用机制的生产能力。",
               showcase: {
                 label: "开源作品入口",
                 title: "NERO Design Team",
-                copy: "已开源的 Codex 风格 agent-native 设计系统，不只是 UI 组件库，而是把设计路由、tokens、模板、案例库和 QA/评分/发布检查组织成可复用工作流。",
+                copy: "已开源的 Codex 风格 agent-native 设计系统，不只是 UI 组件库，而是把设计路由、资产登记、配方、模板和 QA/评分/发布检查组织成可复用工作流。",
                 tagA: "GitHub 公开",
                 tagB: "Apache 2.0",
                 tagC: "Agent-native 设计",
@@ -3408,6 +3474,110 @@
                   ["Routes", "frontend-ui / image-report / ppt / short-video"],
                   ["Assets", "skills / tokens / templates / case-library / mcp-lite"],
                   ["Checks", "visual QA / scoring / production-check"]
+                ]
+              }
+            },
+            wechat: {
+              kicker: "长期内容生产系统",
+              title: "WeChat Publishing Workspace · 公众号写作工作区",
+              summary: "以 Markdown 为正文真源的长期内容系统，连接选题、英文证据包、观点写作、视觉交接、人工发布登记和知识沉淀。",
+              stat: "5 个内容系列<br>Markdown 真源",
+              scenario: "AI 产业、AI Builder、组织与数字化主题的证据驱动长文生产。",
+              modules: "Series Registry、Evidence Pack、Writing Workspace、Visual Handoff、Publish Ledger。",
+              outputs: "系列文章、英文证据包、配图交接、发布登记和可复用观点资产。",
+              value: "把持续写作变成有证据门槛、系列边界和发布真源的长期知识系统。",
+              showcase: {
+                label: "私有内容系统",
+                title: "WeChat Publishing Workspace",
+                copy: "正文、证据、系列归属和发布状态分别管理，避免把草稿、视觉产物或推断误当成已发布事实。",
+                tagA: "Markdown 真源",
+                tagB: "英文证据包",
+                tagC: "发布登记",
+                url: "",
+                urlText: "local/private",
+                cta: "私有内容系统",
+                rows: [
+                  ["Evidence", "英文来源 / 日期门 / 证据包"],
+                  ["Writing", "判断 → 结构 → 正文 → 视觉交接"],
+                  ["Registry", "系列归属 / 发布状态 / 知识沉淀"]
+                ]
+              }
+            },
+            dbs: {
+              kicker: "商业方法能力路由",
+              title: "DBS 商业工具箱 · Capability Routing Harness",
+              summary: "把商业诊断、内容、目标、决策和学习方法组织为可发现、可路由、可验证的 Skill 组合，而不是一个业务数据库或长期运行的 Agent。",
+              stat: "28 个 Skills<br>9 个 packages",
+              scenario: "商业问题诊断、目标澄清、内容创作、传播分析、决策与学习方法。",
+              modules: "Skill Registry、任务前路由、任务后导航、受控集成与安装检查。",
+              outputs: "问题说明书、诊断、内容方案、方法建议和下一步 Skill 路由。",
+              value: "把分散的方法论变成能被 AI 发现、选择和复用的能力层。",
+              showcase: {
+                label: "本地能力层",
+                title: "DBS Business Toolkit",
+                copy: "DBS 管理的是方法 Skill 与路由，不持有客户事实，也不替代垂直业务系统。",
+                tagA: "Skill Registry",
+                tagB: "Capability Routing",
+                tagC: "显式调用",
+                url: "",
+                urlText: "local/private",
+                cta: "本地能力层",
+                rows: [
+                  ["Discover", "识别任务需要的专业方法"],
+                  ["Route", "选择 Skill / 模式 / 执行边界"],
+                  ["Validate", "注册检查 / 受控集成 / 回到主系统"]
+                ]
+              }
+            },
+            hermes: {
+              kicker: "Agent 运行基础设施",
+              title: "Hermes Agent · Agent Runtime 与消息网关",
+              summary: "为受控 Agent 提供运行和消息网关能力的基础设施层；它不持有业务事实，不负责工作流归属，也不承担正式交付结论。",
+              stat: "Agent Runtime<br>Message Gateway",
+              scenario: "Agent 调度、消息转发、受控运行和系统间协作。",
+              modules: "Runtime、Gateway、消息协议、权限与调用边界。",
+              outputs: "Agent 运行会话、消息传递和受控调度记录。",
+              value: "把通用 Agent 运行能力与垂直业务真源分离，避免基础设施越权成为业务系统。",
+              showcase: {
+                label: "私有基础设施",
+                title: "Hermes Agent",
+                copy: "作为 Runtime 和消息网关服务其他系统；业务事实、流程责任和正式交付继续留在对应垂直系统。",
+                tagA: "Agent Runtime",
+                tagB: "Message Gateway",
+                tagC: "边界治理",
+                url: "",
+                urlText: "local/private",
+                cta: "私有基础设施",
+                rows: [
+                  ["Runtime", "受控 Agent 运行"],
+                  ["Gateway", "消息与系统间协作"],
+                  ["Boundary", "不持有业务真源 / 不替代正式责任"]
+                ]
+              }
+            },
+            atlas: {
+              kicker: "系统治理控制台",
+              title: "NERO Atlas · 本地只读 AI-native 系统治理台",
+              summary: "原生本地、只读优先的治理控制台，用 Registry 观察系统对象、Skills、Workflows、Agents、MCP、模板和设计资产的健康、边界与漂移。",
+              stat: "7.3.0 · 9 个对象<br>33 Workflows · 57 Skills",
+              scenario: "系统地图、真源边界、能力登记、健康检查、漂移观察和治理导出。",
+              modules: "System Registry、Skill/Workflow/Agent 视图、NDT 资产导出、健康与漂移检查。",
+              outputs: "只读系统地图、对象详情、治理快照、边界说明和安全导出。",
+              value: "让多个独立系统仍保持可观察、可解释和不混淆真源的治理层。",
+              showcase: {
+                label: "私有治理系统",
+                title: "NERO Atlas",
+                copy: "Atlas 观察 8 个受管对象并登记自身，共 9 个系统对象；它只读治理，不接管任何业务系统的事实与执行。",
+                tagA: "Local native",
+                tagB: "Read-only",
+                tagC: "Registry governance",
+                url: "",
+                urlText: "local/private",
+                cta: "私有治理控制台",
+                rows: [
+                  ["Observe", "系统 / Skill / Workflow / Agent / Asset"],
+                  ["Govern", "真源 / 健康 / 漂移 / 权限边界"],
+                  ["Boundary", "只读观察，不接管业务执行"]
                 ]
               }
             }
@@ -3437,45 +3607,71 @@
             }
           },
           projects: {
-            hermes: {
-              kicker: "Disclosure evidence workbench",
-              title: "Hermes · IPO disclosure and evidence workbench",
-              summary: "A local, evidence-driven IPO / NEEQ project workbench that connects document intake, Gold/M2 business-finance analysis, disclosure review, inquiry response, workpaper generation and human review into a verifiable workflow.",
-              stat: "737 Python files<br>approx. 137k Python LOC",
-              scenario: "IPO / NEEQ disclosure review, inquiry response, due diligence workpapers, bank flows, interviews and confirmations.",
-              modules: "M1 Raw/Bronze/Silver/Gold, M2 business-finance analysis, shared evidence store, multi-database governance and disclosure workbench.",
-              outputs: "Review reports, inquiry/workpaper drafts, run records, evidence freezes, Word/HTML/GUI workbench.",
-              value: "Breaks expert banking work into governed data sources, evidence IDs, quality gates and human review nodes for financial / compliance agent products.",
+            ipo: {
+              kicker: "Core vertical operating system",
+              title: "NERO IPO Desk · AI-native operating system for IPO / NEEQ work",
+              summary: "A local vertical operating system for regulated investment-banking work, connecting facts and evidence, authoritative workflows, deterministic rules, controlled agents, quality gates and human review into formal delivery.",
+              stat: "5 authoritative workflows<br>14 primary Agents",
+              scenario: "Disclosure review, inquiry response, workpaper generation, substantive workpaper review and bank-flow checks.",
+              modules: "Fact and evidence system, workflow governance, disclosure workbench, agent control plane and artifact factory.",
+              outputs: "Inquiry responses, disclosure reviews, workpapers, bank-flow quality reports and Word/HTML/native workbenches.",
+              value: "Turns regulated, evidence-heavy professional work into a traceable, reviewable and deliverable business system.",
               showcase: {
-                label: "Local project snapshot",
-                title: "Hermes Evidence Workbench",
-                copy: "A private local disclosure and evidence workbench for investment-banking workflows. Screenshots stay private; code scale, module chain and outputs show system-building ability.",
-                tagA: "Private local system",
-                tagB: "Evidence workflow",
-                tagC: "Human review",
+                label: "Private production system",
+                title: "NERO IPO Desk",
+                copy: "Used for disclosure review, inquiry responses, workpaper generation, substantive workpaper review and bank-flow checks. Customer facts and formal conclusions remain governed by controlled evidence and human review.",
+                tagA: "Banking vertical system",
+                tagB: "Authoritative workflows",
+                tagC: "Human accountability",
                 url: "",
                 urlText: "local/private",
-                cta: "Private workflow",
+                cta: "Private production system",
                 rows: [
-                  ["Evidence", "shared evidence store / evidence freeze / review logs"],
-                  ["Workflow", "intake → financial analysis → disclosure review → inquiry/workpapers"],
-                  ["Quality gate", "evidence IDs / human review / conclusion boundary"]
+                  ["Evidence", "fact system / evidence store / citation chain"],
+                  ["Workflow", "scope → evidence → draft → review → delivery"],
+                  ["Quality gate", "deterministic rules / human review / conclusion scope"]
+                ]
+              }
+            },
+            ibd: {
+              kicker: "Investment-banking task workbench",
+              title: "NERO Ibd Workbench · File-first banking task system",
+              summary: "A local workbench for short-cycle investment-banking tasks, connecting intake and scope freeze, evidence and content production, visual and Office delivery, closeout and knowledge promotion.",
+              stat: "5 authoritative workflows<br>Task-to-asset loop",
+              scenario: "PitchBooks, IPO diagnostics, pre-visit research, project proposals and capital-markets materials.",
+              modules: "Task control, evidence and content production, visual and Office delivery, closeout/archive, knowledge and Skill promotion.",
+              outputs: "Pre-visit materials, diagnostic reports, project proposals, capital-markets materials, archives and reusable methods.",
+              value: "Turns non-standard banking tasks into scoped, evidence-backed and reusable execution chains.",
+              showcase: {
+                label: "Private task system",
+                title: "NERO Ibd Workbench",
+                copy: "A file-as-truth banking workbench that keeps task scope, evidence, formal delivery and archival responsibility connected.",
+                tagA: "File-first",
+                tagB: "Banking tasks",
+                tagC: "Delivery governance",
+                url: "",
+                urlText: "local/private",
+                cta: "Private workbench",
+                rows: [
+                  ["Intake", "task intake / scope freeze / control file"],
+                  ["Delivery", "evidence → content → visual / Office delivery"],
+                  ["Closeout", "archive → review → knowledge / Skill promotion"]
                 ]
               }
             },
             aipha: {
               kicker: "Industry research asset system",
               title: "AIpha · AI and semiconductor research asset system",
-              summary: "An AI / semiconductor supply-chain research asset system turning overseas hard events, Serenity public-post signals, A-share mapping, local market facts, Feature Store and Evaluation Ledger into bounded HTML-only outputs.",
-              stat: "72 Python files<br>23.9k Python LOC",
-              scenario: "Overseas AI supply-chain event discovery, A-share mapping, after-close review and Serenity Lens research assets.",
-              modules: "329-row A-share mapping, Fact Store, Feature Store, Evaluation Ledger, Radar, Serenity Lens and AIpha-Close.",
-              outputs: "AIpha-Radar, Serenity Lens, AIpha-Close, mapping audits and HTML-only public packages.",
-              value: "Turns public facts and market data into queryable, reviewable and degradable research assets without treating model output as trading conclusions.",
+              summary: "A local-first AI and semiconductor research system that organizes public facts, industry mapping, local market data, Feature Store, verifiers and Evaluation Ledger into reviewable assets. Loki's surviving research interface has been absorbed into AIpha.",
+              stat: "6 capabilities · 17 verifiers<br>13 artifact types · 5 run records",
+              scenario: "Overseas industry events, A-share mapping, holdings and watchlist research, after-close review and Serenity Lens.",
+              modules: "Fact Store, Feature Store, Evaluation Ledger, Radar, Serenity Lens, AIpha-Close and Loki Portfolio Web.",
+              outputs: "Event radar, public-post research, after-close views, portfolio research interface, mapping audits and HTML-only public packages.",
+              value: "Turns public facts and local market data into queryable, reviewable and degradable research assets without treating model output as trading conclusions.",
               showcase: {
                 label: "Live project",
                 title: "AIpha Research Desk",
-                copy: "A published GitHub Pages entry for three HTML-only research assets: AIpha-Radar, AIpha Serenity and AIpha-Close.",
+                copy: "A published GitHub Pages entry for AIpha's public research assets. Portfolio, holdings and strategy details remain in local sources of truth.",
                 tagA: "Public page",
                 tagB: "HTML-only",
                 tagC: "Research asset",
@@ -3485,49 +3681,49 @@
                 rows: [
                   ["AIpha-Radar", "Supply-chain event radar"],
                   ["AIpha Serenity", "Public-post research asset"],
-                  ["AIpha-Close", "After-close research view"]
+                  ["AIpha-Close", "After-close view and evaluation ledger"]
                 ]
               }
             },
-            loki: {
-              kicker: "Research committee and monitoring system",
-              title: "Loki · A-share research committee and monitoring system",
-              summary: "A personal augmented A-share investment committee system built around Loki Prime + Expert Swarm, with four main agents for intraday risk, daily review, weekly committee and monthly strategy.",
-              stat: "387 Python files<br>approx. 79k Python LOC",
-              scenario: "Core/watch/holding pool management, intraday alerts, after-close review, weekly committee, monthly strategy audit and deep-review reports.",
-              modules: "IntradayRiskAlert, DailyMarketReview, WeeklyInvestmentCommittee, MonthlyStrategy, Prime deep review and learning governance.",
-              outputs: "Risk alerts, daily samples, weekly memos, monthly strategy, state machine, deep-review candidates and strategy-version history.",
-              value: "Productizes a discretionary research process into menus, state machines, expert roles and ex-post calibration for research / strategy AI products.",
+            kat: {
+              kicker: "Knowledge artifact governance backend",
+              title: "Knowledge Artifact Team · Structured artifact system",
+              summary: "A production and governance backend for documents, presentations and structured research artifacts. It owns content pipelines, presentation handoff and QA repair without replacing business-system facts or conclusion accountability.",
+              stat: "3 authoritative workflows<br>Content / handoff / QA repair",
+              scenario: "Structured content production, presentation handoff, document and visual quality repair.",
+              modules: "Content Pipeline, Presentation Handoff, QA Repair and static Contract Registry.",
+              outputs: "Structured documents, presentation handoff packages, repair records, quality checks and reusable artifact contracts.",
+              value: "Turns one-off deliverables into contract-driven, checkable and repairable knowledge-production capability.",
               showcase: {
-                label: "Local project snapshot",
-                title: "Loki Research Committee",
-                copy: "A private local A-share research committee and monitoring system. Agent roles, state machines and review outputs show research workflow productization without exposing holdings or strategy details.",
-                tagA: "Private local system",
-                tagB: "Research workflow",
-                tagC: "Strategy audit",
+                label: "Private production backend",
+                title: "Knowledge Artifact Team",
+                copy: "KAT owns artifact production contracts and QA only. It does not hold investment-banking, research or client facts, preserving the boundary between business truth and artifact factory.",
+                tagA: "Knowledge artifacts",
+                tagB: "Production contracts",
+                tagC: "QA repair",
                 url: "",
                 urlText: "local/private",
-                cta: "Private research system",
+                cta: "Private production backend",
                 rows: [
-                  ["Agent roles", "intraday risk / daily review / weekly committee / monthly strategy"],
-                  ["State machine", "core pool / watch pool / holdings / deep-review candidates"],
-                  ["Outputs", "risk alerts / memos / strategy-version history"]
+                  ["Pipeline", "structured content production"],
+                  ["Handoff", "presentation and formal-material handoff"],
+                  ["QA", "check → locate → repair → verify"]
                 ]
               }
             },
-            design: {
-              kicker: "Research output design system",
-              title: "NERO Design Team · Research output design system",
-              summary: "An open-source agent-native design system for research output, covering brand assets, tokens, templates, case library, visual QA, scoring and production checks.",
-              stat: "92 core files<br>17 script/frontend files",
-              scenario: "Resume, research cards, web presentations, report visuals, frontend interfaces and visual audits.",
-              modules: "brand, tokens, templates, case-library, mcp-lite, visual-qa, scorecards and production-check.",
-              outputs: "HTML resumes, image reports, web demos, visual QA reports, design rules and reusable templates.",
-              value: "Moves professional content from readable to deliverable, verifiable and reusable, completing the presentation and interaction layer of AI products.",
+            ndt: {
+              kicker: "Design production and quality governance",
+              title: "NERO Design Team · Agent-native design system",
+              summary: "A design-production and quality-governance system for professional artifacts, using registered assets, recipes, routing, templates, visual QA, scoring and release checks across delivery formats.",
+              stat: "71 registered design assets<br>10 categories · 7 recipes",
+              scenario: "Resumes, research cards, web presentations, report visuals, frontend interfaces and formal-material audits.",
+              modules: "Registry, brand, tokens, templates, case-library, mcp-lite, visual-qa and scorecards.",
+              outputs: "HTML, image reports, web presentations, visual QA reports, design rules, templates and safe Atlas exports.",
+              value: "Turns design from one-off styling into a production capability with asset truth, routing, checks and reuse.",
               showcase: {
                 label: "Open-source project",
                 title: "NERO Design Team",
-                copy: "A public Codex-style agent-native design system. It is not only a UI kit; it organizes design routing, tokens, templates, case references and QA/score/release checks into a reusable workflow.",
+                copy: "A public Codex-style agent-native design system. It is not only a UI kit; it organizes design routing, asset registry, recipes, templates and QA/score/release checks into a reusable workflow.",
                 tagA: "GitHub public",
                 tagB: "Apache 2.0",
                 tagC: "Agent-native design",
@@ -3538,6 +3734,110 @@
                   ["Routes", "frontend-ui / image-report / ppt / short-video"],
                   ["Assets", "skills / tokens / templates / case-library / mcp-lite"],
                   ["Checks", "visual QA / scoring / production-check"]
+                ]
+              }
+            },
+            wechat: {
+              kicker: "Long-form publishing system",
+              title: "WeChat Publishing Workspace",
+              summary: "A Markdown-authority content system connecting topic selection, English evidence packs, judgment-led writing, visual handoff, manual publication records and knowledge retention.",
+              stat: "5 content series<br>Markdown authority",
+              scenario: "Evidence-driven long-form work across AI industry, AI Builder, organization and digital transformation.",
+              modules: "Series Registry, Evidence Pack, Writing Workspace, Visual Handoff and Publish Ledger.",
+              outputs: "Article series, English evidence packs, visual handoffs, publication records and reusable viewpoint assets.",
+              value: "Turns ongoing writing into a long-term knowledge system with evidence gates, series boundaries and publication truth.",
+              showcase: {
+                label: "Private publishing system",
+                title: "WeChat Publishing Workspace",
+                copy: "Body text, evidence, series membership and publication state are governed separately, preventing drafts, visuals or inferences from being mistaken for published facts.",
+                tagA: "Markdown authority",
+                tagB: "English evidence packs",
+                tagC: "Publication ledger",
+                url: "",
+                urlText: "local/private",
+                cta: "Private publishing system",
+                rows: [
+                  ["Evidence", "English sources / date gate / evidence pack"],
+                  ["Writing", "judgment → structure → body → visual handoff"],
+                  ["Registry", "series / publication state / knowledge retention"]
+                ]
+              }
+            },
+            dbs: {
+              kicker: "Business-method capability routing",
+              title: "DBS Business Toolkit · Capability Routing Harness",
+              summary: "A discoverable and governable portfolio of Skills for business diagnosis, content, goals, decisions and learning methods, rather than a business database or long-running agent.",
+              stat: "28 Skills<br>9 packages",
+              scenario: "Business diagnosis, goal clarification, content creation, communication analysis, decisions and learning methods.",
+              modules: "Skill Registry, pre-task routing, post-task navigation, controlled integration and install checks.",
+              outputs: "Problem specifications, diagnoses, content plans, method recommendations and next-Skill routing.",
+              value: "Turns dispersed methods into a capability layer that AI can discover, select and reuse.",
+              showcase: {
+                label: "Local capability layer",
+                title: "DBS Business Toolkit",
+                copy: "DBS governs method Skills and routing. It does not hold client facts or replace vertical business systems.",
+                tagA: "Skill Registry",
+                tagB: "Capability Routing",
+                tagC: "Explicit invocation",
+                url: "",
+                urlText: "local/private",
+                cta: "Local capability layer",
+                rows: [
+                  ["Discover", "identify the professional method needed"],
+                  ["Route", "select Skill / mode / execution boundary"],
+                  ["Validate", "registry checks / controlled integration / return to host"]
+                ]
+              }
+            },
+            hermes: {
+              kicker: "Agent runtime infrastructure",
+              title: "Hermes Agent · Agent Runtime and message gateway",
+              summary: "An infrastructure layer for controlled agent execution and message routing. It does not own business facts, workflow accountability or formal delivery conclusions.",
+              stat: "Agent Runtime<br>Message Gateway",
+              scenario: "Agent dispatch, message routing, controlled runtime and cross-system collaboration.",
+              modules: "Runtime, Gateway, message protocol, permission and invocation boundaries.",
+              outputs: "Agent sessions, message delivery and controlled dispatch records.",
+              value: "Separates generic agent runtime from vertical business truth so infrastructure cannot silently become the business system.",
+              showcase: {
+                label: "Private infrastructure",
+                title: "Hermes Agent",
+                copy: "Provides Runtime and message-gateway services to other systems, while business facts, workflow responsibility and formal delivery remain in the relevant vertical system.",
+                tagA: "Agent Runtime",
+                tagB: "Message Gateway",
+                tagC: "Boundary governance",
+                url: "",
+                urlText: "local/private",
+                cta: "Private infrastructure",
+                rows: [
+                  ["Runtime", "controlled agent execution"],
+                  ["Gateway", "messages and cross-system coordination"],
+                  ["Boundary", "no business truth / no formal accountability"]
+                ]
+              }
+            },
+            atlas: {
+              kicker: "System governance control plane",
+              title: "NERO Atlas · Local read-only AI-native systems console",
+              summary: "A native local, read-only-first governance console that uses registries to observe system objects, Skills, Workflows, Agents, MCPs, templates and design assets for health, boundaries and drift.",
+              stat: "7.3.0 · 9 objects<br>33 Workflows · 57 Skills",
+              scenario: "System maps, source-of-truth boundaries, capability registration, health checks, drift observation and governance exports.",
+              modules: "System Registry, Skill/Workflow/Agent views, NDT asset exports, health and drift checks.",
+              outputs: "Read-only system maps, object details, governance snapshots, boundary statements and safe exports.",
+              value: "Keeps multiple independent systems observable and explainable without mixing their sources of truth.",
+              showcase: {
+                label: "Private governance system",
+                title: "NERO Atlas",
+                copy: "Atlas observes eight managed objects and registers itself for nine total system objects. It governs read-only and does not take over business facts or execution.",
+                tagA: "Local native",
+                tagB: "Read-only",
+                tagC: "Registry governance",
+                url: "",
+                urlText: "local/private",
+                cta: "Private governance console",
+                rows: [
+                  ["Observe", "systems / Skills / Workflows / Agents / assets"],
+                  ["Govern", "truth / health / drift / permission boundaries"],
+                  ["Boundary", "read-only observation, no business execution"]
                 ]
               }
             }
@@ -3579,7 +3879,7 @@
         const aiShowcaseRowBCopy = lab.querySelector("[data-ai-showcase-row-b-copy]");
         const aiShowcaseRowCTitle = lab.querySelector("[data-ai-showcase-row-c-title]");
         const aiShowcaseRowCCopy = lab.querySelector("[data-ai-showcase-row-c-copy]");
-        let activeProject = "hermes";
+        let activeProject = "ipo";
 
         function renderCase(caseKey) {
           portalButtons.forEach(function (button) {
