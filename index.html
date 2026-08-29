@@ -3,8 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="陈祎 / Nero Chen：投资银行业务总监，独立构建 NERO Banker、NERO Principal、知识库与人工智能专业生产工具。">
-  <title>陈祎 / Nero Chen | 投资银行与人工智能业务系统</title>
+  <meta name="description" content="陈祎 / Nero Chen：近七年投资银行与资本市场经验，独立构建并在真实工作中运行 NERO Banker、NERO Principal、AIpha 等人工智能专业系统。">
+  <meta property="og:title" content="陈祎 / Nero Chen | 复杂专业工作的人工智能产品化">
+  <meta property="og:description" content="投资银行业务总监，独立构建并运行人工智能专业系统，将事实、证据、规则、工作流和人工责任组织为可复核的生产能力。">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://cyanask.github.io/CV/">
+  <title>陈祎 / Nero Chen | 复杂专业工作的人工智能产品化</title>
   <style>
     :root {
       --brand: #1f4e5f;
@@ -3050,11 +3054,117 @@
         animation: none;
       }
     }
+
+    /* Long-term career homepage hierarchy */
+    .case-room[data-case-panel="ai"] {
+      margin-top: 38px;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+    }
+
+    .build-proof {
+      display: block;
+      margin: 18px 0;
+      padding: 0;
+      color: var(--text);
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--accent);
+    }
+
+    .build-proof > summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      min-height: 48px;
+      padding: 11px 14px;
+      color: var(--ink);
+      font-weight: 800;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .build-proof > summary::-webkit-details-marker { display: none; }
+
+    .build-proof > summary::after {
+      content: "+";
+      color: var(--brand);
+      font: 800 20px/1 var(--mono);
+    }
+
+    .build-proof[open] > summary::after { content: "−"; }
+
+    .build-proof-summary-note {
+      color: var(--muted);
+      font: 700 11px/1.35 var(--mono);
+      text-align: right;
+    }
+
+    .build-proof-body {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 330px);
+      gap: 18px;
+      align-items: center;
+      padding: 0 14px 14px;
+    }
+
+    .build-proof h4,
+    .build-proof p { color: inherit; }
+
+    .build-proof .usage-metric {
+      border-top-color: rgba(31, 78, 95, 0.18);
+    }
+
+    .build-proof .usage-metric b { color: var(--brand); }
+    .build-proof .usage-metric span { color: var(--muted); }
+
+    .project-group-label {
+      flex: 0 0 100%;
+      margin-top: 4px;
+      color: var(--brand);
+      font: 800 10px/1.25 var(--mono);
+      text-transform: uppercase;
+    }
+
+    .ai-project-pill.is-featured {
+      border-color: var(--brand);
+      box-shadow: inset 0 -2px 0 var(--accent);
+    }
+
+    .article-catalog-toggle {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      margin-top: 14px;
+      padding: 7px 11px;
+      border: 1px solid var(--brand);
+      border-radius: 0;
+      background: #fff;
+      color: var(--brand);
+      font: 800 12px/1.2 var(--font);
+      cursor: pointer;
+    }
+
+    .wechat-article-catalog:not(.show-all) .wechat-title-list li:nth-child(n + 7) {
+      display: none;
+    }
+
+    @media (max-width: 760px) {
+      .build-proof-body { grid-template-columns: 1fr; }
+      .build-proof-summary-note { max-width: 160px; }
+      .project-group-label { display: none; }
+    }
+
+    @media print {
+      .article-catalog-toggle { display: none; }
+      .wechat-article-catalog:not(.show-all) .wechat-title-list li:nth-child(n + 7) { display: list-item; }
+    }
   </style>
 </head>
 <body data-lang="zh">
   <div class="language-toolbar" aria-label="语言切换">
-    <span class="toolbar-title" data-toolbar-title>中文简历</span>
+    <span class="toolbar-title" data-toolbar-title>中文</span>
     <button class="lang-toggle" type="button" data-lang-toggle aria-pressed="false">English</button>
   </div>
 
@@ -3062,11 +3172,11 @@
     <div class="topbar"></div>
     <header>
       <div>
-        <div class="eyebrow">简历 / 复杂专业工作的人工智能产品化</div>
+        <div class="eyebrow">职业档案 / 复杂专业工作的人工智能产品化</div>
         <h1>陈祎</h1>
-        <div class="title">投资银行业务总监 | 人工智能应用与业务系统构建者</div>
+        <div class="title">投资银行业务总监｜复杂专业工作的人工智能产品化与系统构建</div>
         <p class="summary">
-          2019 年起从事投资银行业务，长期处理业务与财务核查、审核问询、披露文件和多专业协作。此后独立把这些高约束工作拆成可运行的人工智能业务系统，并把实践延伸到产业研究、知识库、写作和专业材料生产。
+          近七年投资银行与资本市场项目经验，长期处理业务财务核查、审核问询、披露文件和多专业协作。独立构建并在真实工作中运行 NERO Banker、NERO Principal 等人工智能系统，把事实、证据、规则、工作流、质量门和人工责任组织为可复核的专业生产能力。
         </p>
         <div class="hero-tags" aria-label="Candidate positioning">
           <span class="hero-tag">人工智能应用落地</span>
@@ -3074,9 +3184,9 @@
           <span class="hero-tag">投行与产业研究</span>
         </div>
         <div class="mobile-evidence-bar" aria-label="移动端核心证据">
-          <div class="mobile-evidence-card"><b>2019.09</b><span>投行从业至今</span></div>
-          <div class="mobile-evidence-card"><b>301563</b><span>创业板 IPO</span></div>
-          <div class="mobile-evidence-card"><b>59.96B</b><span>Codex tokens</span></div>
+          <div class="mobile-evidence-card"><b>近 7 年</b><span>资本市场项目执行</span></div>
+          <div class="mobile-evidence-card"><b>301563</b><span>ICKey 创业板 IPO</span></div>
+          <div class="mobile-evidence-card"><b>真实运行</b><span>专业 AI 系统</span></div>
         </div>
         <div class="signal-grid" aria-label="能力桥接">
           <div class="signal-card"><b>专业问题定义</b><span>理解事实、规则、责任、复核和正式交付。</span></div>
@@ -3091,9 +3201,10 @@
         <div class="contact" aria-label="个人信息">
           <div class="contact-row"><b>当前</b><span>国金证券 · 投资银行业务总监</span></div>
           <div class="contact-row"><b>年限</b><span>2019.09 至今 · 近 7 年</span></div>
-          <div class="contact-row"><b>地点</b><span>上海 · 可接受远程</span></div>
+          <div class="contact-row"><b>地点</b><span>上海 · 北京 · 深圳 · 香港 · 新加坡</span></div>
+          <div class="contact-row"><b>邮箱</b><span><a href="mailto:chenyiask@gmail.com">chenyiask@gmail.com</a></span></div>
           <div class="contact-row"><b>主页</b><span><a href="https://www.linkedin.com/in/frech/">linkedin.com/in/frech</a></span></div>
-          <div class="contact-row"><b>更新</b><span>2026-08-28</span></div>
+          <div class="contact-row"><b>更新</b><span>2026-08-29</span></div>
         </div>
       </div>
     </header>
@@ -3194,8 +3305,10 @@
               <div class="ai-stat">业务系统 · Harness<br>知识资产 · 生产工具</div>
             </div>
 
-            <div class="portfolio-proof" aria-label="Codex 持续构建证据">
-              <div>
+            <details class="portfolio-proof build-proof" aria-label="Codex 持续构建证据">
+              <summary><span>持续构建证据</span><span class="build-proof-summary-note">599.6 亿 Token · 连续 61 天</span></summary>
+              <div class="build-proof-body">
+                <div>
                 <h4>持续构建强度</h4>
                 <p>截至 2026 年 8 月 28 日，我已连续 61 天使用 Codex。系统运行、团队采用和正式交付仍是评价作品的主要依据。</p>
                 <div class="usage-metrics">
@@ -3204,11 +3317,12 @@
                   <div class="usage-metric"><b>61 天</b><span>当前及最长连续使用</span></div>
                 </div>
               </div>
-              <figure class="usage-proof-image">
-                <img src="assets/codex-usage-summary-2026-08-28.png" alt="Codex 使用摘要：累计 599.6 亿 Token，峰值日 24.2 亿，当前及最长连续使用 61 天">
-                <figcaption>Codex Usage Summary · 2026-08-28</figcaption>
-              </figure>
-            </div>
+                <figure class="usage-proof-image">
+                  <img src="assets/codex-usage-summary-2026-08-28.png" alt="Codex 使用摘要：累计 599.6 亿 Token，峰值日 24.2 亿，当前及最长连续使用 61 天">
+                  <figcaption>Codex Usage Summary · 2026-08-28</figcaption>
+                </figure>
+              </div>
+            </details>
 
             <div class="ai-system-cards" aria-label="AI 系统摘要">
               <button class="ai-system-card" type="button" aria-pressed="true" data-ai-jump="banker"><b>NERO Banker</b><span>投行工作台</span></button>
@@ -3260,13 +3374,15 @@
             </details>
 
             <div class="ai-project-pills" role="tablist" aria-label="AI 项目">
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="true" data-ai-project="banker">NERO Banker</button>
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="principal">NERO Principal</button>
+              <span class="project-group-label">代表作品</span>
+              <button class="ai-project-pill is-featured" type="button" role="tab" aria-selected="true" data-ai-project="banker">NERO Banker</button>
+              <button class="ai-project-pill is-featured" type="button" role="tab" aria-selected="false" data-ai-project="principal">NERO Principal</button>
+              <button class="ai-project-pill is-featured" type="button" role="tab" aria-selected="false" data-ai-project="aipha">AIpha</button>
+              <span class="project-group-label">其他作品</span>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="writer">Nero Writer</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="knowledge">IPO 案例库 / 法律库</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="prose">中文行文内核</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="ppt">NERO PPT Harness</button>
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="aipha">AIpha</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="design">NERO Design Team</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="atlas">NERO Atlas（治理）</button>
             </div>
@@ -3302,10 +3418,10 @@
                 <a class="showcase-link" data-ai-showcase-link aria-disabled="true">业务界面不公开</a>
               </div>
               <div class="ai-detail-grid">
-                <div class="ai-detail-cell"><b>场景</b><span data-ai-scenario>IPO / 新三板的证据、分析、披露、问询与底稿工作。</span></div>
-                <div class="ai-detail-cell"><b>模块</b><span data-ai-modules>Agent Runtime、前端工作台、证据与数据层、领域 Skills 和质量门。</span></div>
-                <div class="ai-detail-cell"><b>输出物</b><span data-ai-outputs>业财分析、披露审阅、问询与底稿候选、运行记录和正式材料。</span></div>
-                <div class="ai-detail-cell"><b>形成的能力</b><span data-ai-value>把复杂专业责任拆成系统边界、业务模块、验证机制和人工决策点。</span></div>
+                <div class="ai-detail-cell"><b>真实问题</b><span data-ai-scenario>IPO / 新三板的证据、分析、披露、问询与底稿工作。</span></div>
+                <div class="ai-detail-cell"><b>我构建的系统</b><span data-ai-modules>Agent Runtime、前端工作台、证据与数据层、领域 Skills 和质量门。</span></div>
+                <div class="ai-detail-cell"><b>当前使用与产物</b><span data-ai-outputs>业财分析、披露审阅、问询与底稿候选、运行记录和正式材料。</span></div>
+                <div class="ai-detail-cell"><b>质量控制与迁移价值</b><span data-ai-value>把复杂专业责任拆成系统边界、业务模块、验证机制和人工决策点。</span></div>
               </div>
             </div>
 
@@ -3334,15 +3450,18 @@
               <div class="wechat-account-id">公众号 ID<br>gh_dd2c48491319</div>
             </div>
             <div class="wechat-article-catalog">
-              <span class="wechat-catalog-label">已发布长文清单 · 17 篇</span>
+              <span class="wechat-catalog-label">精选长文 · 点击标题查看观点</span>
               <ol class="wechat-title-list">
+                <li><button class="wechat-title-button" type="button" data-article-key="builder1" aria-pressed="false">AI Builder：第一章，智能体时代正在出现的新身份</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder2" aria-pressed="false">AI Builder：第二篇，成长与壁垒</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder3" aria-pressed="false">AI Builder：第三篇，我理解的 AI-native 专业系统</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="deepseek" aria-pressed="false">DeepSeek为什么开源Harness？模型决定上限，Harness来兑现。</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agentupper" aria-pressed="false">AI Agent产业分析（上篇）：从模型能力到工作现场的四条路线</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agentlower" aria-pressed="false">AI Agent产业分析（下篇）：智力通缩时代，价值正在向业务闭环转移</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="storage" aria-pressed="false">存储“超级周期”，老模型为什么不够用了？</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="coding" aria-pressed="false">我不是程序员，却开始指挥编程AI干活</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="workbuddy" aria-pressed="false">WorkBuddy 很强，但它不是万能办公助手</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="k3" aria-pressed="false">K3的发布是“DeepSeek 2.0时刻”吗？</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="builder1" aria-pressed="false">AI Builder：第一章，智能体时代正在出现的新身份</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="builder2" aria-pressed="false">AI Builder：第二篇，成长与壁垒</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="builder3" aria-pressed="false">AI Builder：第三篇，我理解的 AI-native 专业系统</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="compute" aria-pressed="false">K3之后，模型越来越便宜，算力为什么可能会更贵？</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="openweights" aria-pressed="false">美国AI产业的一次集体发声：开放模型背后，争的是AI领导力</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="google" aria-pressed="false">谷歌云增长82%，2000亿美元资本开支背后的经济账</button></li>
@@ -3350,10 +3469,8 @@
                 <li><button class="wechat-title-button" type="button" data-article-key="langchain" aria-pressed="false">从免费开源到12.5亿美元，LangChain把“让AI干活”做成了一门生意</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="palantir" aria-pressed="false">Karp 和 Palantir，如何让华尔街重新衡量软件公司在 AI 时代的价值？</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="financeai" aria-pressed="false">金融人怎么学AI？请将吴恩达这份公开信倒着读</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="deepseek" aria-pressed="false">DeepSeek为什么开源Harness？模型决定上限，Harness来兑现。</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="agentupper" aria-pressed="false">AI Agent产业分析（上篇）：从模型能力到工作现场的四条路线</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="agentlower" aria-pressed="false">AI Agent产业分析（下篇）：智力通缩时代，价值正在向业务闭环转移</button></li>
               </ol>
+              <button class="article-catalog-toggle" type="button" data-article-toggle data-show-label="查看全部 17 篇" data-hide-label="收起完整目录" aria-expanded="false">查看全部 17 篇</button>
             </div>
           </div>
           <dialog class="article-modal" data-article-modal aria-labelledby="article-modal-title-zh">
@@ -3379,13 +3496,12 @@
 
       <aside>
         <section class="side-block">
-          <h2>目标场景</h2>
+          <h2>可贡献的工作</h2>
           <div class="role-tags">
-            <span class="tag primary">企业级 AI 应用</span>
-            <span class="tag primary">复杂业务 AI 产品化</span>
-            <span class="tag">业务型 FDE</span>
-            <span class="tag">Business Builder</span>
-            <span class="tag">AI 战略与解决方案</span>
+            <span class="tag primary">复杂专业工作 AI 产品化</span>
+            <span class="tag primary">领域任务与评测设计</span>
+            <span class="tag">企业 AI 方案与落地</span>
+            <span class="tag">高约束项目 Owner</span>
           </div>
         </section>
 
@@ -3395,9 +3511,7 @@
             <span class="tag">Codex 原生构建</span>
             <span class="tag">Agent / Skill / MCP</span>
             <span class="tag">Workflow / Verifier</span>
-            <span class="tag">本地优先系统</span>
-            <span class="tag">Python</span>
-            <span class="tag">SwiftUI / AppKit</span>
+            <span class="tag">Python / Swift / API</span>
             <span class="tag">SQL / SQLite / DuckDB</span>
             <span class="tag">HTML / CSS</span>
           </div>
@@ -3431,9 +3545,11 @@
         <section class="side-block">
           <h2>工作地点</h2>
           <div class="skill-tags">
-            <span class="tag">上海 base</span>
-            <span class="tag">远程开放</span>
-            <span class="tag">海外机会开放</span>
+            <span class="tag">上海</span>
+            <span class="tag">北京</span>
+            <span class="tag">深圳</span>
+            <span class="tag">香港</span>
+            <span class="tag">新加坡</span>
           </div>
         </section>
       </aside>
@@ -3444,11 +3560,11 @@
     <div class="topbar"></div>
     <header>
       <div>
-        <div class="eyebrow">Resume / Productizing Complex Professional Work with AI</div>
+        <div class="eyebrow">Profile / Productizing Complex Professional Work with AI</div>
         <h1>Nero Chen</h1>
-        <div class="title">Investment Banking Business Director | AI Application &amp; Business-System Builder</div>
+        <div class="title">Investment Banking Business Director | AI Productization &amp; Systems for Complex Professional Work</div>
         <p class="summary">
-          Investment-banking professional since 2019, working across business and financial verification, regulatory inquiries, disclosure and multidisciplinary delivery. I then independently turned these high-accountability workflows into operating AI business systems and extended the same practice to industry research, knowledge bases, writing and professional-material production.
+          Nearly seven years of investment-banking and capital-markets execution across business-finance diligence, exchange inquiries, disclosure and multi-disciplinary coordination. I independently built and now operate systems including NERO Banker and NERO Principal, organizing facts, evidence, rules, workflows, quality gates and human accountability into auditable professional workflows.
         </p>
         <div class="hero-tags" aria-label="Candidate positioning">
           <span class="hero-tag">Applied AI</span>
@@ -3456,9 +3572,9 @@
           <span class="hero-tag">Banking &amp; Industry Research</span>
         </div>
         <div class="mobile-evidence-bar" aria-label="Mobile core evidence">
-          <div class="mobile-evidence-card"><b>2019.09</b><span>banking since</span></div>
-          <div class="mobile-evidence-card"><b>301563</b><span>GEM IPO</span></div>
-          <div class="mobile-evidence-card"><b>59.96B</b><span>Codex tokens</span></div>
+          <div class="mobile-evidence-card"><b>Nearly 7 yrs</b><span>capital-markets execution</span></div>
+          <div class="mobile-evidence-card"><b>301563</b><span>ICKey GEM IPO</span></div>
+          <div class="mobile-evidence-card"><b>In use</b><span>professional AI systems</span></div>
         </div>
         <div class="signal-grid" aria-label="Capability bridge">
           <div class="signal-card"><b>Problem definition</b><span>Facts, rules, accountability, review and formal delivery.</span></div>
@@ -3473,9 +3589,10 @@
         <div class="contact" aria-label="Profile facts">
           <div class="contact-row"><b>Current</b><span>Sinolink Securities · Investment Banking Business Director</span></div>
           <div class="contact-row"><b>Tenure</b><span>Sep 2019 - present · nearly 7 years</span></div>
-          <div class="contact-row"><b>Location</b><span>Shanghai · remote-ready</span></div>
+          <div class="contact-row"><b>Location</b><span>Shanghai · Beijing · Shenzhen · Hong Kong · Singapore</span></div>
+          <div class="contact-row"><b>Email</b><span><a href="mailto:chenyiask@gmail.com">chenyiask@gmail.com</a></span></div>
           <div class="contact-row"><b>Profile</b><span><a href="https://www.linkedin.com/in/frech/">linkedin.com/in/frech</a></span></div>
-          <div class="contact-row"><b>Updated</b><span>Aug 28, 2026</span></div>
+          <div class="contact-row"><b>Updated</b><span>Aug 29, 2026</span></div>
         </div>
       </div>
     </header>
@@ -3576,8 +3693,10 @@
               <div class="ai-stat">Business systems · Harnesses<br>Knowledge · Production</div>
             </div>
 
-            <div class="portfolio-proof" aria-label="Sustained Codex building evidence">
-              <div>
+            <details class="portfolio-proof build-proof" aria-label="Sustained Codex building evidence">
+              <summary><span>Sustained building evidence</span><span class="build-proof-summary-note">59.96B tokens · 61-day streak</span></summary>
+              <div class="build-proof-body">
+                <div>
                 <h4>Sustained building intensity</h4>
                 <p>As of Aug 28, 2026, I had used Codex for 61 consecutive days. Operating systems, team adoption and formal delivery remain the primary evidence of quality.</p>
                 <div class="usage-metrics">
@@ -3586,11 +3705,12 @@
                   <div class="usage-metric"><b>61 days</b><span>current and longest streak</span></div>
                 </div>
               </div>
-              <figure class="usage-proof-image">
-                <img src="assets/codex-usage-summary-2026-08-28.png" alt="Codex usage summary: 59.96B lifetime tokens, 2.42B peak day, 61-day current and longest streak">
-                <figcaption>Codex Usage Summary · Aug 28, 2026</figcaption>
-              </figure>
-            </div>
+                <figure class="usage-proof-image">
+                  <img src="assets/codex-usage-summary-2026-08-28.png" alt="Codex usage summary: 59.96B lifetime tokens, 2.42B peak day, 61-day current and longest streak">
+                  <figcaption>Codex Usage Summary · Aug 28, 2026</figcaption>
+                </figure>
+              </div>
+            </details>
 
             <div class="ai-system-cards" aria-label="AI system summary">
               <button class="ai-system-card" type="button" aria-pressed="true" data-ai-jump="banker"><b>NERO Banker</b><span>banking workbench</span></button>
@@ -3642,13 +3762,15 @@
             </details>
 
             <div class="ai-project-pills" role="tablist" aria-label="AI projects">
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="true" data-ai-project="banker">NERO Banker</button>
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="principal">NERO Principal</button>
+              <span class="project-group-label">Featured work</span>
+              <button class="ai-project-pill is-featured" type="button" role="tab" aria-selected="true" data-ai-project="banker">NERO Banker</button>
+              <button class="ai-project-pill is-featured" type="button" role="tab" aria-selected="false" data-ai-project="principal">NERO Principal</button>
+              <button class="ai-project-pill is-featured" type="button" role="tab" aria-selected="false" data-ai-project="aipha">AIpha</button>
+              <span class="project-group-label">Additional work</span>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="writer">Nero Writer</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="knowledge">IPO Case / Legal KB</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="prose">Chinese Prose Core</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="ppt">NERO PPT Harness</button>
-              <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="aipha">AIpha</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="design">NERO Design Team</button>
               <button class="ai-project-pill" type="button" role="tab" aria-selected="false" data-ai-project="atlas">NERO Atlas (Governance)</button>
             </div>
@@ -3684,10 +3806,10 @@
                 <a class="showcase-link" data-ai-showcase-link aria-disabled="true">Operating screens remain private</a>
               </div>
               <div class="ai-detail-grid">
-                <div class="ai-detail-cell"><b>Scenario</b><span data-ai-scenario>Evidence, analysis, disclosure, inquiry and workpaper workflows for IPO and NEEQ projects.</span></div>
-                <div class="ai-detail-cell"><b>Modules</b><span data-ai-modules>Agent Runtime, frontend workbench, evidence and data layers, domain skills and quality gates.</span></div>
-                <div class="ai-detail-cell"><b>Outputs</b><span data-ai-outputs>Business-finance analysis, disclosure review, inquiry and workpaper candidates, run records and formal materials.</span></div>
-                <div class="ai-detail-cell"><b>Capability developed</b><span data-ai-value>Decomposing complex professional accountability into system boundaries, business modules, validation mechanisms and human decision points.</span></div>
+                <div class="ai-detail-cell"><b>Real problem</b><span data-ai-scenario>Evidence, analysis, disclosure, inquiry and workpaper workflows for IPO and NEEQ projects.</span></div>
+                <div class="ai-detail-cell"><b>What I built</b><span data-ai-modules>Agent Runtime, frontend workbench, evidence and data layers, domain skills and quality gates.</span></div>
+                <div class="ai-detail-cell"><b>Current use &amp; outputs</b><span data-ai-outputs>Business-finance analysis, disclosure review, inquiry and workpaper candidates, run records and formal materials.</span></div>
+                <div class="ai-detail-cell"><b>Quality control &amp; transfer value</b><span data-ai-value>Decomposing complex professional accountability into system boundaries, business modules, validation mechanisms and human decision points.</span></div>
               </div>
             </div>
 
@@ -3716,15 +3838,18 @@
               <div class="wechat-account-id">Account ID<br>gh_dd2c48491319</div>
             </div>
             <div class="wechat-article-catalog">
-              <span class="wechat-catalog-label">Published long-form directory · 17 essays</span>
+              <span class="wechat-catalog-label">Selected essays · open a title for its thesis</span>
               <ol class="wechat-title-list">
+                <li><button class="wechat-title-button" type="button" data-article-key="builder1" aria-pressed="false">AI Builder I: An Emerging Identity in the Agent Era</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder2" aria-pressed="false">AI Builder II: Growth and Defensibility</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder3" aria-pressed="false">AI Builder III: My Model of an AI-native Professional System</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="deepseek" aria-pressed="false">Why Did DeepSeek Open-source a Harness? Models Set the Ceiling; Harnesses Deliver the Value</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agentupper" aria-pressed="false">AI Agent Industry Analysis I: Four Routes from Model Capability to the Workplace</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agentlower" aria-pressed="false">AI Agent Industry Analysis II: Value Moves toward Business Closure as Intelligence Gets Cheaper</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="storage" aria-pressed="false">Why Old Models No Longer Explain the Memory Supercycle</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="coding" aria-pressed="false">I Am Not a Programmer, Yet I Started Directing Coding AI</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="workbuddy" aria-pressed="false">WorkBuddy Is Powerful, but It Is Not a Universal Office Assistant</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="k3" aria-pressed="false">Was Kimi K3 a DeepSeek 2.0 Moment?</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="builder1" aria-pressed="false">AI Builder I: An Emerging Identity in the Agent Era</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="builder2" aria-pressed="false">AI Builder II: Growth and Defensibility</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="builder3" aria-pressed="false">AI Builder III: My Model of an AI-native Professional System</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="compute" aria-pressed="false">Why Cheaper Models May Make Compute More Expensive after K3</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="openweights" aria-pressed="false">Open Models and the Contest for AI Leadership</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="google" aria-pressed="false">Google Cloud Grew 82%: The Economics behind RMB 200 Billion of CapEx</button></li>
@@ -3732,10 +3857,8 @@
                 <li><button class="wechat-title-button" type="button" data-article-key="langchain" aria-pressed="false">How LangChain Turned “Making AI Work” into a $1.25 Billion Business</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="palantir" aria-pressed="false">How Karp and Palantir Made Wall Street Revalue Software in the AI Era</button></li>
                 <li><button class="wechat-title-button" type="button" data-article-key="financeai" aria-pressed="false">How Should Finance Professionals Learn AI? Read Andrew Ng's Open Letter Backwards</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="deepseek" aria-pressed="false">Why Did DeepSeek Open-source a Harness? Models Set the Ceiling; Harnesses Deliver the Value</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="agentupper" aria-pressed="false">AI Agent Industry Analysis I: Four Routes from Model Capability to the Workplace</button></li>
-                <li><button class="wechat-title-button" type="button" data-article-key="agentlower" aria-pressed="false">AI Agent Industry Analysis II: Value Moves toward Business Closure as Intelligence Gets Cheaper</button></li>
               </ol>
+              <button class="article-catalog-toggle" type="button" data-article-toggle data-show-label="View all 17 essays" data-hide-label="Collapse directory" aria-expanded="false">View all 17 essays</button>
             </div>
           </div>
           <dialog class="article-modal" data-article-modal aria-labelledby="article-modal-title-en">
@@ -3761,13 +3884,12 @@
 
       <aside>
         <section class="side-block">
-          <h2>Target Scenarios</h2>
+          <h2>Work I Can Contribute</h2>
           <div class="role-tags">
-            <span class="tag primary">Enterprise AI Applications</span>
-            <span class="tag primary">Complex Workflow Productization</span>
-            <span class="tag">Business-oriented FDE</span>
-            <span class="tag">Business Builder</span>
-            <span class="tag">AI Strategy &amp; Solutions</span>
+            <span class="tag primary">AI Productization of Professional Work</span>
+            <span class="tag primary">Domain Tasks &amp; Evaluation Design</span>
+            <span class="tag">Enterprise AI Solutions &amp; Delivery</span>
+            <span class="tag">High-accountability Project Ownership</span>
           </div>
         </section>
 
@@ -3777,9 +3899,7 @@
             <span class="tag">Codex-native building</span>
             <span class="tag">Agent / Skill / MCP</span>
             <span class="tag">Workflow / Verifier</span>
-            <span class="tag">local-first systems</span>
-            <span class="tag">Python</span>
-            <span class="tag">SwiftUI / AppKit</span>
+            <span class="tag">Python / Swift / API</span>
             <span class="tag">SQL / SQLite / DuckDB</span>
             <span class="tag">HTML / CSS</span>
           </div>
@@ -3813,9 +3933,11 @@
         <section class="side-block">
           <h2>Location</h2>
           <div class="skill-tags">
-            <span class="tag">Shanghai base</span>
-            <span class="tag">remote open</span>
-            <span class="tag">overseas open</span>
+            <span class="tag">Shanghai</span>
+            <span class="tag">Beijing</span>
+            <span class="tag">Shenzhen</span>
+            <span class="tag">Hong Kong</span>
+            <span class="tag">Singapore</span>
           </div>
         </section>
       </aside>
@@ -3828,20 +3950,28 @@
       const button = document.querySelector("[data-lang-toggle]");
       const title = document.querySelector("[data-toolbar-title]");
 
-      function setLanguage(lang) {
+      function setLanguage(lang, syncUrl) {
         body.dataset.lang = lang;
         document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-        title.textContent = lang === "zh" ? "中文简历" : "English Resume";
+        title.textContent = lang === "zh" ? "中文" : "English";
         button.textContent = lang === "zh" ? "English" : "中文";
         button.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
         try {
           window.localStorage.setItem("nero-resume-lang", lang);
         } catch (_) {}
+        if (syncUrl) {
+          const url = new URL(window.location.href);
+          url.searchParams.set("lang", lang);
+          window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+        }
       }
 
       let initial = "zh";
       try {
-        initial = window.localStorage.getItem("nero-resume-lang") === "en" ? "en" : "zh";
+        const requestedLanguage = new URL(window.location.href).searchParams.get("lang");
+        initial = requestedLanguage === "en" || requestedLanguage === "zh"
+          ? requestedLanguage
+          : (window.localStorage.getItem("nero-resume-lang") === "en" ? "en" : "zh");
       } catch (_) {}
       setLanguage(initial);
 
@@ -3865,8 +3995,17 @@
       }
 
       button.addEventListener("click", function () {
-        setLanguage(body.dataset.lang === "zh" ? "en" : "zh");
+        document.querySelectorAll("[data-article-modal][open]").forEach(function (modal) {
+          if (typeof modal.close === "function") modal.close();
+        });
+        setLanguage(body.dataset.lang === "zh" ? "en" : "zh", true);
       });
+
+      function replaceHash(hash) {
+        const url = new URL(window.location.href);
+        url.hash = hash;
+        window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+      }
 
       const caseLabData = {
         zh: {
@@ -4599,6 +4738,7 @@
         projectButtons.forEach(function (button) {
           button.addEventListener("click", function () {
             renderProject(button.dataset.aiProject);
+            replaceHash("ai/" + button.dataset.aiProject);
           });
         });
 
@@ -4611,6 +4751,16 @@
         renderCase("yunhan");
         renderNode("background");
         renderProject("banker");
+        const requestedProject = decodeURIComponent(window.location.hash).match(/^#ai\/([a-z]+)$/);
+        if (requestedProject && dataset.projects[requestedProject[1]]) {
+          renderProject(requestedProject[1]);
+          if (body.dataset.lang === langKey) {
+            window.requestAnimationFrame(function () {
+              const aiPanel = lab.querySelector('[data-case-panel="ai"]');
+              if (aiPanel) aiPanel.scrollIntoView({ block: "start" });
+            });
+          }
+        }
       });
 
       document.querySelectorAll("[data-article-lab]").forEach(function (lab) {
@@ -4619,6 +4769,8 @@
         const triggers = Array.from(lab.querySelectorAll("[data-article-key]"));
         const modal = lab.querySelector("[data-article-modal]");
         const closeButton = lab.querySelector("[data-article-close]");
+        const catalog = lab.querySelector(".wechat-article-catalog");
+        const catalogToggle = lab.querySelector("[data-article-toggle]");
         const kicker = lab.querySelector("[data-article-kicker]");
         const articleTitle = lab.querySelector("[data-article-title]");
         const summary = lab.querySelector("[data-article-summary]");
@@ -4661,16 +4813,34 @@
           }
         }
 
+        function openArticle(trigger) {
+          activeTrigger = trigger;
+          if (triggers.indexOf(trigger) > 5) {
+            catalog.classList.add("show-all");
+            catalogToggle.setAttribute("aria-expanded", "true");
+            catalogToggle.textContent = catalogToggle.dataset.hideLabel;
+          }
+          renderArticle(trigger.dataset.articleKey);
+          replaceHash("writing/" + trigger.dataset.articleKey);
+          if (typeof modal.showModal === "function") {
+            modal.showModal();
+          } else {
+            modal.setAttribute("open", "");
+          }
+        }
+
         triggers.forEach(function (trigger) {
           trigger.addEventListener("click", function () {
-            activeTrigger = trigger;
-            renderArticle(trigger.dataset.articleKey);
-            if (typeof modal.showModal === "function") {
-              modal.showModal();
-            } else {
-              modal.setAttribute("open", "");
-            }
+            openArticle(trigger);
           });
+        });
+
+        catalogToggle.addEventListener("click", function () {
+          const expanded = catalog.classList.toggle("show-all");
+          catalogToggle.setAttribute("aria-expanded", expanded ? "true" : "false");
+          catalogToggle.textContent = expanded
+            ? catalogToggle.dataset.hideLabel
+            : catalogToggle.dataset.showLabel;
         });
 
         closeButton.addEventListener("click", closeModal);
@@ -4688,7 +4858,16 @@
           });
           if (activeTrigger) activeTrigger.focus();
           activeTrigger = null;
+          if (window.location.hash.indexOf("#writing/") === 0) replaceHash("writing");
         });
+
+        const requestedArticle = decodeURIComponent(window.location.hash).match(/^#writing\/([a-z0-9]+)$/);
+        if (body.dataset.lang === langKey && requestedArticle) {
+          const requestedTrigger = triggers.find(function (trigger) {
+            return trigger.dataset.articleKey === requestedArticle[1];
+          });
+          if (requestedTrigger) openArticle(requestedTrigger);
+        }
       });
     })();
   </script>
