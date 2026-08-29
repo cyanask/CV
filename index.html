@@ -2634,50 +2634,6 @@
       margin-top: 24px;
     }
 
-    .deal-ledger {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .deal-item {
-      min-width: 0;
-      padding: 16px 18px;
-      border: 1px solid var(--line);
-      border-left: 4px solid var(--accent);
-      background: #fff;
-    }
-
-    .deal-item.primary {
-      grid-column: 1 / -1;
-      border-left-color: var(--brand);
-      background: var(--soft);
-    }
-
-    .deal-item b,
-    .deal-item strong {
-      color: var(--ink);
-    }
-
-    .deal-item b {
-      display: block;
-      margin-bottom: 5px;
-      font-size: 15px;
-    }
-
-    .deal-item p {
-      margin: 0;
-      color: var(--text);
-    }
-
-    .deal-label {
-      display: inline-block;
-      margin-bottom: 8px;
-      color: var(--brand);
-      font: 800 11px/1.2 var(--mono);
-    }
-
     .portfolio-proof {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(260px, 370px);
@@ -2881,15 +2837,10 @@
     }
 
     @media (max-width: 760px) {
-      .deal-ledger,
       .portfolio-proof,
       .article-lab-head,
       .article-detail {
         grid-template-columns: 1fr;
-      }
-
-      .deal-item.primary {
-        grid-column: auto;
       }
 
       .usage-metrics {
@@ -3027,12 +2978,6 @@
                 <div class="flow-step"><b>审核问询与披露</b><span>业务财务问询回复、交易所沟通材料、招股书口径一致。</span></div>
                 <div class="flow-step"><b>公开结果</b><span>2025 年 9 月 30 日创业板上市，募资总额 43,953.37 万元。</span></div>
               </div>
-            </div>
-
-            <div class="deal-ledger" aria-label="投行项目经历补充">
-              <div class="deal-item primary"><span class="deal-label">CURRENT / NEEQ</span><b>厦门斯巴特股份有限公司</b><p>负责新三板项目的业务与财务工作。公开简历仅保留职责范围，不披露项目底稿和未公开细节。</p></div>
-              <div class="deal-item"><span class="deal-label">REPRESENTATIVE / GEM</span><b>ICKey（301563）</b><p>创业板 IPO 核心执行人员；业务财务主责，覆盖财务真实性核查和问询回复。</p></div>
-              <div class="deal-item"><span class="deal-label">HISTORICAL</span><b>超捷股份 · 森松国际 · 台州水务</b><p>持续参与不同市场和阶段的资本市场项目。</p></div>
             </div>
 
             <div class="case-workbench">
@@ -3202,14 +3147,14 @@
         </section>
 
         <section class="case-stage article-stage" data-article-lab data-lang-key="zh">
-          <h2>公众号文章</h2>
-          <p class="case-stage-intro">Nero Writer 已登记发布 19 篇文章，覆盖人工智能专业系统、产业变量、半导体周期和知识工作方式。点击标题可查看台账中的核心观点与发布状态。</p>
+          <h2>公众号长文</h2>
+          <p class="case-stage-intro">这里仅展示 Nero Writer 已登记发布的 12 篇公众号长文，公众号图片消息和小红书组图不纳入。点击标题可查看台账中的核心观点与发布状态。</p>
           <div class="article-lab">
             <div class="article-lab-head">
               <div><span class="case-kicker-strong">观点与方法</span><h3>从系统实践到可讨论的认知</h3></div>
               <p>Nero Writer 管理选题、证据、人工编辑、知识回写和发布归档；文章正文仍由我承担最终判断。</p>
             </div>
-            <div class="article-tabs" role="tablist" aria-label="公众号文章">
+            <div class="article-tabs" role="tablist" aria-label="公众号长文">
               <button class="article-tab" type="button" role="tab" aria-selected="true" data-article-key="storage">存储超级周期</button>
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="coding">编程 AI</button>
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="workbuddy">WorkBuddy</button>
@@ -3222,13 +3167,6 @@
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="google">谷歌 AI 资本开支</button>
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="agioption">AGI 战略期权</button>
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="langchain">LangChain</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="skill">Skill</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="sources">AI 信息源</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="delegate">哪些工作交给 AI</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="fundsale">AI 新贵与老钱</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="meta">Meta AI 投入</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="lpddr6">长鑫 LPDDR6</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="openai">OpenAI 与 Anthropic</button>
             </div>
             <div class="article-detail" aria-live="polite">
               <div>
@@ -3407,12 +3345,6 @@
               </div>
             </div>
 
-            <div class="deal-ledger" aria-label="Additional transaction experience">
-              <div class="deal-item primary"><span class="deal-label">CURRENT / NEEQ</span><b>Xiamen Sparta Co., Ltd.</b><p>Responsible for business and financial workstreams. The public resume states the scope only and excludes non-public workpapers and transaction details.</p></div>
-              <div class="deal-item"><span class="deal-label">REPRESENTATIVE / GEM</span><b>ICKey (301563)</b><p>Core execution member owning business-finance verification, financial-authenticity work and inquiry responses.</p></div>
-              <div class="deal-item"><span class="deal-label">HISTORICAL</span><b>Chaojie Fastener · Morimatsu International · Taizhou Water</b><p>Historical capital-markets experience demonstrating sustained execution across transactions and markets.</p></div>
-            </div>
-
             <div class="case-workbench">
               <div class="case-node-nav" aria-label="ICKey case nodes">
                 <button class="case-node-button" type="button" aria-pressed="true" data-case-node="background"><b>01</b><span>Case context</span></button>
@@ -3580,14 +3512,14 @@
         </section>
 
         <section class="case-stage article-stage" data-article-lab data-lang-key="en">
-          <h2>Published Essays</h2>
-          <p class="case-stage-intro">Nero Writer currently records 19 published essays across AI-native professional systems, industry variables, semiconductor cycles and knowledge work. Select a title to view its ledger thesis and publication status.</p>
+          <h2>Long-form WeChat Essays</h2>
+          <p class="case-stage-intro">This section contains only the 12 long-form WeChat essays registered in Nero Writer. WeChat image posts and Xiaohongshu carousels are excluded. Select a title to view its ledger thesis and publication status.</p>
           <div class="article-lab">
             <div class="article-lab-head">
               <div><span class="case-kicker-strong">Ideas &amp; Methods</span><h3>Turning operating practice into discussable ideas</h3></div>
               <p>Nero Writer manages topics, evidence, human editing, knowledge feedback and publication archives. I remain responsible for the final argument.</p>
             </div>
-            <div class="article-tabs" role="tablist" aria-label="Published essays">
+            <div class="article-tabs" role="tablist" aria-label="Long-form WeChat essays">
               <button class="article-tab" type="button" role="tab" aria-selected="true" data-article-key="storage">Memory Supercycle</button>
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="coding">Coding AI</button>
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="workbuddy">WorkBuddy</button>
@@ -3600,13 +3532,6 @@
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="google">Google AI CapEx</button>
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="agioption">AGI Option</button>
               <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="langchain">LangChain</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="skill">Skills</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="sources">AI Sources</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="delegate">What to Delegate</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="fundsale">AI Fund Sale</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="meta">Meta AI CapEx</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="lpddr6">CXMT LPDDR6</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="openai">OpenAI vs Anthropic</button>
             </div>
             <div class="article-detail" aria-live="polite">
               <div>
@@ -3790,7 +3715,7 @@
               modules: "选题 Registry、证据包、文章目录、文风学习、知识卡、发布台账和净化归档。",
               outputs: "公众号文章、证据包、知识卡、编辑差异和发布复盘。",
               value: "把观点生产从一次性写作变成有证据、有反馈、可积累的知识工作流。",
-              showcase: { label: "内容知识工作台", title: "Nero Writer", copy: "它不是自动代写或自动发布工具；证据选择、观点判断、人工编辑和最终发布仍由我负责。", tagA: "Registered", tagB: "Evidence-led", tagC: "Human edited", url: "", urlText: "local / markdown", cta: "19 篇文章见下方", rows: [["Input", "选题 / 研究 / 证据包"], ["Writing", "初稿 / 人工编辑 / 质量门"], ["Learning", "知识卡 / 风格回写 / 发布归档"]] }
+              showcase: { label: "内容知识工作台", title: "Nero Writer", copy: "它不是自动代写或自动发布工具；证据选择、观点判断、人工编辑和最终发布仍由我负责。", tagA: "Registered", tagB: "Evidence-led", tagC: "Human edited", url: "", urlText: "local / markdown", cta: "12 篇长文见下方", rows: [["Input", "选题 / 研究 / 证据包"], ["Writing", "初稿 / 人工编辑 / 质量门"], ["Learning", "知识卡 / 风格回写 / 发布归档"]] }
             },
             knowledge: {
               kicker: "双知识库",
@@ -3915,7 +3840,7 @@
               modules: "Topic registry, evidence packs, article folders, style learning, knowledge cards, publication ledger and sanitized archives.",
               outputs: "Published essays, evidence packs, knowledge cards, edit differences and publication reviews.",
               value: "Turns opinion development from one-off writing into an evidence-led, feedback-rich and cumulative knowledge workflow.",
-              showcase: { label: "Content knowledge workbench", title: "Nero Writer", copy: "It is neither an automatic ghostwriter nor an auto-publishing tool. Evidence selection, argument, human editing and final publication remain my responsibility.", tagA: "Registered", tagB: "Evidence-led", tagC: "Human edited", url: "", urlText: "local / markdown", cta: "19 essays below", rows: [["Input", "topics / research / evidence packs"], ["Writing", "drafts / human edits / quality gates"], ["Learning", "knowledge cards / style feedback / archives"]] }
+              showcase: { label: "Content knowledge workbench", title: "Nero Writer", copy: "It is neither an automatic ghostwriter nor an auto-publishing tool. Evidence selection, argument, human editing and final publication remain my responsibility.", tagA: "Registered", tagB: "Evidence-led", tagC: "Human edited", url: "", urlText: "local / markdown", cta: "12 long-form essays below", rows: [["Input", "topics / research / evidence packs"], ["Writing", "drafts / human edits / quality gates"], ["Learning", "knowledge cards / style feedback / archives"]] }
             },
             knowledge: {
               kicker: "Two knowledge services",
@@ -4108,76 +4033,6 @@
             status: "已登记发布 · 链接待补",
             url: "",
             cta: "公众号内已发布 · 链接待补"
-          },
-          skill: {
-            kicker: "AI BUILDER / 13",
-            title: "Skill 到底是什么？从“AI 上岗手册”到第一个可用 Skill",
-            summary: "Skill 不只是更长的 Prompt，而是把一类工作何时开始、怎样执行、哪里停止和如何检查沉淀为可复用方法。",
-            series: "AI Builder",
-            question: "2026-07-29",
-            status: "已登记发布 · 链接待补",
-            url: "",
-            cta: "公众号内已发布 · 链接待补"
-          },
-          sources: {
-            kicker: "数字 AI / 14",
-            title: "我研究AI常用的8类信息源",
-            summary: "信息源决定证据边界，验证链决定结论强度；不同材料分别承担线索、事实、评测和产业判断角色。",
-            series: "数字 AI",
-            question: "2026-07-29",
-            status: "已登记发布 · 链接待补",
-            url: "",
-            cta: "公众号内已发布 · 链接待补"
-          },
-          delegate: {
-            kicker: "数字 AI / 15",
-            title: "哪些工作，适合先交给AI？",
-            summary: "第一批交给 AI 的工作，应当材料明确、步骤重复、风险较低、结果可查、动作可撤，并保留最终人工判断。",
-            series: "数字 AI",
-            question: "2026-07-30",
-            status: "已登记发布 · 链接待补",
-            url: "",
-            cta: "公众号内已发布 · 链接待补"
-          },
-          fundsale: {
-            kicker: "AI 产业变量 / 16",
-            title: "39年华尔街老钱精准收割25岁AI新贵",
-            summary: "AI 趋势判断没有立刻消失，但高杠杆和短期现金约束先耗尽了等待时间；风险承接能力让买方获得更强定价权。",
-            series: "AI 产业变量",
-            question: "2026-07-31",
-            status: "已登记发布 · 链接已登记",
-            url: "https://mp.weixin.qq.com/s/WhCvDBuXboWth6QZvrSQbA",
-            cta: "阅读公众号文章 ↗"
-          },
-          meta: {
-            kicker: "AI 产业变量 / 17",
-            title: "Meta自由现金流大幅缩水，千亿美元AI投入何时回本？",
-            summary: "Meta 披露的可量化 AI 业务效果主要来自广告；1300亿至1450亿美元资本开支的整体回收期尚未披露。",
-            series: "AI 产业变量",
-            question: "2026-08-01",
-            status: "已登记发布 · 链接待补",
-            url: "",
-            cta: "公众号内已发布 · 链接待补"
-          },
-          lpddr6: {
-            kicker: "存储周期 / 18",
-            title: "长鑫LPDDR6研发验证接近尾声，下半年量产导入进入冲刺",
-            summary: "8 月 1 日媒体消息把长鑫 LPDDR6 推进到量产前的最后一段赛程；若下半年稳定量产兑现，手机和端侧 AI 设备的低功耗内存竞争会先发生变化。",
-            series: "存储周期",
-            question: "日期待补",
-            status: "已登记发布 · 链接待补",
-            url: "",
-            cta: "公众号内已发布 · 链接待补"
-          },
-          openai: {
-            kicker: "AI 产业变量 / 19",
-            title: "OpenAI，怎么输给了前员工？",
-            summary: "OpenAI 广泛铺开产品与入口，Anthropic 先把编程智能体和企业工作流做深；两种资源配置形成了阶段性商业分叉。",
-            series: "AI 产业变量",
-            question: "日期待补",
-            status: "已登记发布 · 链接待补",
-            url: "",
-            cta: "公众号内已发布 · 链接待补"
           }
         },
         en: {
@@ -4296,76 +4151,6 @@
             title: "How LangChain Turned 'Making AI Work' into a $1.25 Billion Business",
             summary: "LangChain entered developer projects through an open-source framework, then monetized the observability, evaluation and governance needs that emerge when agents reach production.",
             series: "Digital AI",
-            question: "Date pending",
-            status: "Registered as published · link pending",
-            url: "",
-            cta: "Published on WeChat · link pending"
-          },
-          skill: {
-            kicker: "AI BUILDER / 13",
-            title: "What Is a Skill? From an AI Job Manual to the First Usable Skill",
-            summary: "A Skill is more than a longer prompt. It captures when a class of work starts, how it runs, where it stops and how its output is checked as a reusable method.",
-            series: "AI Builder",
-            question: "Jul 29, 2026",
-            status: "Registered as published · link pending",
-            url: "",
-            cta: "Published on WeChat · link pending"
-          },
-          sources: {
-            kicker: "DIGITAL AI / 14",
-            title: "Eight Types of Sources I Use to Research AI",
-            summary: "Sources define the evidence boundary and validation chains determine conclusion strength. Different materials serve as leads, facts, evaluations and industry judgement.",
-            series: "Digital AI",
-            question: "Jul 29, 2026",
-            status: "Registered as published · link pending",
-            url: "",
-            cta: "Published on WeChat · link pending"
-          },
-          delegate: {
-            kicker: "DIGITAL AI / 15",
-            title: "Which Work Should Be Delegated to AI First?",
-            summary: "The first work delegated to AI should have clear materials, repeatable steps, lower risk, inspectable results and reversible actions, with final human judgement retained.",
-            series: "Digital AI",
-            question: "Jul 30, 2026",
-            status: "Registered as published · link pending",
-            url: "",
-            cta: "Published on WeChat · link pending"
-          },
-          fundsale: {
-            kicker: "AI INDUSTRY / 16",
-            title: "How Wall Street Experience Outlasted a Young AI Prodigy",
-            summary: "The AI thesis did not disappear immediately, but leverage and near-term cash constraints exhausted the waiting period first. The buyer's ability to carry risk created stronger pricing power.",
-            series: "AI Industry Variables",
-            question: "Jul 31, 2026",
-            status: "Registered as published · link available",
-            url: "https://mp.weixin.qq.com/s/WhCvDBuXboWth6QZvrSQbA",
-            cta: "Read on WeChat ↗"
-          },
-          meta: {
-            kicker: "AI INDUSTRY / 17",
-            title: "Meta's Free Cash Flow Fell Sharply. When Will Its AI Spending Pay Back?",
-            summary: "Meta's quantified AI business impact is concentrated in advertising, while the full payback period for $130-145 billion of capital expenditure remains undisclosed.",
-            series: "AI Industry Variables",
-            question: "Aug 1, 2026",
-            status: "Registered as published · link pending",
-            url: "",
-            cta: "Published on WeChat · link pending"
-          },
-          lpddr6: {
-            kicker: "MEMORY CYCLE / 18",
-            title: "CXMT's LPDDR6 Validation Nears Completion ahead of Production",
-            summary: "An Aug 1 media report placed CXMT's LPDDR6 in the final stage before production. If stable output arrives in the second half, competition in low-power memory for phones and edge AI devices may shift first.",
-            series: "Memory Cycle",
-            question: "Date pending",
-            status: "Registered as published · link pending",
-            url: "",
-            cta: "Published on WeChat · link pending"
-          },
-          openai: {
-            kicker: "AI INDUSTRY / 19",
-            title: "How Did OpenAI Fall behind Its Former Employees?",
-            summary: "OpenAI spread resources across products and entry points, while Anthropic went deeper into coding agents and enterprise workflows. The two allocations produced a temporary commercial divergence.",
-            series: "AI Industry Variables",
             question: "Date pending",
             status: "Registered as published · link pending",
             url: "",
