@@ -2716,13 +2716,6 @@
       white-space: nowrap;
     }
 
-    .article-lab {
-      margin-top: 24px;
-      padding: 22px;
-      border: 1px solid var(--line);
-      background: #fff;
-    }
-
     .wechat-reading-entry {
       margin-top: 18px;
       padding: 18px 20px;
@@ -2812,69 +2805,114 @@
       font: 900 10px/1.2 var(--mono);
     }
 
-    .article-lab-head {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(220px, 0.62fr);
-      gap: 24px;
-      align-items: end;
-      padding-bottom: 18px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .article-lab-head h3 {
-      margin: 4px 0 0;
-      color: var(--ink);
-      font-size: 24px;
-    }
-
-    .article-lab-head p {
+    .wechat-title-button {
+      position: relative;
+      display: block;
+      width: 100%;
+      min-height: 32px;
       margin: 0;
-      color: var(--text);
-    }
-
-    .article-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin: 18px 0;
-    }
-
-    .article-tab {
-      flex: 0 0 auto;
-      white-space: nowrap;
-      min-height: 38px;
-      padding: 8px 12px;
-      border: 1px solid var(--line);
-      color: var(--text);
-      background: #fff;
+      padding: 0 24px 0 0;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      line-height: inherit;
+      text-align: left;
       cursor: pointer;
-      font-weight: 800;
     }
 
-    .article-tab[aria-selected="true"] {
+    .wechat-title-button::after {
+      content: ">";
+      position: absolute;
+      right: 2px;
+      top: 1px;
+      color: var(--accent);
+      font: 900 14px/1.2 var(--mono);
+      opacity: 0.65;
+    }
+
+    .wechat-title-button:hover {
+      color: var(--brand);
+    }
+
+    .wechat-title-button:focus-visible,
+    .article-modal-close:focus-visible {
+      outline: 3px solid rgba(184, 138, 61, 0.34);
+      outline-offset: 3px;
+    }
+
+    .wechat-title-button[aria-pressed="true"] {
+      color: var(--brand);
+    }
+
+    .article-modal {
+      width: min(720px, calc(100% - 32px));
+      max-height: min(82vh, 720px);
+      margin: auto;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid rgba(31, 78, 95, 0.34);
+      border-left: 4px solid var(--accent);
+      border-radius: 4px;
+      background: #ffffff;
+      color: var(--ink);
+      box-shadow: 0 28px 72px rgba(24, 35, 45, 0.24);
+    }
+
+    .article-modal::backdrop {
+      background: rgba(23, 33, 43, 0.56);
+      backdrop-filter: blur(2px);
+    }
+
+    .article-modal[open] {
+      animation: article-modal-in 180ms ease-out both;
+    }
+
+    .article-modal-shell {
+      position: relative;
+      max-height: min(82vh, 720px);
+      padding: 28px 30px 26px;
+      overflow: auto;
+    }
+
+    .article-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      z-index: 2;
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: #ffffff;
+      color: var(--brand);
+      font: 500 24px/1 var(--font);
+      cursor: pointer;
+    }
+
+    .article-modal-close:hover {
       border-color: var(--brand);
-      color: #fff;
-      background: var(--brand);
+      background: var(--tag);
     }
 
-    .article-detail {
+    .article-modal-layout {
       display: grid;
       grid-template-columns: minmax(0, 1.35fr) minmax(230px, 0.65fr);
       gap: 22px;
-      padding: 20px;
-      border-left: 4px solid var(--accent);
-      background: var(--soft);
     }
 
-    .article-detail h4 {
-      margin: 5px 0 9px;
+    .article-modal h4 {
+      margin: 7px 44px 10px 0;
       color: var(--ink);
-      font-size: 21px;
+      font-size: 24px;
+      line-height: 1.28;
     }
 
-    .article-detail p {
+    .article-modal p {
       margin: 0;
       color: var(--text);
+      font-size: 14px;
+      line-height: 1.65;
     }
 
     .article-kicker,
@@ -2918,6 +2956,12 @@
       border-color: var(--line);
       color: var(--muted);
       cursor: default;
+      pointer-events: none;
+    }
+
+    @keyframes article-modal-in {
+      from { opacity: 0; transform: translateY(8px) scale(0.99); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
 
     aside .side-details > summary {
@@ -2927,8 +2971,7 @@
 
     @media (max-width: 760px) {
       .portfolio-proof,
-      .article-lab-head,
-      .article-detail {
+      .article-modal-layout {
         grid-template-columns: 1fr;
       }
 
@@ -2937,8 +2980,7 @@
         overflow-x: auto;
       }
 
-      .ai-project-pills,
-      .article-tabs {
+      .ai-project-pills {
         flex-wrap: nowrap;
         margin-right: -14px;
         padding-right: 14px;
@@ -2947,8 +2989,7 @@
         scrollbar-width: thin;
       }
 
-      .ai-project-pill,
-      .article-tab {
+      .ai-project-pill {
         scroll-snap-align: start;
       }
 
@@ -2965,17 +3006,48 @@
       .wechat-title-list {
         column-count: 1;
       }
+
+      .wechat-title-list li {
+        min-height: 48px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      .wechat-title-button {
+        min-height: 44px;
+      }
+
+      .article-modal {
+        width: calc(100% - 16px);
+        max-height: 88vh;
+      }
+
+      .article-modal-shell {
+        max-height: 88vh;
+        padding: 24px 20px 22px;
+      }
+
+      .article-modal h4 {
+        margin-right: 40px;
+        font-size: 21px;
+      }
     }
 
     @media print {
       .ai-project-pills,
-      .article-tabs {
+      .article-modal {
         display: none;
       }
 
       .portfolio-proof,
-      .article-detail {
+      .wechat-reading-entry {
         break-inside: avoid;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .article-modal[open] {
+        animation: none;
       }
     }
   </style>
@@ -3251,7 +3323,7 @@
 
         <section class="case-stage article-stage" data-article-lab data-lang-key="zh">
           <h2>公众号长文</h2>
-          <p class="case-stage-intro">这里展示 Nero Writer 已登记发布的 16 个公众号长文主题，公众号图片消息和小红书组图不纳入。AI Agent 产业分析上下篇合并为一个入口。点击标题可查看台账中的核心观点与发布状态。</p>
+          <p class="case-stage-intro">这里展示 Nero Writer 已登记发布的 17 篇公众号长文，公众号图片消息和小红书组图不纳入。点击任一标题，可在浮窗中查看核心观点、主线和发布状态。</p>
           <div class="wechat-reading-entry" aria-label="微信公众号与长文目录">
             <div class="wechat-account-line">
               <div>
@@ -3264,63 +3336,44 @@
             <div class="wechat-article-catalog">
               <span class="wechat-catalog-label">已发布长文清单 · 17 篇</span>
               <ol class="wechat-title-list">
-                <li>存储“超级周期”，老模型为什么不够用了？</li>
-                <li>我不是程序员，却开始指挥编程AI干活</li>
-                <li>WorkBuddy 很强，但它不是万能办公助手</li>
-                <li>K3的发布是“DeepSeek 2.0时刻”吗？</li>
-                <li>AI Builder：第一章，智能体时代正在出现的新身份</li>
-                <li>AI Builder：第二篇，成长与壁垒</li>
-                <li>AI Builder：第三篇，我理解的 AI-native 专业系统</li>
-                <li>K3之后，模型越来越便宜，算力为什么可能会更贵？</li>
-                <li>美国AI产业的一次集体发声：开放模型背后，争的是AI领导力</li>
-                <li>谷歌云增长82%，2000亿美元资本开支背后的经济账</li>
-                <li>模型一直没赚钱，算力还能烧多久？</li>
-                <li>从免费开源到12.5亿美元，LangChain把“让AI干活”做成了一门生意</li>
-                <li>Karp 和 Palantir，如何让华尔街重新衡量软件公司在 AI 时代的价值？</li>
-                <li>金融人怎么学AI？请将吴恩达这份公开信倒着读</li>
-                <li>DeepSeek为什么开源Harness？模型决定上限，Harness来兑现。</li>
-                <li>AI Agent产业分析（上篇）：从模型能力到工作现场的四条路线</li>
-                <li>AI Agent产业分析（下篇）：智力通缩时代，价值正在向业务闭环转移</li>
+                <li><button class="wechat-title-button" type="button" data-article-key="storage" aria-pressed="false">存储“超级周期”，老模型为什么不够用了？</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="coding" aria-pressed="false">我不是程序员，却开始指挥编程AI干活</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="workbuddy" aria-pressed="false">WorkBuddy 很强，但它不是万能办公助手</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="k3" aria-pressed="false">K3的发布是“DeepSeek 2.0时刻”吗？</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder1" aria-pressed="false">AI Builder：第一章，智能体时代正在出现的新身份</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder2" aria-pressed="false">AI Builder：第二篇，成长与壁垒</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder3" aria-pressed="false">AI Builder：第三篇，我理解的 AI-native 专业系统</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="compute" aria-pressed="false">K3之后，模型越来越便宜，算力为什么可能会更贵？</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="openweights" aria-pressed="false">美国AI产业的一次集体发声：开放模型背后，争的是AI领导力</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="google" aria-pressed="false">谷歌云增长82%，2000亿美元资本开支背后的经济账</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agioption" aria-pressed="false">模型一直没赚钱，算力还能烧多久？</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="langchain" aria-pressed="false">从免费开源到12.5亿美元，LangChain把“让AI干活”做成了一门生意</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="palantir" aria-pressed="false">Karp 和 Palantir，如何让华尔街重新衡量软件公司在 AI 时代的价值？</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="financeai" aria-pressed="false">金融人怎么学AI？请将吴恩达这份公开信倒着读</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="deepseek" aria-pressed="false">DeepSeek为什么开源Harness？模型决定上限，Harness来兑现。</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agentupper" aria-pressed="false">AI Agent产业分析（上篇）：从模型能力到工作现场的四条路线</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agentlower" aria-pressed="false">AI Agent产业分析（下篇）：智力通缩时代，价值正在向业务闭环转移</button></li>
               </ol>
             </div>
           </div>
-          <div class="article-lab">
-            <div class="article-lab-head">
-              <div><span class="case-kicker-strong">观点与方法</span><h3>从系统实践到可讨论的认知</h3></div>
-              <p>Nero Writer 管理选题、证据、人工编辑、知识回写和发布归档；文章正文仍由我承担最终判断。</p>
-            </div>
-            <div class="article-tabs" role="tablist" aria-label="公众号长文">
-              <button class="article-tab" type="button" role="tab" aria-selected="true" data-article-key="storage">存储超级周期</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="coding">编程 AI</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="workbuddy">WorkBuddy</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="k3">Kimi K3</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="builder1">AI Builder 01</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="builder2">AI Builder 02</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="builder3">AI Builder 03</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="compute">模型降价与算力</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="openweights">开放模型</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="google">谷歌 AI 资本开支</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="agioption">AGI 战略期权</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="langchain">LangChain</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="palantir">Palantir</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="financeai">金融人学 AI</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="deepseek">DeepSeek Harness</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="agentindustry">AI Agent 产业分析</button>
-            </div>
-            <div class="article-detail" aria-live="polite">
-              <div>
-                <span class="article-kicker" data-article-kicker>存储周期 / 01</span>
-                <h4 data-article-title>存储“超级周期”，老模型为什么不够用了？</h4>
-                <p data-article-summary>AI 没有消灭周期，而是在重写周期模型。</p>
-                <a class="article-link" data-article-link href="https://mp.weixin.qq.com/s/J6cM-fETeVK3UqBfh8ZlbA" target="_blank" rel="noopener noreferrer">阅读公众号文章 ↗</a>
-              </div>
-              <div class="article-meta">
-                <div><b>主线</b><span data-article-series>存储周期</span></div>
-                <div><b>发布日期</b><span data-article-question>2026-06-30</span></div>
-                <div><b>状态</b><span data-article-status>已登记发布 · 链接已登记</span></div>
+          <dialog class="article-modal" data-article-modal aria-labelledby="article-modal-title-zh">
+            <div class="article-modal-shell">
+              <button class="article-modal-close" type="button" data-article-close aria-label="关闭文章观点浮窗" title="关闭">×</button>
+              <div class="article-modal-layout">
+                <div>
+                  <span class="article-kicker" data-article-kicker></span>
+                  <h4 id="article-modal-title-zh" data-article-title></h4>
+                  <p data-article-summary></p>
+                  <a class="article-link" data-article-link aria-disabled="true"></a>
+                </div>
+                <div class="article-meta">
+                  <div><b>主线</b><span data-article-series></span></div>
+                  <div><b>发布日期</b><span data-article-question></span></div>
+                  <div><b>状态</b><span data-article-status></span></div>
+                </div>
               </div>
             </div>
-          </div>
+          </dialog>
         </section>
       </main>
 
@@ -3652,7 +3705,7 @@
 
         <section class="case-stage article-stage" data-article-lab data-lang-key="en">
           <h2>Long-form WeChat Essays</h2>
-          <p class="case-stage-intro">This section contains 16 registered long-form WeChat topics. WeChat image posts and Xiaohongshu carousels are excluded, and the two-part AI Agent industry analysis is presented through one entry. Select a title to view its ledger thesis and publication status.</p>
+          <p class="case-stage-intro">This section contains 17 registered long-form WeChat essays. WeChat image posts and Xiaohongshu carousels are excluded. Select any title to open its core thesis, series and publication status.</p>
           <div class="wechat-reading-entry" aria-label="WeChat Official Account and long-form essay directory">
             <div class="wechat-account-line">
               <div>
@@ -3665,63 +3718,44 @@
             <div class="wechat-article-catalog">
               <span class="wechat-catalog-label">Published long-form directory · 17 essays</span>
               <ol class="wechat-title-list">
-                <li>Why Old Models No Longer Explain the Memory Supercycle</li>
-                <li>I Am Not a Programmer, Yet I Started Directing Coding AI</li>
-                <li>WorkBuddy Is Powerful, but It Is Not a Universal Office Assistant</li>
-                <li>Was Kimi K3 a DeepSeek 2.0 Moment?</li>
-                <li>AI Builder I: An Emerging Identity in the Agent Era</li>
-                <li>AI Builder II: Growth and Defensibility</li>
-                <li>AI Builder III: My Model of an AI-native Professional System</li>
-                <li>Why Cheaper Models May Make Compute More Expensive after K3</li>
-                <li>Open Models and the Contest for AI Leadership</li>
-                <li>Google Cloud Grew 82%: The Economics behind RMB 200 Billion of CapEx</li>
-                <li>Models Still Lose Money. How Long Can the Compute Burn Continue?</li>
-                <li>How LangChain Turned “Making AI Work” into a $1.25 Billion Business</li>
-                <li>How Karp and Palantir Made Wall Street Revalue Software in the AI Era</li>
-                <li>How Should Finance Professionals Learn AI? Read Andrew Ng's Open Letter Backwards</li>
-                <li>Why Did DeepSeek Open-source a Harness? Models Set the Ceiling; Harnesses Deliver the Value</li>
-                <li>AI Agent Industry Analysis I: Four Routes from Model Capability to the Workplace</li>
-                <li>AI Agent Industry Analysis II: Value Moves toward Business Closure as Intelligence Gets Cheaper</li>
+                <li><button class="wechat-title-button" type="button" data-article-key="storage" aria-pressed="false">Why Old Models No Longer Explain the Memory Supercycle</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="coding" aria-pressed="false">I Am Not a Programmer, Yet I Started Directing Coding AI</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="workbuddy" aria-pressed="false">WorkBuddy Is Powerful, but It Is Not a Universal Office Assistant</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="k3" aria-pressed="false">Was Kimi K3 a DeepSeek 2.0 Moment?</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder1" aria-pressed="false">AI Builder I: An Emerging Identity in the Agent Era</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder2" aria-pressed="false">AI Builder II: Growth and Defensibility</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="builder3" aria-pressed="false">AI Builder III: My Model of an AI-native Professional System</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="compute" aria-pressed="false">Why Cheaper Models May Make Compute More Expensive after K3</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="openweights" aria-pressed="false">Open Models and the Contest for AI Leadership</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="google" aria-pressed="false">Google Cloud Grew 82%: The Economics behind RMB 200 Billion of CapEx</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agioption" aria-pressed="false">Models Still Lose Money. How Long Can the Compute Burn Continue?</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="langchain" aria-pressed="false">How LangChain Turned “Making AI Work” into a $1.25 Billion Business</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="palantir" aria-pressed="false">How Karp and Palantir Made Wall Street Revalue Software in the AI Era</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="financeai" aria-pressed="false">How Should Finance Professionals Learn AI? Read Andrew Ng's Open Letter Backwards</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="deepseek" aria-pressed="false">Why Did DeepSeek Open-source a Harness? Models Set the Ceiling; Harnesses Deliver the Value</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agentupper" aria-pressed="false">AI Agent Industry Analysis I: Four Routes from Model Capability to the Workplace</button></li>
+                <li><button class="wechat-title-button" type="button" data-article-key="agentlower" aria-pressed="false">AI Agent Industry Analysis II: Value Moves toward Business Closure as Intelligence Gets Cheaper</button></li>
               </ol>
             </div>
           </div>
-          <div class="article-lab">
-            <div class="article-lab-head">
-              <div><span class="case-kicker-strong">Ideas &amp; Methods</span><h3>Turning operating practice into discussable ideas</h3></div>
-              <p>Nero Writer manages topics, evidence, human editing, knowledge feedback and publication archives. I remain responsible for the final argument.</p>
-            </div>
-            <div class="article-tabs" role="tablist" aria-label="Long-form WeChat essays">
-              <button class="article-tab" type="button" role="tab" aria-selected="true" data-article-key="storage">Memory Supercycle</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="coding">Coding AI</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="workbuddy">WorkBuddy</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="k3">Kimi K3</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="builder1">AI Builder 01</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="builder2">AI Builder 02</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="builder3">AI Builder 03</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="compute">Cheaper Models, More Compute</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="openweights">Open Models</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="google">Google AI CapEx</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="agioption">AGI Option</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="langchain">LangChain</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="palantir">Palantir</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="financeai">Finance Professionals &amp; AI</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="deepseek">DeepSeek Harness</button>
-              <button class="article-tab" type="button" role="tab" aria-selected="false" data-article-key="agentindustry">AI Agent Industry</button>
-            </div>
-            <div class="article-detail" aria-live="polite">
-              <div>
-                <span class="article-kicker" data-article-kicker>MEMORY CYCLE / 01</span>
-                <h4 data-article-title>Why Old Models No Longer Explain the Memory Supercycle</h4>
-                <p data-article-summary>AI has not eliminated the cycle; it is rewriting the cycle model.</p>
-                <a class="article-link" data-article-link href="https://mp.weixin.qq.com/s/J6cM-fETeVK3UqBfh8ZlbA" target="_blank" rel="noopener noreferrer">Read on WeChat ↗</a>
-              </div>
-              <div class="article-meta">
-                <div><b>Series</b><span data-article-series>Memory Cycle</span></div>
-                <div><b>Published</b><span data-article-question>Jun 30, 2026</span></div>
-                <div><b>Status</b><span data-article-status>Registered as published · link available</span></div>
+          <dialog class="article-modal" data-article-modal aria-labelledby="article-modal-title-en">
+            <div class="article-modal-shell">
+              <button class="article-modal-close" type="button" data-article-close aria-label="Close essay insight dialog" title="Close">×</button>
+              <div class="article-modal-layout">
+                <div>
+                  <span class="article-kicker" data-article-kicker></span>
+                  <h4 id="article-modal-title-en" data-article-title></h4>
+                  <p data-article-summary></p>
+                  <a class="article-link" data-article-link aria-disabled="true"></a>
+                </div>
+                <div class="article-meta">
+                  <div><b>Series</b><span data-article-series></span></div>
+                  <div><b>Published</b><span data-article-question></span></div>
+                  <div><b>Status</b><span data-article-status></span></div>
+                </div>
               </div>
             </div>
-          </div>
+          </dialog>
         </section>
       </main>
 
@@ -3890,7 +3924,7 @@
               modules: "选题 Registry、证据包、文章目录、文风学习、知识卡、发布台账和净化归档。",
               outputs: "公众号文章、证据包、知识卡、编辑差异和发布复盘。",
               value: "把观点生产从一次性写作变成有证据、有反馈、可积累的知识工作流。",
-              showcase: { label: "内容知识工作台", title: "Nero Writer", copy: "它不是自动代写或自动发布工具；证据选择、观点判断、人工编辑和最终发布仍由我负责。", tagA: "Registered", tagB: "Evidence-led", tagC: "Human edited", url: "", urlText: "local / markdown", cta: "16 个长文主题见下方", rows: [["Input", "选题 / 研究 / 证据包"], ["Writing", "初稿 / 人工编辑 / 质量门"], ["Learning", "知识卡 / 风格回写 / 发布归档"]] }
+              showcase: { label: "内容知识工作台", title: "Nero Writer", copy: "它不是自动代写或自动发布工具；证据选择、观点判断、人工编辑和最终发布仍由我负责。", tagA: "Registered", tagB: "Evidence-led", tagC: "Human edited", url: "", urlText: "local / markdown", cta: "17 篇长文见下方", rows: [["Input", "选题 / 研究 / 证据包"], ["Writing", "初稿 / 人工编辑 / 质量门"], ["Learning", "知识卡 / 风格回写 / 发布归档"]] }
             },
             knowledge: {
               kicker: "双知识库",
@@ -4015,7 +4049,7 @@
               modules: "Topic registry, evidence packs, article folders, style learning, knowledge cards, publication ledger and sanitized archives.",
               outputs: "Published essays, evidence packs, knowledge cards, edit differences and publication reviews.",
               value: "Turns opinion development from one-off writing into an evidence-led, feedback-rich and cumulative knowledge workflow.",
-              showcase: { label: "Content knowledge workbench", title: "Nero Writer", copy: "It is neither an automatic ghostwriter nor an auto-publishing tool. Evidence selection, argument, human editing and final publication remain my responsibility.", tagA: "Registered", tagB: "Evidence-led", tagC: "Human edited", url: "", urlText: "local / markdown", cta: "16 long-form topics below", rows: [["Input", "topics / research / evidence packs"], ["Writing", "drafts / human edits / quality gates"], ["Learning", "knowledge cards / style feedback / archives"]] }
+              showcase: { label: "Content knowledge workbench", title: "Nero Writer", copy: "It is neither an automatic ghostwriter nor an auto-publishing tool. Evidence selection, argument, human editing and final publication remain my responsibility.", tagA: "Registered", tagB: "Evidence-led", tagC: "Human edited", url: "", urlText: "local / markdown", cta: "17 long-form essays below", rows: [["Input", "topics / research / evidence packs"], ["Writing", "drafts / human edits / quality gates"], ["Learning", "knowledge cards / style feedback / archives"]] }
             },
             knowledge: {
               kicker: "Two knowledge services",
@@ -4239,15 +4273,25 @@
             url: "",
             cta: "公众号内已发布 · 链接待补"
           },
-          agentindustry: {
-            kicker: "数字 AI / 16 · 上下篇",
-            title: "AI Agent产业分析（上、下篇）",
-            summary: "Agent 竞争先分化为工作入口、运行时、云控制面和业务记录系统；随着通用智力成本下降，价值进一步沉淀到事实底座、专业判断、验证、审批和业务闭环。",
+          agentupper: {
+            kicker: "数字 AI / 16 · 上篇",
+            title: "AI Agent产业分析（上篇）：从模型能力到工作现场的四条路线",
+            summary: "AI Agent 产业正在分化为工作入口、Agent Runtime、云控制面和业务记录系统四条路线，差异不只来自模型能力，也来自对工作现场的控制深度。",
             series: "数字 AI / AI Builder / AI 产业变量",
             question: "日期待补",
-            status: "上下篇均已登记发布 · 链接待补",
+            status: "已登记发布 · 链接待补",
             url: "",
-            cta: "公众号内已发布 · 上下篇链接待补"
+            cta: "公众号内已发布 · 链接待补"
+          },
+          agentlower: {
+            kicker: "数字 AI / 17 · 下篇",
+            title: "AI Agent产业分析（下篇）：智力通缩时代，价值正在向业务闭环转移",
+            summary: "通用智力成本下降后，价值将进一步沉淀到事实底座、专业判断、验证、审批和业务闭环。",
+            series: "数字 AI / AI Builder / AI 产业变量",
+            question: "日期待补",
+            status: "已登记发布 · 链接待补",
+            url: "",
+            cta: "公众号内已发布 · 链接待补"
           }
         },
         en: {
@@ -4401,15 +4445,25 @@
             url: "",
             cta: "Published on WeChat · link pending"
           },
-          agentindustry: {
-            kicker: "DIGITAL AI / 16 · TWO PARTS",
-            title: "AI Agent Industry Analysis (Parts I and II)",
-            summary: "Agent competition first separates into work entry points, runtimes, cloud control planes and systems of record. As general intelligence becomes cheaper, value moves further into authoritative facts, professional judgement, validation, approvals and business closure.",
+          agentupper: {
+            kicker: "DIGITAL AI / 16 · PART I",
+            title: "AI Agent Industry Analysis I: Four Routes from Model Capability to the Workplace",
+            summary: "The AI Agent industry is separating into work entry points, Agent Runtimes, cloud control planes and systems of record. Differentiation comes not only from models, but also from the depth of control over the workplace.",
             series: "Digital AI / AI Builder / AI Industry Variables",
             question: "Date pending",
-            status: "Both parts registered as published · links pending",
+            status: "Registered as published · link pending",
             url: "",
-            cta: "Published on WeChat · both links pending"
+            cta: "Published on WeChat · link pending"
+          },
+          agentlower: {
+            kicker: "DIGITAL AI / 17 · PART II",
+            title: "AI Agent Industry Analysis II: Value Moves toward Business Closure as Intelligence Gets Cheaper",
+            summary: "As general intelligence becomes cheaper, value moves further into authoritative facts, professional judgement, validation, approvals and business closure.",
+            series: "Digital AI / AI Builder / AI Industry Variables",
+            question: "Date pending",
+            status: "Registered as published · link pending",
+            url: "",
+            cta: "Published on WeChat · link pending"
           }
         }
       };
@@ -4562,7 +4616,9 @@
       document.querySelectorAll("[data-article-lab]").forEach(function (lab) {
         const langKey = lab.dataset.langKey;
         const articles = articleLabData[langKey];
-        const tabs = Array.from(lab.querySelectorAll("[data-article-key]"));
+        const triggers = Array.from(lab.querySelectorAll("[data-article-key]"));
+        const modal = lab.querySelector("[data-article-modal]");
+        const closeButton = lab.querySelector("[data-article-close]");
         const kicker = lab.querySelector("[data-article-kicker]");
         const articleTitle = lab.querySelector("[data-article-title]");
         const summary = lab.querySelector("[data-article-summary]");
@@ -4570,11 +4626,12 @@
         const question = lab.querySelector("[data-article-question]");
         const status = lab.querySelector("[data-article-status]");
         const link = lab.querySelector("[data-article-link]");
+        let activeTrigger = null;
 
         function renderArticle(key) {
           const item = articles[key];
-          tabs.forEach(function (tab) {
-            tab.setAttribute("aria-selected", tab.dataset.articleKey === key ? "true" : "false");
+          triggers.forEach(function (trigger) {
+            trigger.setAttribute("aria-pressed", trigger.dataset.articleKey === key ? "true" : "false");
           });
           kicker.textContent = item.kicker;
           articleTitle.textContent = item.title;
@@ -4596,24 +4653,42 @@
           }
         }
 
-        tabs.forEach(function (tab, index) {
-          tab.addEventListener("click", function () {
-            renderArticle(tab.dataset.articleKey);
-          });
-          tab.addEventListener("keydown", function (event) {
-            if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
-            event.preventDefault();
-            let nextIndex = index;
-            if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
-            if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
-            if (event.key === "Home") nextIndex = 0;
-            if (event.key === "End") nextIndex = tabs.length - 1;
-            tabs[nextIndex].focus();
-            renderArticle(tabs[nextIndex].dataset.articleKey);
+        function closeModal() {
+          if (typeof modal.close === "function" && modal.open) {
+            modal.close();
+          } else {
+            modal.removeAttribute("open");
+          }
+        }
+
+        triggers.forEach(function (trigger) {
+          trigger.addEventListener("click", function () {
+            activeTrigger = trigger;
+            renderArticle(trigger.dataset.articleKey);
+            if (typeof modal.showModal === "function") {
+              modal.showModal();
+            } else {
+              modal.setAttribute("open", "");
+            }
           });
         });
 
-        renderArticle("storage");
+        closeButton.addEventListener("click", closeModal);
+        modal.addEventListener("keydown", function (event) {
+          if (event.key !== "Escape") return;
+          event.preventDefault();
+          closeModal();
+        });
+        modal.addEventListener("click", function (event) {
+          if (event.target === modal) closeModal();
+        });
+        modal.addEventListener("close", function () {
+          triggers.forEach(function (trigger) {
+            trigger.setAttribute("aria-pressed", "false");
+          });
+          if (activeTrigger) activeTrigger.focus();
+          activeTrigger = null;
+        });
       });
     })();
   </script>
