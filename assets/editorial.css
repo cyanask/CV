@@ -17,3 +17,9 @@
 .record-heading small{font-size:12px}.record-stat,.build-proof>summary{font-size:12px}.build-proof-summary-note{font-size:11px}.project-source p,.source-map>div,.text-tags{font-size:13px}.source-map>div{grid-template-columns:80px 1fr}.project-facts{grid-template-columns:1fr}.project-appendix{gap:20px}.wechat-title-button{font-size:14px}.wechat-title-list li:before,.wechat-catalog-label,.wechat-account-label,.wechat-account-id{font-size:11px}.wechat-search-note{font-size:13px}.profile-grid{grid-template-columns:1fr}.side-block h2{font-size:15px}.side-block h3{font-size:14px}.side-block p,.tag{font-size:13px}.contact-row{font-size:13px}.folio-footer,.folio-footer button{font-size:11px}.article-meta b{font-size:11px}.article-meta span{font-size:13px}.article-kicker{font-size:11px}
 }
 h1,h2,h3,h4,.record-heading,.case-selector button strong{overflow-wrap:anywhere;min-width:0}:lang(de),:lang(fr){hyphens:auto}.record-heading{flex:1}.record-heading strong{min-width:0}.hero-copy .title{overflow-wrap:anywhere}
+/* Explicit role/focus grouping prevents isolated final characters. */
+.title-role,.title-focus{display:block;text-wrap:balance}.title-focus{margin-top:4px;color:#53605a;font-size:.9em}.lang-panel[lang="zh-CN"] .title-focus{white-space:nowrap}
+.arrow-icon{position:relative;display:inline-block!important;flex:none;width:12px;height:12px;vertical-align:middle;font-size:0!important;line-height:0;margin-left:3px;color:inherit}
+.arrow-icon:before{content:"";position:absolute;right:1px;top:1px;width:8px;height:8px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor}
+.arrow-icon:after{content:"";position:absolute;left:1px;top:6px;width:12px;border-top:1.5px solid currentColor;transform:rotate(-45deg);transform-origin:center}
+.arrow-down{transform:rotate(90deg)}.hero-cta .arrow-icon{width:15px;height:15px}.case-arrow .arrow-icon{margin-left:0}
