@@ -33,6 +33,8 @@
 @media(prefers-reduced-motion:reduce){.cv-scene__world{transition:none!important;animation:none!important}.cv-scene__link{transition:none}}
 .cv-scene__sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .cv-scene--compact{min-height:0!important;height:290px}.cv-scene--compact .cv-scene__world{top:43%;margin-left:-325px}.cv-scene--compact .cv-scene__caption{top:17px;left:20px;right:20px;font-size:8px;letter-spacing:.1em}.cv-scene--compact .cv-scene__hint{left:20px}
-.cv-scene[data-case="banker"] .cv-scene__box[data-material="bronze"]{--front:#8f7852!important;--side:#5f5039!important;--top:#c4b18a!important}
-.cv-scene[data-case="principal"] .cv-scene__box[data-material="teal"]{--front:#465f5c!important;--side:#283d3b!important;--top:#8b9f96!important}
 @media(max-width:600px){.cv-scene--compact{height:240px}.cv-scene--compact .cv-scene__caption span:last-child{max-width:43%}}
+
+
+/* Cool mineral stage balances the cobalt identity cover. */
+.cv-scene__floor{background:linear-gradient(130deg,#f2f3ef,#ccd3df);border-color:#b8c1cd}.cv-scene__grid{background-image:linear-gradient(#244dcc13 1px,transparent 1px),linear-gradient(90deg,#244dcc13 1px,transparent 1px)}.cv-scene__route{background:#bd7d42}.scene-mount .cv-scene__caption,.scene-mount .cv-scene__hint{opacity:1;color:#54616f}.cv-scene--compact .cv-scene__world{top:47%}
