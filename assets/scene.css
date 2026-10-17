@@ -38,3 +38,7 @@
 
 /* Cool mineral stage balances the cobalt identity cover. */
 .cv-scene__floor{background:linear-gradient(130deg,#f2f3ef,#ccd3df);border-color:#b8c1cd}.cv-scene__grid{background-image:linear-gradient(#244dcc13 1px,transparent 1px),linear-gradient(90deg,#244dcc13 1px,transparent 1px)}.cv-scene__route{background:#bd7d42}.scene-mount .cv-scene__caption,.scene-mount .cv-scene__hint{opacity:1;color:#54616f}.cv-scene--compact .cv-scene__world{top:47%}
+
+/* Compact case-local model: fixed height, fluid width, no decorative hero. */
+.scene-mount.cv-scene--compact{height:200px;min-height:0!important}.scene-mount .cv-scene__caption{top:12px;left:12px;right:12px;font-size:9px;letter-spacing:0}.scene-mount .cv-scene__caption span:last-child{display:none}.scene-mount .cv-scene__hint{left:12px;font-size:9px;bottom:12px!important}.scene-mount .cv-scene__world{top:48%}.cv-scene__floor{background:linear-gradient(130deg,#fafbfc,#e5eaf0)}
+@media(max-width:900px){.scene-mount.cv-scene--compact{height:180px}}
